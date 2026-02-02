@@ -5,7 +5,7 @@ Material_ID,Material_Name,Category,Density_kg_m3,Tensile_Strength_MPa,Cost_per_k
 4,Single-Ply Aluminum Foil,Metal,2506,32.48,3.3,11.137,No
 5,Fire-Retardant Nylon Fabric,Plastic,1323,69.04,4.71,6.8,No
 6,Commercial-Grade Recycled Denim,Eco,287,4.78,1.61,0.573,Yes
-7,Food-Grade Polycarbonate,Plastic,1142,61.84,4,3.615,No
+7,Food-Grade Polycarbonate,Plastic,1142,61.84,4.0,3.615,No
 8,Lightweight PET Plastic,Plastic,1082,43.14,0.97,1.941,No
 9,Single-Ply Borosilicate Glass,Glass,1957,40.95,2.34,0.965,No
 10,Food-Grade Mushroom Mycelium,Eco,146,0.78,5.1,0.486,Yes
@@ -18,7 +18,7 @@ Material_ID,Material_Name,Category,Density_kg_m3,Tensile_Strength_MPa,Cost_per_k
 17,Laminated Plywood,Wood,716,48.08,3.51,0.781,Yes
 18,Medical-Grade PLA Bioplastic,Eco,1191,69.14,8.07,2.074,Yes
 19,Perforated Aluminum Foil,Metal,2471,36.6,4.47,12.2,No
-20,Recycled Seaweed Film,Eco,1089,14,3.73,0.124,Yes
+20,Recycled Seaweed Film,Eco,1089,14.0,3.73,0.124,Yes
 21,Industrial-Grade Plywood,Wood,684,45.92,2.63,0.631,Yes
 22,Reinforced Polypropylene (PP),Plastic,1068,51.62,1.79,2.271,No
 23,Woven Palm Leaf,Eco,534,18.95,1.52,0.428,Yes
@@ -86,7 +86,7 @@ Material_ID,Material_Name,Category,Density_kg_m3,Tensile_Strength_MPa,Cost_per_k
 85,Reinforced Polycarbonate,Plastic,1475,99.84,3.73,4.28,No
 86,Medical-Grade Corrugated Cardboard,Paper,603,7.24,2.41,1.086,Yes
 87,Waterproof Pine Wood Crate,Wood,542,34.46,2.36,0.542,Yes
-88,Double-Wall PVC Film,Plastic,2034,84.51,3,3.652,No
+88,Double-Wall PVC Film,Plastic,2034,84.51,3.0,3.652,No
 89,Lightweight Seaweed Film,Eco,819,11.7,3.51,0.175,Yes
 90,Perforated Corrugated Cardboard,Paper,565,5.02,0.92,0.942,Yes
 91,Lightweight Molded Pulp,Paper,242,1.61,0.91,0.636,Yes
@@ -130,7 +130,7 @@ Material_ID,Material_Name,Category,Density_kg_m3,Tensile_Strength_MPa,Cost_per_k
 129,Standard Jute Burlap,Eco,1301,30.02,1.2,0.5,Yes
 130,Laminated Aluminum Foil,Metal,2838,51.6,5.35,14.907,No
 131,Double-Wall Styrofoam (EPS),Plastic,36,0.69,2.31,4.446,No
-132,Double-Wall Wax Paper,Paper,1407,28.13,2,1.605,Yes
+132,Double-Wall Wax Paper,Paper,1407,28.13,2.0,1.605,Yes
 133,Waterproof Balsa Wood,Wood,184,10.46,4.39,0.46,Yes
 134,Standard Polyurethane Foam,Plastic,29,0.48,1.64,2.902,No
 135,Heavy-Duty Sheep Wool,Eco,1676,13.88,4.44,0.595,Yes
@@ -247,12 +247,12 @@ Material_ID,Material_Name,Category,Density_kg_m3,Tensile_Strength_MPa,Cost_per_k
 246,UV-Stabilized Tin Plate,Metal,8236,230.81,2.64,10.072,No
 247,Insulated Palm Leaf,Eco,239,8.61,1.84,0.459,Yes
 248,Standard Corrugated Cardboard,Paper,591,5.91,0.79,0.886,Yes
-249,Recycled Bubble Wrap (LDPE),Plastic,928,9.08,2,1.756,No
+249,Recycled Bubble Wrap (LDPE),Plastic,928,9.08,2.0,1.756,No
 250,Insulated Aluminum Foil,Metal,1343,26.86,6.37,14.326,No
 251,Perforated Cornstarch Foam,Eco,36,0.4,2.21,1.206,Yes
 252,Heavy-Duty Recycled Denim,Eco,374,6.71,2.15,0.69,Yes
 253,Lightweight Mushroom Mycelium,Eco,124,0.66,3.26,0.465,Yes
-254,Anti-Static Polypropylene (PP),Plastic,925,35.77,2,2.361,No
+254,Anti-Static Polypropylene (PP),Plastic,925,35.77,2.0,2.361,No
 255,Commercial-Grade Seaweed Film,Eco,1057,15.1,4.23,0.201,Yes
 256,Single-Ply Nylon Fabric,Plastic,1082,43.91,2.51,4.705,No
 257,Food-Grade Bubble Wrap (LDPE),Plastic,888,9.65,3.18,2.798,No
@@ -334,7 +334,7 @@ Material_ID,Material_Name,Category,Density_kg_m3,Tensile_Strength_MPa,Cost_per_k
 333,Standard Styrofoam (EPS),Plastic,24,0.39,1.46,3.207,No
 334,Reinforced Corrugated Cardboard,Paper,705,8.82,1.02,0.97,Yes
 335,Reinforced ABS Plastic,Plastic,1225,58.91,2.55,3.348,No
-336,Commercial-Grade Teflon Coating,Plastic,2112,24,8.06,7.681,No
+336,Commercial-Grade Teflon Coating,Plastic,2112,24.0,8.06,7.681,No
 337,Insulated Borosilicate Glass,Glass,1150,37.14,4.95,1.362,No
 338,Heavy-Duty PLA Bioplastic,Eco,1690,88.07,4.11,2.265,Yes
 339,Single-Ply Bamboo Sheet,Wood,636,31.82,1.7,0.545,Yes
@@ -349,7 +349,7 @@ Material_ID,Material_Name,Category,Density_kg_m3,Tensile_Strength_MPa,Cost_per_k
 348,Anti-Static Mushroom Mycelium,Eco,151,0.81,4.93,0.554,Yes
 349,Woven Wax Paper,Paper,981,19.32,1.55,1.199,Yes
 350,Industrial-Grade Tissue Paper,Paper,280,1.22,1.68,0.897,Yes
-351,Anti-Static Nylon Fabric,Plastic,1095,57.11,4,5.235,No
+351,Anti-Static Nylon Fabric,Plastic,1095,57.11,4.0,5.235,No
 352,Anti-Static Steel Strap,Metal,7792,399.61,1.68,2.198,No
 353,Waterproof Glass Jar,Glass,2670,48.54,1.75,0.854,No
 354,Single-Ply Tissue Paper,Paper,233,0.72,1.24,0.745,Yes
@@ -391,7 +391,7 @@ Material_ID,Material_Name,Category,Density_kg_m3,Tensile_Strength_MPa,Cost_per_k
 390,UV-Stabilized HDPE Container,Plastic,976,28.25,1.87,2.342,No
 391,Waterproof Wax Paper,Paper,1035,15.68,1.51,1.265,Yes
 392,Fire-Retardant Plywood,Wood,741,45.57,3.88,0.808,Yes
-393,Lightweight Bamboo Sheet,Wood,576,37,1.94,0.555,Yes
+393,Lightweight Bamboo Sheet,Wood,576,37.0,1.94,0.555,Yes
 394,Commercial-Grade Borosilicate Glass,Glass,2174,58.5,3.07,1.073,No
 395,Medical-Grade Recycled Denim,Eco,291,5.82,4.66,0.699,Yes
 396,Woven ABS Plastic,Plastic,1184,53.82,2.69,3.529,No
@@ -420,7 +420,7 @@ Material_ID,Material_Name,Category,Density_kg_m3,Tensile_Strength_MPa,Cost_per_k
 419,Perforated Nylon Fabric,Plastic,1064,49.35,3.39,5.141,No
 420,Double-Wall Sheep Wool,Eco,1871,17.27,4.91,0.672,Yes
 421,Waterproof Recycled Denim,Eco,316,4.79,1.84,0.632,Yes
-422,Insulated Nylon Fabric,Plastic,599,37.5,5,6.25,No
+422,Insulated Nylon Fabric,Plastic,599,37.5,5.0,6.25,No
 423,Single-Ply Cornstarch Foam,Eco,36,0.35,1.62,1.091,Yes
 424,Heavy-Duty Tissue Paper,Paper,335,1.44,2.17,0.99,Yes
 425,Insulated Pine Wood Crate,Wood,241,20.23,3.08,0.578,Yes
@@ -470,7 +470,7 @@ Material_ID,Material_Name,Category,Density_kg_m3,Tensile_Strength_MPa,Cost_per_k
 469,Standard Sheep Wool,Eco,1349,10.38,3.32,0.519,Yes
 470,Single-Ply Mushroom Mycelium,Eco,138,0.57,2.86,0.46,Yes
 471,Heavy-Duty Kraft Paper,Paper,1027,69.12,1.52,0.948,Yes
-472,Food-Grade Kraft Paper,Paper,768,48,1.58,0.768,Yes
+472,Food-Grade Kraft Paper,Paper,768,48.0,1.58,0.768,Yes
 473,Perforated Teflon Coating,Plastic,1944,19.64,8.64,7.855,No
 474,Anti-Static Cork Sheet,Wood,234,4.89,5.47,0.322,Yes
 475,Industrial-Grade Acrylic Sheet,Plastic,1343,86.89,2.84,3.983,No
@@ -529,7 +529,7 @@ Material_ID,Material_Name,Category,Density_kg_m3,Tensile_Strength_MPa,Cost_per_k
 528,Woven Kraft Paper,Paper,880,65.02,1.43,0.88,Yes
 529,UV-Stabilized Styrofoam (EPS),Plastic,26,0.46,2.2,4.144,No
 530,Recycled Kraft Paper,Paper,801,45.05,0.99,0.481,Yes
-531,Medical-Grade Polycarbonate,Plastic,1142,74.24,8,4.34,No
+531,Medical-Grade Polycarbonate,Plastic,1142,74.24,8.0,4.34,No
 532,Single-Ply Acrylic Sheet,Plastic,1070,49.38,2.02,3.174,No
 533,Perforated PLA Bioplastic,Eco,1108,47.65,3.06,1.787,Yes
 534,Double-Wall Cotton Canvas,Eco,2338,74.82,3.66,2.182,Yes
@@ -599,5 +599,5 @@ Material_ID,Material_Name,Category,Density_kg_m3,Tensile_Strength_MPa,Cost_per_k
 598,Laminated Recycled Denim,Eco,326,5.93,2.21,0.771,Yes
 599,Double-Wall Bamboo Sheet,Wood,1004,77.42,3.21,0.803,Yes
 600,Anti-Static Cornstarch Foam,Eco,41,0.52,2.9,1.369,Yes
-601,Mushroom Pkg (Mycelium),Bio-based,95,12,3.2,0.18,Yes
-602,Honeycomb Paper,Paper,380,42,1.95,0.75,Yes
+601,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes
+602,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes

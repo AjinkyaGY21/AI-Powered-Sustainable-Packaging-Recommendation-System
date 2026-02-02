@@ -1,667 +1,174 @@
 # 🌱 EcoPackAI
-## AI‑Powered Sustainable Packaging Recommendation System
+## AI-Powered Sustainable Packaging Recommendation System
 
 ---
 
-## 📌 What is EcoPackAI?
+## 📌 Overview
 
-EcoPackAI is a **simple AI-based decision system** that helps you choose the **best packaging material** for a shipment based on:
+EcoPackAI is an **AI-based decision system** that recommends the **best packaging material** for shipments based on:
 
-- Cost 💰  
-- CO₂ emissions 🌍  
-- Sustainability 🌱  
+- 💰 **Cost**
+- 🌍 **CO₂ Emissions**  
+- 🌱 **Sustainability Score**
 
-You **do NOT choose the packaging material** yourself.  
-The system **predicts and recommends** the best options automatically.
+The system automatically predicts and ranks packaging materials — you don't choose manually.
+
+### Key Features
+
+✅ **MySQL Database** - Full data persistence and authentication  
+✅ **Secure Authentication** - Email/password with bcrypt hashing  
+✅ **Account Protection** - 3-attempt lockout system  
+✅ **Recommendation History** - All queries saved to database  
+✅ **PowerBI Dashboard** - Visual analytics and insights  
+✅ **PDF Reports** - Downloadable recommendation reports  
+✅ **ML Integration** - Auto-loads your models or uses intelligent mock data
 
 ---
 
-## 🧠 How the System Works (In Simple Words)
+## 🧠 How It Works
 
-1. You enter shipment details (weight, size, distance, etc.)  
-2. The system:
-   - Tests your shipment against many packaging materials
-   - Predicts cost and CO₂ for each
-3. It ranks materials using a sustainability score  
-4. You see **Top Recommended Packaging Materials**
+1. **Input** - Enter shipment details (weight, size, distance, fragility, etc.)
+2. **Processing** - System tests your shipment against 15+ packaging materials
+3. **Prediction** - ML models predict cost and CO₂ for each material
+4. **Ranking** - Materials ranked by your chosen priority (Sustainability/CO₂/Cost)
+5. **Output** - View top recommendations with detailed metrics
 
-No ML knowledge required.
+No ML knowledge required to use the system.
 
 ---
 
 ## 🧱 Project Structure
 
 ```
-ecopackai-clean/
+ecopackai/
 ├── backend/
-│   └── app.py                      # Flask API + ML integration (500 lines)
+│   ├── app.py                      # Main Flask application (500+ lines)
+│   ├── auth.py                     # Authentication with bcrypt + lockout
+│   ├── db.py                       # MySQL connection pool
+│   ├── recommender.py              # ML wrapper + history saver
+│   ├── requirements.txt            # Python dependencies
+│   ├── .env                        # Environment variables (CREATE THIS)
+│   └── .env.example                # Template
 ├── frontend/
-│   ├── index.html                  # Main UI (clean, modern)
+│   ├── login.html                  # Login page
+│   ├── index.html                  # Main application UI
 │   ├── css/
-│   │   └── styles.css              # Beautiful styling (1000+ lines)
+│   │   ├── login.css               # Login styles
+│   │   └── styles.css              # Main app styles (1000+ lines)
 │   └── js/
-│       └── app.js                  # Frontend logic (600 lines)
-├── ml/                             # ⬅️ YOUR ML MODELS GO HERE
-│   └── models/
-│       ├── cost_model.pkl          # (Optional) Your trained model
-│       └── co2_model.pkl           # (Optional) Your trained model
-├── data/                           # ⬅️ YOUR DATASET GOES HERE
+│       ├── login.js                # Login logic
+│       └── app.js                  # Frontend logic (600+ lines)
+├── ml/
+│   ├── models/
+│   │   ├── cost_model.pkl          # (Optional) Trained cost model
+│   │   └── co2_model.pkl           # (Optional) Trained CO₂ model
+│   └── notebooks/
+│       └── recommendation_engine.py # Your ML engine
+├── data/
 │   └── processed/
-│       └── final_ecopack_dataset_fe.csv  # (Optional) Your data
-├── .env                            # ⬅️ Environment variables (REQUIRED)
-├── requirements.txt                # ⬅️ Python dependencies
-├── README.md                       # This file
-├── SETUP.md                        # Complete setup commands
-└── QUICKSTART.md                   # 2-minute start guide
+│       └── final_ecopack_dataset_fe.csv  # (Optional) Training dataset
+├── sql/
+│   └── schema.sql                  # Database schema
+├── powerbi/
+│   └── EcoPackAI_Dashboard.pbix    # PowerBI dashboard file
+├── requirements.txt                # Python dependencies
+└── README.md                       # This file
 ```
-
-> 🔹 **Backend**: Flask API (Python)  
-> 🔹 **Frontend**: Pure HTML/CSS/JavaScript (no frameworks!)  
-> 🔹 **Authentication**: Simple session-based (no OAuth complexity)  
-> 🔹 **ML Integration**: Auto-loads your models OR uses mock data
 
 ---
 
-## 🏗️ System Architecture 
+## 🏗️ System Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
 │                      🌱 EcoPackAI System                        │
 └─────────────────────────────────────────────────────────────────┘
 
-┌──────────────────┐          ┌──────────────────┐
-│   HTML/CSS/JS    │◄────────►│   Flask Backend  │
-│   Frontend       │   HTTP   │   (Port 5000)    │
-│  localhost:3000  │          │                  │
-└──────────────────┘          └─────────┬────────┘
+┌──────────────────┐          ┌──────────────────┐          ┌──────────────────┐
+│   HTML/CSS/JS    │◄────────►│   Flask Backend  │◄────────►│  MySQL Database  │
+│   Frontend       │   HTTP   │   (Port 5000)    │   TCP    │  (Port 3306)     │
+│  localhost:3000  │          │                  │          │                  │
+└──────────────────┘          └─────────┬────────┘          └─────────┬────────┘
+                                        │                             │
+                    ┌───────────────────┼─────────────────┐           │
+                    │                   │                 │           │
+              ┌─────▼─────┐      ┌─────▼─────┐    ┌─────▼─────┐     │
+              │  Session  │      │    ML     │    │  History  │     │
+              │   Store   │      │  Models   │    │   Saver   │     │
+              │ (Flask)   │      │   .pkl    │    │           │     │
+              └───────────┘      └───────────┘    └───────────┘     │
+                                                                     │
+                                        ┌────────────────────────────┘
                                         │
-                    ┌───────────────────┼───────────────────┐
-                    │                   │                   │
-              ┌─────▼─────┐      ┌─────▼─────┐      ┌─────▼─────┐
-              │  Session  │      │   Your    │      │    ML     │
-              │   Data    │      │  Dataset  │      │  Models   │
-              │ In-Memory │      │   .csv    │      │   .pkl    │
-              └───────────┘      └───────────┘      └───────────┘
-```
-
-**Flow:**
-1. User opens browser → HTML/CSS/JS loads
-2. Frontend sends API request to Flask backend
-3. Backend validates session → Loads ML models
-4. ML models predict cost/CO₂ for materials
-5. Backend returns top recommendations
-6. Frontend displays results + PDF download option
-
----
-
-## ⚙️ How to Set Up EcoPackAI (Complete Guide)
-
-### 🎯 Prerequisites
-
-- **Python 3.8+** installed
-- **Web browser** (Chrome, Firefox, Safari, Edge)
-- **Terminal/Command Prompt**
-
-That's it! No database setup, no OAuth, no complexity.
-
----
-
-### ✅ Step 1: Download the Project
-
-Extract the ZIP file or navigate to project:
-
-```bash
-cd ecopackai-clean
-```
-
----
-
-### ✅ Step 2: Create Virtual Environment
-
-**Windows:**
-```bash
-python -m venv venv
-venv\Scripts\activate
-```
-
-**Mac/Linux:**
-```bash
-python3 -m venv venv
-source venv/bin/activate
-```
-
-You should see `(venv)` in your terminal.
-
----
-
-### ✅ Step 3: Install Dependencies
-
-```bash
-pip install --upgrade pip
-pip install -r requirements.txt
-```
-
-This installs:
-- Flask (web framework)
-- Flask-CORS (cross-origin requests)
-- Flask-Limiter (rate limiting)
-- Pandas, NumPy (data processing)
-- Scikit-learn, XGBoost (ML models)
-- ReportLab (PDF generation)
-- Gunicorn (production server)
-
----
-
-### ✅ Step 4: Generate Secret Key
-
-Run this command:
-
-```bash
-python -c "import secrets; print(secrets.token_urlsafe(32))"
-```
-
-**Example output:**
-```
-k3vX9pLmQ7rT2nB8jH4yF6wD1sA5zE0cU
-```
-
-Copy this key!
-
----
-
-### ✅ Step 5: Create .env File
-
-Create a `.env` file in the project root:
-
-```env
-# REQUIRED
-SECRET_KEY=paste-your-key-from-step-4-here
-
-# Optional - Only if you have your own ML models
-DATASET_PATH=data/processed/final_ecopack_dataset_fe.csv
-ML_MODELS_PATH=ml/models
-```
-
----
-
-## 🚀 Running EcoPackAI
-
-### Terminal 1: Start Backend
-
-```bash
-cd backend
-python app.py
-```
-
-**Expected output:**
-```
-🌱 EcoPackAI Backend Starting...
-✅ ML Models: True
-✅ Materials: 15
-📚 Health: http://localhost:5000/api/health
- * Running on http://0.0.0.0:5000
-```
-
-**Leave this running!**
-
----
-
-### Terminal 2: Start Frontend
-
-**Mac/Linux:**
-```bash
-cd frontend
-python3 -m http.server 3000
-```
-
-**Windows:**
-```bash
-cd frontend
-python -m http.server 3000
-```
-
----
-
-### Open Browser
-
-Go to: **http://localhost:3000**
-
----
-
-## 📍 Where to Update URLs
-
-### For Local Development
-✅ **Nothing to change!** Works immediately.
-
-### For Deployment
-
-**1. Frontend** (`frontend/js/app.js` line 6):
-```javascript
-const API_URL = 'https://YOUR-BACKEND.onrender.com';  // ← UPDATE
-```
-
-**2. Backend** (`backend/app.py` line 35):
-```python
-CORS(app, origins=[
-    'http://localhost:3000',
-    'https://YOUR-FRONTEND.netlify.app'  # ← ADD
-])
-```
-
----
-
-## 🧠 ML Models
-
-### Without Your Models (Works Immediately!)
-- Uses intelligent mock data
-- 15 realistic materials
-- Perfect for testing
-
-### With Your Models
-1. Place models in `ml/models/`:
-   - `cost_model.pkl`
-   - `co2_model.pkl`
-
-2. Place dataset in `data/processed/`:
-   - `final_ecopack_dataset_fe.csv`
-
-3. Update `.env`
-
-4. Restart backend
-
-5. **Customize `backend/app.py` line 150** to match your features!
-
----
-
-## 🌐 Deployment
-
-### Backend → Render.com
-1. Push to GitHub
-2. Create Web Service
-3. Build: `pip install -r requirements.txt`
-4. Start: `gunicorn backend.app:app`
-5. Add env: `SECRET_KEY`
-
-### Frontend → Netlify.com
-1. Update API_URL in `frontend/js/app.js`
-2. Drag `frontend` folder to Netlify
-3. Update CORS in backend
-4. Done!
-
----
-
-## 🐛 Troubleshooting
-
-**Backend won't start:**
-```bash
-# Check virtual environment is activated
-pip install -r requirements.txt
-```
-
-**Frontend can't connect:**
-```bash
-# Check backend is running
-curl http://localhost:5000/api/health
-```
-
-**CORS error:**
-```python
-# Add your URL to backend/app.py line 35
-```
-
----
-
-## 📚 Complete Documentation
-
-- **README.md** - This file (overview)
-- **SETUP.md** - All commands reference
-- **QUICKSTART.md** - 2-minute start guide
-- **Code comments** - Extensive in all files
-
----
-
-**🌱 Start Now:** Open **QUICKSTART.md** for fastest setup! 🚀
-
-# 🌱 EcoPackAI - MySQL Edition
-## AI-Powered Sustainable Packaging with Complete Authentication
-
----
-
-## 🎯 What's New in This Version?
-
-✅ **MySQL Database** - Full database integration  
-✅ **Email/Password Authentication** - Secure login system  
-✅ **Bcrypt Hashing** - Password security  
-✅ **3-Attempt Lockout** - Account protection  
-✅ **Recommendation History** - All queries saved to MySQL  
-✅ **Fixed Sorting** - Properly sorts by Sustainability/CO₂/Cost  
-✅ **Fixed UI Colors** - Best recommendation card matches theme  
-✅ **Session Management** - Secure user sessions  
-
----
-
-## 📁 Project Structure
-
-```
-ecopackai-mysql/
-├── backend/
-│   ├── app.py                  # Main Flask application
-│   ├── auth.py                 # Authentication logic (bcrypt + lockout)
-│   ├── db.py                   # MySQL connection
-│   ├── recommender.py          # ML wrapper + history saver
-│   ├── requirements.txt        # Python dependencies
-│   ├── .env                    # Environment variables (CREATE THIS)
-│   └── .env.example            # Template
-├── frontend/
-│   ├── login.html              # Login page
-│   ├── index.html              # Main app (copy from uploads)
-│   ├── css/
-│   │   ├── login.css           # Login page styles
-│   │   └── styles.css          # Main app styles (copy from uploads)
-│   └── js/
-│       ├── login.js            # Login logic
-│       └── app.js              # Main app logic
-├── ml/
-│   └── notebooks/
-│       └── recommendation_engine.py  # Your ML engine
-├── sql/
-│   └── schema.sql              # Database schema
-└── README.md                   # This file
+                                 ┌──────▼──────┐
+                                 │   PowerBI   │
+                                 │  Dashboard  │
+                                 │ (localhost) │
+                                 └─────────────┘
 ```
 
 ---
 
 ## 🚀 Complete Setup Guide
 
-### Step 1: MySQL Setup
+### Prerequisites
+
+- **Python 3.8+** installed
+- **MySQL 8.0+** installed and running
+- **PowerBI Desktop** (for dashboard)
+- **Web browser** (Chrome, Firefox, Safari, Edge)
+- **Terminal/Command Prompt**
+
+---
+
+### Step 1: MySQL Database Setup
 
 **1.1 Install MySQL** (if not installed)
 
-**1.2 Create Database**
+**1.2 Create Database and Tables**
 
 ```bash
 # Login to MySQL
 mysql -u root -p
 
-# Run the schema
-source sql/schema.sql
+# Create database
+CREATE DATABASE IF NOT EXISTS ecopackdb;
+USE ecopackdb;
+
+# Run schema
+source sql/schema.sql;
+
+# Verify tables
+SHOW TABLES;
+# Should show: users, recommendation_history
+
+# Check test user
+SELECT * FROM users;
+# Should show: test@ecopackai.com
 ```
 
-**Or manually:**
+**Manual Schema Creation** (if needed):
 
 ```sql
 CREATE DATABASE IF NOT EXISTS ecopackdb;
 USE ecopackdb;
 
--- Run the contents of sql/schema.sql
-```
-
-**1.3 Verify Tables**
-
-```sql
-SHOW TABLES;
--- Should show: users, recommendation_history
-
-SELECT * FROM users;
--- Should show test@ecopackai.com
-```
-
----
-
-### Step 2: Backend Setup
-
-**2.1 Create Virtual Environment**
-
-```bash
-cd backend
-python -m venv venv
-
-# Activate
-source venv/bin/activate       # Mac/Linux
-venv\Scripts\activate          # Windows
-```
-
-**2.2 Install Dependencies**
-
-```bash
-pip install -r requirements.txt
-```
-
-**2.3 Create .env File**
-
-Copy `.env.example` to `.env`:
-
-```bash
-cp .env.example .env
-```
-
-**Edit `.env`:**
-
-```env
-APP_SECRET_KEY=Uh84IqEQ_5duV4R3d2glAW8-zcDp8veSlkWsJZWBM-s
-
-DB_HOST=localhost
-DB_PORT=3306
-DB_USER=ecopackai
-DB_PASSWORD=Yawalkarag@21       # YOUR ACTUAL PASSWORD
-DB_NAME=ecopackdb
-
-FLASK_ENV=development
-```
-
-**2.4 Test Database Connection**
-
-```bash
-python db.py
-```
-
-Expected: `✅ Database connection successful!`
-
-**2.5 Start Backend**
-
-```bash
-python app.py
-```
-
-Expected:
-```
-🌱 EcoPackAI Backend Starting...
-✅ MySQL connected
-📚 API: http://localhost:5000/api/health
- * Running on http://0.0.0.0:5000
-```
-
----
-
-### Step 3: Add Your ML Engine
-
-**3.1 Copy Your ML Files**
-
-```bash
-# Copy your recommendation_engine.py
-cp /path/to/your/recommendation_engine.py ml/notebooks/
-```
-
-**3.2 Verify it has these exports:**
-
-```python
-# ml/notebooks/recommendation_engine.py should export:
-- generate_recommendations
-- materials_df
-- co2_model
-- cost_model
-- FEATURES_COST
-- FEATURES_CO2
-```
-
----
-
-### Step 4: Frontend Setup
-
-**4.1 Copy Missing Files**
-
-Copy these from your uploads:
-- `index.html` → `frontend/index.html`
-- `styles.css` → `frontend/css/styles.css`
-
-**4.2 Start Frontend**
-
-```bash
-cd frontend
-
-# Option 1: Python HTTP Server
-python -m http.server 3000
-
-# Option 2: Live Server (VS Code extension)
-# Right-click index.html → "Open with Live Server"
-```
-
----
-
-## 🔐 Authentication Flow
-
-### First-Time Login
-
-1. User enters email: `test@ecopackai.com`
-2. User enters any password: `mypassword123`
-3. System **hashes and stores** the password
-4. User is logged in ✅
-
-### Subsequent Logins
-
-1. User enters email: `test@ecopackai.com`
-2. User enters password: `mypassword123`
-3. System **verifies hash**
-4. User is logged in ✅
-
-### Failed Attempts
-
-1. Wrong password attempt 1: ⚠️ 2 attempts remaining
-2. Wrong password attempt 2: ⚠️ 1 attempt remaining
-3. Wrong password attempt 3: 🔒 **ACCESS DENIED**
-   - Login form disappears
-   - Red X and "ACCESS DENIED" message shown
-   - Account locked in database
-
-### Unlock Account
-
-```sql
--- Run in MySQL
-UPDATE users SET is_locked = FALSE, failed_attempts = 0 WHERE email = 'test@ecopackai.com';
-```
-
----
-
-## 🎯 Using the App
-
-### 1. Open Login Page
-
-```
-http://localhost:3000/login.html
-```
-
-### 2. Login
-
-- Email: `test@ecopackai.com`
-- Password: (any password for first time)
-
-### 3. Use Main App
-
-- Fill in shipment details
-- Choose optimization goal (🌱 Sustainability / 🌍 CO₂ / 💰 Cost)
-- Click "Generate AI Recommendations"
-- View results (properly sorted!)
-- Download PDF
-
-### 4. Check History
-
-All recommendations are saved to MySQL:
-
-```sql
-SELECT * FROM recommendation_history;
-```
-
----
-
-## 🐛 Troubleshooting
-
-### Backend Won't Start
-
-**Error: "MySQL connection failed"**
-
-```bash
-# Check MySQL is running
-mysql -u root -p
-
-# Verify credentials in .env
-# Test connection
-python db.py
-```
-
-**Error: "Module not found"**
-
-```bash
-pip install -r requirements.txt
-```
-
-### Frontend Won't Connect
-
-**CORS Error**
-
-Update `backend/app.py` line 40:
-
-```python
-CORS(app, origins=[
-    "http://localhost:3000",
-    "http://127.0.0.1:5500",  # Add Live Server port
-])
-```
-
-### Sorting Not Working
-
-✅ **FIXED!** The backend now properly sorts by the selected criterion.
-
-Verify in `backend/recommender.py` line 50:
-```python
-sort_by=sort_by  # This is now passed correctly
-```
-
-### Best Card Color Wrong
-
-✅ **FIXED!** Update `frontend/css/styles.css`:
-
-```css
-.best-recommendation-card {
-    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-    /* Now matches dark theme */
-}
-```
-
----
-
-## 📊 Database Schema
-
-### Users Table
-
-```sql
+-- Users table with authentication
 CREATE TABLE users (
     email VARCHAR(255) PRIMARY KEY,
-    password_hash VARCHAR(255),           -- Bcrypt hash
-    failed_attempts INT DEFAULT 0,        -- Track attempts
-    is_locked BOOLEAN DEFAULT FALSE,      -- Lock after 3 fails
-    created_at TIMESTAMP,
-    last_login TIMESTAMP
+    password_hash VARCHAR(255),
+    failed_attempts INT DEFAULT 0,
+    is_locked BOOLEAN DEFAULT FALSE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    last_login TIMESTAMP NULL
 );
-```
 
-### Recommendation History Table
-
-```sql
+-- Recommendation history
 CREATE TABLE recommendation_history (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     email VARCHAR(255),
     session_id VARCHAR(100),
-    created_at TIMESTAMP,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     
     -- Shipment details
     product_category VARCHAR(100),
@@ -674,100 +181,654 @@ CREATE TABLE recommendation_history (
     width_cm FLOAT,
     height_cm FLOAT,
     
-    -- Request params
+    -- Request parameters
     k_value INT,
     sort_by VARCHAR(50),
     
-    -- Results (JSON)
+    -- Results (JSON format)
     recommendations JSON,
     
     FOREIGN KEY (email) REFERENCES users(email)
 );
+
+-- Insert test user
+INSERT INTO users (email, password_hash, failed_attempts, is_locked)
+VALUES ('test@ecopackai.com', NULL, 0, FALSE);
 ```
 
 ---
 
-## 🔧 Configuration
+### Step 2: Backend Setup
 
-### Change Session Timeout
+**2.1 Create Virtual Environment**
 
-`backend/app.py` line 24:
+```bash
+cd backend
 
-```python
-app.config["PERMANENT_SESSION_LIFETIME"] = timedelta(minutes=60)  # 1 hour
+# Create venv
+python -m venv venv
+
+# Activate
+source venv/bin/activate       # Mac/Linux
+venv\Scripts\activate          # Windows
 ```
 
-### Change Lockout Attempts
+**2.2 Install Dependencies**
 
-`backend/auth.py` line 15:
-
-```python
-MAX_ATTEMPTS = 5  # Allow 5 attempts instead of 3
+```bash
+pip install --upgrade pip
+pip install -r requirements.txt
 ```
 
-### Add More Test Users
+This installs:
+- Flask (web framework)
+- Flask-CORS (cross-origin requests)
+- Flask-Limiter (rate limiting)
+- PyMySQL (MySQL connector)
+- bcrypt (password hashing)
+- Pandas, NumPy (data processing)
+- Scikit-learn, XGBoost (ML models)
+- ReportLab (PDF generation)
+- python-dotenv (environment variables)
 
+**2.3 Generate Secret Key**
+
+```bash
+python -c "import secrets; print(secrets.token_urlsafe(32))"
+```
+
+**Example output:**
+```
+k3vX9pLmQ7rT2nB8jH4yF6wD1sA5zE0cU
+```
+
+Copy this key!
+
+**2.4 Create .env File**
+
+Create `.env` in the `backend/` directory:
+
+```env
+# Flask Secret Key (REQUIRED)
+APP_SECRET_KEY=paste-your-generated-key-here
+
+# MySQL Connection (REQUIRED)
+DB_HOST=localhost
+DB_PORT=3306
+DB_USER=root
+DB_PASSWORD=your-mysql-password
+DB_NAME=ecopackdb
+
+# Optional - Only if you have ML models
+DATASET_PATH=../data/processed/final_ecopack_dataset_fe.csv
+ML_MODELS_PATH=../ml/models
+
+# Environment
+FLASK_ENV=development
+```
+
+**2.5 Test Database Connection**
+
+```bash
+python db.py
+```
+
+**Expected output:**
+```
+✅ Database connection successful!
+```
+
+**2.6 Start Backend**
+
+```bash
+python app.py
+```
+
+**Expected output:**
+```
+🌱 EcoPackAI Backend Starting...
+✅ MySQL connected
+✅ ML Models loaded: True
+✅ Materials available: 15
+📚 API Health: http://localhost:5000/api/health
+ * Running on http://0.0.0.0:5000
+```
+
+**Leave this terminal running!**
+
+---
+
+### Step 3: Frontend Setup
+
+**3.1 Start Frontend Server**
+
+Open a **new terminal**:
+
+```bash
+cd frontend
+
+# Mac/Linux
+python3 -m http.server 3000
+
+# Windows
+python -m http.server 3000
+```
+
+**Alternative - VS Code Live Server:**
+- Install "Live Server" extension
+- Right-click `login.html` → "Open with Live Server"
+
+---
+
+### Step 4: PowerBI Dashboard Setup
+
+**4.1 Install PowerBI Desktop**
+
+Download from: https://powerbi.microsoft.com/desktop/
+
+**4.2 Connect PowerBI to MySQL**
+
+1. Open PowerBI Desktop
+2. Click **Get Data** → **Database** → **MySQL database**
+3. Enter connection details:
+   - **Server:** localhost
+   - **Database:** ecopackdb
+4. Click **OK**
+5. Select **Database** authentication
+   - **User name:** root (or your MySQL user)
+   - **Password:** your-mysql-password
+6. Click **Connect**
+
+**4.3 Import Tables**
+
+Select these tables:
+- ✅ `users`
+- ✅ `recommendation_history`
+
+Click **Load**
+
+**4.4 Create Dashboard Visualizations**
+
+**A. Recommendations Over Time (Line Chart)**
+- **X-axis:** `created_at` (Date hierarchy)
+- **Y-axis:** Count of `id`
+- **Legend:** `sort_by` (Sustainability/CO₂/Cost)
+
+**B. Top Product Categories (Bar Chart)**
+- **Axis:** `product_category`
+- **Values:** Count of `id`
+
+**C. Average Metrics by Shipping Mode (Clustered Column)**
+- **Axis:** `shipping_mode`
+- **Values:** 
+  - Average of `weight_kg`
+  - Average of `distance_km`
+
+**D. User Activity (Table)**
+- **Columns:**
+  - `email`
+  - Count of recommendations
+  - Latest `created_at`
+  - Most used `sort_by`
+
+**E. Fragility Distribution (Pie Chart)**
+- **Legend:** `fragility` (1-5)
+- **Values:** Count of `id`
+
+**F. Key Metrics (Cards)**
+- Total Recommendations: `COUNT(id)`
+- Active Users: `DISTINCTCOUNT(email)`
+- Avg Weight: `AVERAGE(weight_kg)`
+- Avg Distance: `AVERAGE(distance_km)`
+
+**4.5 Add Filters (Slicers)**
+
+Add slicers for:
+- Date Range (`created_at`)
+- Product Category
+- Shipping Mode
+- Sort By (optimization goal)
+
+**4.6 Save Dashboard**
+
+File → Save As → `powerbi/EcoPackAI_Dashboard.pbix`
+
+**4.7 Auto-Refresh Setup**
+
+1. Go to **Transform Data** → **Data source settings**
+2. Select MySQL connection → **Edit Permissions**
+3. Set **Privacy Level** to "Organizational"
+4. In the report, click **Refresh** to update data
+
+---
+
+## 🔐 Authentication Flow
+
+### First-Time Login
+
+1. Navigate to: `http://localhost:3000/login.html`
+2. Enter email: `test@ecopackai.com`
+3. Enter any password (e.g., `mypassword123`)
+4. System **hashes and stores** the password in MySQL
+5. Redirected to main app ✅
+
+### Subsequent Logins
+
+1. Enter email: `test@ecopackai.com`
+2. Enter password: `mypassword123`
+3. System verifies bcrypt hash
+4. Logged in successfully ✅
+
+### Account Lockout
+
+After **3 failed login attempts**:
+- 🔒 Account locked in database
+- Login form disappears
+- "ACCESS DENIED" message shown
+
+**To unlock:**
 ```sql
-INSERT INTO users (email, password_hash, failed_attempts, is_locked)
-VALUES ('user@example.com', NULL, 0, FALSE);
+UPDATE users 
+SET is_locked = FALSE, failed_attempts = 0 
+WHERE email = 'test@ecopackai.com';
 ```
+
+---
+
+## 🎯 Using the Application
+
+### 1. Login
+
+Open: `http://localhost:3000/login.html`
+
+### 2. Generate Recommendations
+
+1. Fill in shipment details:
+   - Product Category
+   - Weight (kg)
+   - Dimensions (L×W×H cm)
+   - Distance (km)
+   - Fragility (1-5)
+   - Shipping Mode (Road/Air/Sea/Rail)
+   - Moisture Sensitive (Yes/No)
+
+2. Choose optimization goal:
+   - 🌱 **Sustainability** (recommended)
+   - 🌍 **CO₂ Emissions**
+   - 💰 **Cost**
+
+3. Click **"Generate AI Recommendations"**
+
+4. View results:
+   - **Best Recommendation** (highlighted card)
+   - **Top 5 Alternatives**
+   - Detailed metrics for each option
+
+### 3. Download PDF Report
+
+Click **"Download PDF Report"** button to get a professional summary.
+
+### 4. View History
+
+Check MySQL database:
+```sql
+SELECT 
+    email,
+    product_category,
+    weight_kg,
+    sort_by,
+    created_at
+FROM recommendation_history
+ORDER BY created_at DESC
+LIMIT 10;
+```
+
+Or open PowerBI dashboard for visual analytics.
+
+---
+
+## 🧠 ML Models Integration
+
+### Option 1: Without Your Models (Works Immediately!)
+
+- Uses intelligent mock data
+- 15 realistic packaging materials
+- Accurate cost/CO₂ calculations
+- Perfect for testing and demos
+
+### Option 2: With Your Trained Models
+
+**1. Place your models:**
+```
+ml/models/
+├── cost_model.pkl       # Trained cost predictor
+└── co2_model.pkl        # Trained CO₂ predictor
+```
+
+**2. Place your dataset:**
+```
+data/processed/
+└── final_ecopack_dataset_fe.csv
+```
+
+**3. Update `.env`:**
+```env
+DATASET_PATH=../data/processed/final_ecopack_dataset_fe.csv
+ML_MODELS_PATH=../ml/models
+```
+
+**4. Ensure your `recommendation_engine.py` exports:**
+```python
+# ml/notebooks/recommendation_engine.py
+def generate_recommendations(shipment_data, k=5, sort_by='sustainability'):
+    # Your implementation
+    pass
+
+# Required exports
+materials_df = pd.DataFrame(...)  # Your materials data
+co2_model = ...                    # Your CO₂ model
+cost_model = ...                   # Your cost model
+FEATURES_COST = [...]              # Feature list for cost
+FEATURES_CO2 = [...]               # Feature list for CO₂
+```
+
+**5. Restart backend:**
+```bash
+python app.py
+```
+
+---
+
+## 📊 PowerBI Dashboard Features
+
+### Live Data Connection
+- Real-time sync with MySQL
+- Auto-refresh capabilities
+- No data export needed
+
+### Key Visualizations
+
+1. **Recommendation Trends**
+   - Time-series analysis
+   - Peak usage periods
+   - Growth patterns
+
+2. **Product Analysis**
+   - Most packaged categories
+   - Average weights by category
+   - Fragility patterns
+
+3. **Shipping Insights**
+   - Mode preferences (Road/Air/Sea/Rail)
+   - Distance distributions
+   - Cost vs. CO₂ trade-offs
+
+4. **User Behavior**
+   - Active users tracking
+   - Optimization goal preferences
+   - Usage frequency
+
+5. **Environmental Impact**
+   - Total CO₂ saved
+   - Sustainability score trends
+   - Material preferences
+
+### Interactive Filters
+
+- **Date Range** - Focus on specific periods
+- **Product Category** - Filter by product type
+- **Shipping Mode** - Analyze by transport method
+- **Sort By** - View by optimization goal
+
+---
+
+## 🌐 Deployment
+
+### Backend → Render.com (or similar)
+
+1. Push code to GitHub
+2. Create new Web Service on Render
+3. Set build command: `pip install -r requirements.txt`
+4. Set start command: `gunicorn backend.app:app`
+5. Add environment variables:
+   - `APP_SECRET_KEY`
+   - `DB_HOST` (cloud MySQL host)
+   - `DB_PORT`
+   - `DB_USER`
+   - `DB_PASSWORD`
+   - `DB_NAME`
+
+### Frontend → Netlify/Vercel
+
+1. Update `frontend/js/app.js` line 6:
+```javascript
+const API_URL = 'https://your-backend.onrender.com';
+```
+
+2. Update `backend/app.py` CORS settings:
+```python
+CORS(app, origins=[
+    'http://localhost:3000',
+    'https://your-frontend.netlify.app'
+])
+```
+
+3. Deploy frontend folder
+
+### MySQL → Cloud Database
+
+Use **PlanetScale**, **AWS RDS**, or **DigitalOcean**:
+- Export schema: `mysqldump -u root -p ecopackdb > backup.sql`
+- Import to cloud database
+- Update `.env` with cloud credentials
+
+### PowerBI → PowerBI Service
+
+1. Publish from Desktop: **File** → **Publish** → **Publish to PowerBI**
+2. Set up **Gateway** for cloud MySQL connection
+3. Configure **scheduled refresh**
+4. Share dashboard with team
+
+---
+
+## 🐛 Troubleshooting
+
+### Backend Issues
+
+**Error: "MySQL connection failed"**
+```bash
+# Check MySQL is running
+mysql -u root -p
+
+# Test connection
+python db.py
+
+# Verify credentials in .env
+```
+
+**Error: "Module not found"**
+```bash
+pip install -r requirements.txt
+```
+
+### Frontend Issues
+
+**CORS Error**
+
+Update `backend/app.py`:
+```python
+CORS(app, origins=[
+    "http://localhost:3000",
+    "http://127.0.0.1:5500",  # VS Code Live Server
+    "http://localhost:5500"    # Alternative port
+])
+```
+
+**Can't Connect to Backend**
+```bash
+# Verify backend is running
+curl http://localhost:5000/api/health
+
+# Should return: {"status": "healthy"}
+```
+
+### Database Issues
+
+**Tables Don't Exist**
+```sql
+USE ecopackdb;
+SHOW TABLES;
+
+-- If empty, run:
+source sql/schema.sql;
+```
+
+**User Can't Login**
+```sql
+-- Check user exists
+SELECT * FROM users WHERE email = 'test@ecopackai.com';
+
+-- Unlock if locked
+UPDATE users SET is_locked = FALSE, failed_attempts = 0 
+WHERE email = 'test@ecopackai.com';
+```
+
+### PowerBI Issues
+
+**Can't Connect to MySQL**
+- Install MySQL ODBC driver
+- Check MySQL is listening on 0.0.0.0:3306
+- Verify firewall allows connection
+
+**Data Not Refreshing**
+- Click **Refresh** button in PowerBI
+- Check Data Source Settings → Credentials
+- Verify MySQL service is running
 
 ---
 
 ## 📝 API Endpoints
 
-| Endpoint | Method | Description |
-|----------|--------|-------------|
-| `/api/auth/login` | POST | Login (sets password on first login) |
-| `/api/auth/logout` | POST | Logout |
-| `/api/auth/status` | GET | Check if authenticated |
-| `/api/recommend` | POST | Generate recommendations |
-| `/api/history` | GET | Get user history |
-| `/api/generate-pdf` | POST | Download PDF report |
-| `/api/health` | GET | Health check |
+| Endpoint | Method | Auth Required | Description |
+|----------|--------|---------------|-------------|
+| `/api/auth/login` | POST | No | Login (sets password on first use) |
+| `/api/auth/logout` | POST | Yes | Logout and clear session |
+| `/api/auth/status` | GET | Yes | Check authentication status |
+| `/api/recommend` | POST | Yes | Generate recommendations |
+| `/api/history` | GET | Yes | Get user recommendation history |
+| `/api/generate-pdf` | POST | Yes | Download PDF report |
+| `/api/health` | GET | No | Health check |
+
+---
+
+## 🔧 Configuration
+
+### Session Timeout
+
+Edit `backend/app.py` line 24:
+```python
+app.config["PERMANENT_SESSION_LIFETIME"] = timedelta(minutes=60)  # Change as needed
+```
+
+### Lockout Attempts
+
+Edit `backend/auth.py` line 15:
+```python
+MAX_ATTEMPTS = 3  # Change to 5, 10, etc.
+```
+
+### Number of Recommendations
+
+Edit frontend or pass as parameter:
+```javascript
+// frontend/js/app.js
+k_value: 5  // Change to 3, 10, etc.
+```
+
+### Add New Users
+
+```sql
+INSERT INTO users (email, password_hash, failed_attempts, is_locked)
+VALUES ('newuser@example.com', NULL, 0, FALSE);
+```
 
 ---
 
 ## ✅ Features Checklist
 
 - [x] MySQL database integration
-- [x] Email/password authentication
-- [x] Bcrypt password hashing
+- [x] Email/password authentication with bcrypt
 - [x] 3-attempt account lockout
-- [x] First-time password setup
-- [x] Session management
-- [x] Recommendation history saving
-- [x] Proper sorting (Sustainability/CO₂/Cost)
-- [x] Fixed best card color (dark theme)
+- [x] Session management (Flask sessions)
+- [x] Recommendation history saved to database
+- [x] PowerBI dashboard with live MySQL connection
+- [x] Proper sorting by Sustainability/CO₂/Cost
 - [x] PDF report generation
 - [x] Logout functionality
-- [x] Authentication guards on all routes
+- [x] CORS configuration for deployment
+- [x] ML model integration (auto-detect)
+- [x] Mock data fallback
+- [x] Responsive UI design
+- [x] Error handling and validation
 
 ---
 
-## 🚀 Next Steps
+## 📞 Common Issues & Solutions
 
-1. ✅ Test login flow
-2. ✅ Generate recommendations
-3. ✅ Verify sorting works correctly
-4. ✅ Check recommendation history in MySQL
-5. ✅ Test PDF download
-6. ✅ Test account lockout (3 failed attempts)
-7. Deploy to production (Render + MySQL cloud)
-
----
-
-## 📞 Support
-
-**Common Issues:**
-
-1. **Can't login**: Check MySQL is running and credentials in `.env`
-2. **Sorting wrong**: Verify `sort_by` parameter is passed in `app.py`
-3. **Colors wrong**: Update CSS with dark theme colors
-4. **ML engine not found**: Copy `recommendation_engine.py` to `ml/notebooks/`
+| Issue | Solution |
+|-------|----------|
+| Can't login | Check MySQL running, verify `.env` credentials |
+| Sorting not working | Ensure `sort_by` parameter passed correctly |
+| PowerBI can't connect | Install MySQL ODBC driver, check firewall |
+| Backend crashes | Check Python version (3.8+), reinstall requirements |
+| Frontend blank | Check browser console for errors, verify API_URL |
+| Account locked | Run unlock SQL query in MySQL |
+| Models not loading | Verify paths in `.env`, check file permissions |
 
 ---
 
-**🌱 Your complete EcoPackAI with MySQL authentication is ready!**
+## 🚀 Quick Start Summary
 
-**Start with:** `python backend/app.py` then open `http://localhost:3000/login.html`
+```bash
+# 1. Setup MySQL
+mysql -u root -p
+CREATE DATABASE ecopackdb;
+source sql/schema.sql;
+
+# 2. Setup Backend
+cd backend
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+# Create .env with your settings
+python app.py
+
+# 3. Setup Frontend (new terminal)
+cd frontend
+python -m http.server 3000
+
+# 4. Open Browser
+# http://localhost:3000/login.html
+
+# 5. Setup PowerBI (optional)
+# Open PowerBI Desktop → Get Data → MySQL
+# Connect to localhost:3306/ecopackdb
+# Create visualizations
+```
+
+---
+
+## 📚 Documentation Files
+
+- **README.md** - This comprehensive guide
+- **sql/schema.sql** - Database schema
+- **backend/.env.example** - Environment template
+- **Code comments** - Extensive inline documentation
+
+---
+
+**🌱 Your complete EcoPackAI system with MySQL + PowerBI is ready!**
+
+**Quick Start:** Open `http://localhost:3000/login.html` after running backend and frontend servers.
+
+**Questions?** Check the Troubleshooting section or review inline code comments.

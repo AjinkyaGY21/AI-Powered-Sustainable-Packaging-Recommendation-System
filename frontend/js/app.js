@@ -9,7 +9,7 @@
 const CONFIG = {
     API_URL: (() => {
         const isLocal = ['localhost', '127.0.0.1'].includes(window.location.hostname);
-        return isLocal ? 'http://localhost:5000' : 'https://your-backend.onrender.com';
+        return isLocal ? 'http://localhost:5000' : 'https://ai-powered-sustainable-packaging-recommendation-system.onrender.com';
     })(),
     
     ROUTES: {
@@ -175,6 +175,9 @@ const RecommendationController = {
             
             if (!this.validateFormData(formData)) {
                 UI.showToast('Please select category and shipping mode', 'error');
+		State.isGenerating = false;
+        	UI.Button.setLoading(DOM.generateBtn, false);
+        	UI.Loading.hide();
                 return;
             }
             
@@ -466,3 +469,51 @@ document.addEventListener('DOMContentLoaded', () => {
     Logger.info('Starting EcoPackAI application (No Login Mode)...');
     App.init();
 });
+
+
+// ================= SESSION TIMER (2 HOURS) =================
+let sessionDuration = 2 * 60 * 60; // Sync with backend constant
+
+function startSessionTimer() {
+    const timerElements = [
+        document.getElementById("sessionTimer"),
+        document.getElementById("sessionTimerSidebar")
+    ];
+
+    setInterval(() => {
+        if (sessionDuration <= 0) {
+    		logoutUser();
+	}
+
+
+        sessionDuration--;
+
+        let hrs = String(Math.floor(sessionDuration / 3600)).padStart(2, '0');
+        let mins = String(Math.floor((sessionDuration % 3600) / 60)).padStart(2, '0');
+        let secs = String(sessionDuration % 60).padStart(2, '0');
+
+        timerElements.forEach(el => {
+            if (el) el.innerText = `${hrs}:${mins}:${secs}`;
+        });
+
+    }, 1000);
+}
+
+startSessionTimer();
+
+
+// ================= LOGOUT =================
+function logoutUser() {
+    fetch(`${CONFIG.API_URL}/api/auth/logout`, {
+        method: "POST",
+        credentials: "include"
+    })
+    .then(res => res.json())
+    .then(data => {
+        alert("Logged out successfully");
+        window.location.reload();
+    });
+}
+
+document.getElementById("logoutBtn")?.addEventListener("click", logoutUser);
+document.getElementById("sidebarLogout")?.addEventListener("click", logoutUser);

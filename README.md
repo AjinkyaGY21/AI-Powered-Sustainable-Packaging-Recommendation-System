@@ -3,6 +3,12 @@
 
 ---
 
+## 🌐 Live Demo
+
+Check out the deployed frontend here: [EcoPackAI Live App](http://ecopackai-web.vercel.app/)
+
+---
+
 ## 📌 Overview
 
 EcoPackAI is an **AI-based decision system** that recommends the **best packaging material** for shipments based on:

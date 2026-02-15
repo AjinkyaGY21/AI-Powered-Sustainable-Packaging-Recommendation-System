@@ -68,6 +68,7 @@ CORS(app,
      origins=[
          "http://localhost:3000",
          "http://127.0.0.1:5500",
+	 "https://ai-powered-sustainable-packaging-recommendation-system.onrender.com",
          "https://ecopackai-web.vercel.app/",  # ← YOUR VERCEL URL
          "https://*.vercel.app"  # Allow all Vercel preview URLs
      ])

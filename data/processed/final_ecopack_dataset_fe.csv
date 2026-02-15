@@ -303,7 +303,7 @@ Beauty,0.59,0.22,5,True,Air,2800,PLA Bioplastic,1.24,4.13,575.0,Woven PLA Biopla
 Electronics,21.54,6.6,9,True,Road,2876,Mushroom Pkg (Mycelium),10.42,30.975,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,44.17,82.19,20.2,3.72,4.882574015714158,B,0.03302
 Electronics,0.26,0.02,7,True,Road,777,Honeycomb Paper,1.5,0.101,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,96.56,2.61,1.62,13.9,1.933332139918432,B,0.000105
 Clothing,1.33,4.47,4,True,Air,1045,Kraft Paper Mailer,2.59,11.678,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,38.11,13.92,33.2,31.48,0.5031325149658881,D,0.02236
-Home Decor,2.49,1.44,10,False,Air,2128,Mushroom Pkg (Mycelium),3.0,13.247,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,37.04,36.29,22.78,2.79,1.9116768256507093,B,0.0072
+Home Decor,2.49,1.44,10,False,Air,2128,Mushroom Pkg (Mycelium),3.0,13.247,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,37.04,36.29,22.78,2.79,1.9116768256507095,B,0.0072
 Beauty,0.52,0.24,5,True,Air,1940,PLA Bioplastic,1.21,2.522,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,64.99,9.79,19.93,33.25,0.5894630913465584,D,0.001176
 Clothing,0.21,0.1,2,False,Air,1685,Styrofoam (EPS),0.48,0.885,105.0,Woven Styrofoam (EPS),Plastic,27,0.52,1.93,3.6,No,77.66,1.67,10.96,0.34,0.1218977990969161,E,0.00048
 Furniture,75.12,233.72,8,False,Road,1163,Wood Crate,95.09,135.908,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,20.7,46.94,38.88,8.92,1.4487653948362809,C,1.168584
@@ -505,7 +505,7 @@ Furniture,13.64,4.39,10,False,Road,683,Mushroom Pkg (Mycelium),7.46,4.658,601.0,
 Clothing,0.98,1.41,4,False,Air,2798,Kraft Paper Mailer,1.36,9.863,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,42.1,8.09,31.06,31.48,0.3125563324997961,E,0.007068
 Furniture,41.4,250.39,5,False,Road,1515,Wood Crate,101.16,189.67,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,16.84,29.29,40.77,13.44,0.862104467448995,C,1.251936
 Beauty,0.42,0.04,10,True,Road,676,Mushroom Pkg (Mycelium),2.17,0.142,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,97.54,7.94,0.89,3.37,10.70560594875736,A,0.0002
-Furniture,66.46,360.81,8,False,Road,96,Wood Crate,145.92,17.319,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,43.42,47.23,27.74,8.92,2.04311456225254,B,1.804032
+Furniture,66.46,360.81,8,False,Road,96,Wood Crate,145.92,17.319,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,43.42,47.23,27.74,8.92,2.0431145622525397,B,1.804032
 Beauty,0.82,0.22,4,True,Air,1449,PLA Bioplastic,1.13,2.97,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,60.17,13.46,22.67,39.92,0.7124834268864831,D,0.00112
 Electronics,1.73,0.12,7,True,Road,391,Honeycomb Paper,2.09,0.338,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,85.36,15.04,6.9,13.9,2.615651794833073,B,0.000589
 Furniture,18.33,5.42,9,False,Road,2631,Mushroom Pkg (Mycelium),9.13,24.113,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,47.84,79.8,18.87,3.08,5.0747215116734745,A,0.027075
@@ -684,7 +684,7 @@ Furniture,41.6,286.43,8,False,Road,1984,Wood Crate,116.17,284.139,405.0,Recycled
 Furniture,48.42,260.58,5,False,Road,2559,Wood Crate,105.23,333.412,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,8.29,29.31,44.96,13.44,0.7822953562656727,D,1.302904
 Clothing,1.96,3.57,2,True,Air,1643,Kraft Paper Mailer,1.83,14.664,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,32.67,7.57,36.12,52.56,0.2514950096485324,E,0.01786
 Furniture,14.1,36.86,5,False,Road,1895,Wood Crate,15.74,34.925,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,42.44,27.68,28.22,13.44,1.177037520303419,C,0.18432
-Beauty,0.82,0.22,5,True,Road,440,PLA Bioplastic,1.33,0.18,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,84.74,14.34,8.69,33.25,1.980206906765604,B,0.00112
+Beauty,0.82,0.22,5,True,Road,440,PLA Bioplastic,1.33,0.18,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,84.74,14.34,8.69,33.25,1.9802069067656036,B,0.00112
 Beauty,0.62,0.18,3,True,Road,631,PLA Bioplastic,0.85,0.196,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,86.99,9.98,7.4,49.94,1.6183781596786269,B,0.000882
 Clothing,1.27,3.7,4,True,Air,1645,Kraft Paper Mailer,2.28,15.216,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,32.88,13.05,36.01,31.48,0.4348791881455377,D,0.018522
 Clothing,1.12,1.34,3,False,Air,1456,Kraft Paper Mailer,1.14,4.878,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,54.5,6.78,24.41,39.39,0.3333060084675949,E,0.00672
@@ -786,7 +786,7 @@ Electronics,19.24,6.09,10,True,Road,2835,Mushroom Pkg (Mycelium),9.7,27.273,601.
 Electronics,21.45,8.64,9,True,Road,1784,Mushroom Pkg (Mycelium),10.38,19.133,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,50.51,82.16,17.91,3.72,5.5048573140783175,A,0.0432
 Beauty,0.44,0.04,9,True,Road,470,Mushroom Pkg (Mycelium),1.98,0.103,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,98.01,8.23,0.72,3.72,13.7166476157672,A,0.0002
 Electronics,0.11,0.0,5,True,Air,882,Honeycomb Paper,1.04,0.243,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,93.98,0.75,2.84,18.57,0.3169012968657405,E,2e-05
-Electronics,2.21,0.13,7,True,Road,479,Honeycomb Paper,2.28,0.529,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,82.36,17.73,8.31,13.9,2.560288500566968,B,0.000672
+Electronics,2.21,0.13,7,True,Road,479,Honeycomb Paper,2.28,0.529,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,82.36,17.73,8.31,13.9,2.5602885005669678,B,0.000672
 Furniture,13.99,33.81,5,False,Road,462,Wood Crate,14.52,7.81,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,60.34,27.52,19.44,13.44,1.6987653447137163,B,0.16907
 Electronics,0.23,0.02,7,True,Air,1868,Honeycomb Paper,1.49,1.074,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,81.49,2.25,8.72,13.9,0.3096329920145651,E,9.8e-05
 Clothing,1.18,1.13,4,False,Road,170,Kraft Paper Mailer,1.27,0.1,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,87.43,7.18,6.74,31.48,1.2783380892673455,C,0.005643
@@ -860,7 +860,7 @@ Electronics,2.46,0.11,7,True,Air,918,Honeycomb Paper,2.38,5.646,602.0,Honeycomb 
 Furniture,12.3,37.94,4,False,Road,919,Wood Crate,15.98,17.433,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,51.88,22.32,23.59,16.15,1.1353963062570451,C,0.18972
 Electronics,2.29,0.26,9,True,Air,2525,Mushroom Pkg (Mycelium),2.72,14.456,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,35.22,33.07,23.44,3.72,1.6930033407421778,B,0.00128
 Electronics,1.98,0.13,8,True,Road,132,Mushroom Pkg (Mycelium),2.39,0.131,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,94.38,28.84,2.03,4.15,17.048267463907653,A,0.000672
-Electronics,2.03,0.13,9,True,Road,61,Mushroom Pkg (Mycelium),2.61,0.062,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,95.03,30.5,1.8,3.72,20.33332203704332,A,0.00063
+Electronics,2.03,0.13,9,True,Road,61,Mushroom Pkg (Mycelium),2.61,0.062,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,95.03,30.5,1.8,3.72,20.333322037043317,A,0.00063
 Clothing,0.98,1.39,3,False,Air,2227,Wood Crate,1.16,7.739,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,48.58,8.02,25.21,20.22,0.3817532573679786,D,0.00693
 Furniture,74.45,319.68,7,False,Road,1270,Wood Crate,129.27,202.997,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,15.15,41.24,41.6,10.05,1.1896153560188616,C,1.598376
 Clothing,1.88,3.33,3,True,Air,1752,Kraft Paper Mailer,1.93,14.585,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,32.89,10.27,36.0,39.39,0.3423333238240744,E,0.01665
@@ -989,7 +989,7 @@ Furniture,19.99,6.04,9,False,Road,2953,Mushroom Pkg (Mycelium),9.8,29.515,601.0,
 Electronics,22.91,6.93,10,True,Road,466,Mushroom Pkg (Mycelium),11.16,5.338,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,63.6,90.76,13.17,3.37,8.269703244517599,A,0.034632
 Furniture,11.33,33.48,6,False,Road,1649,Wood Crate,14.59,27.604,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,46.02,32.66,26.46,11.5,1.4811790823439497,B,0.1674
 Clothing,1.0,1.25,4,False,Road,406,Kraft Paper Mailer,1.3,0.254,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,87.64,7.45,6.63,31.48,1.3484160862117516,C,0.006264
-Electronics,1.8,0.1,9,True,Air,1343,Mushroom Pkg (Mycelium),2.52,6.044,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,53.38,27.95,16.87,3.72,1.9881445175966488,B,0.000486
+Electronics,1.8,0.1,9,True,Air,1343,Mushroom Pkg (Mycelium),2.52,6.044,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,53.38,27.95,16.87,3.72,1.9881445175966492,B,0.000486
 Furniture,14.79,33.69,6,False,Road,2476,Wood Crate,14.68,41.708,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,39.9,32.67,29.46,11.5,1.3307535189832478,C,0.168448
 Electronics,0.35,0.0,8,True,Road,350,Mushroom Pkg (Mycelium),1.74,0.061,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,98.8,6.49,0.43,4.15,18.1115857870098,A,0.0
 Furniture,14.79,32.83,4,False,Road,1818,Wood Crate,13.93,29.842,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,44.49,22.15,27.21,16.15,0.9768467116190108,C,0.16416
@@ -1125,7 +1125,7 @@ Furniture,48.59,302.12,6,False,Road,711,Wood Crate,122.05,107.404,405.0,Recycled
 Electronics,24.02,7.5,10,True,Road,579,Mushroom Pkg (Mycelium),11.61,6.954,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,61.08,91.47,14.08,3.37,7.795738082689056,A,0.03752
 Beauty,0.71,0.21,4,True,Air,1409,PLA Bioplastic,1.08,2.501,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,63.27,12.13,20.9,39.92,0.6964592968201294,D,0.001064
 Furniture,43.31,237.79,8,False,Road,2664,Wood Crate,96.72,316.736,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,9.13,46.95,44.55,8.92,1.2646464362593397,C,1.188975
-Home Decor,2.77,1.54,9,False,Air,1943,Mushroom Pkg (Mycelium),2.91,13.455,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,36.63,37.48,22.93,3.08,1.9614477993263053,B,0.00768
+Home Decor,2.77,1.54,9,False,Air,1943,Mushroom Pkg (Mycelium),2.91,13.455,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,36.63,37.48,22.93,3.08,1.9614477993263055,B,0.00768
 Electronics,0.18,0.0,6,True,Air,998,Honeycomb Paper,1.27,0.449,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,89.76,1.63,4.82,15.9,0.4058090444379575,D,0.0
 Clothing,1.57,3.47,2,True,Air,2212,Kraft Paper Mailer,1.79,19.189,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,27.71,7.52,38.78,52.56,0.2326972606318396,E,0.017343
 Beauty,0.34,0.03,8,True,Road,609,Mushroom Pkg (Mycelium),1.74,0.104,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,98.24,6.28,0.64,4.15,11.774981601591248,A,0.000144
@@ -1173,7 +1173,7 @@ Electronics,18.24,7.93,10,True,Road,1294,Mushroom Pkg (Mycelium),9.3,11.801,601.
 Beauty,0.44,0.04,8,True,Air,1838,Mushroom Pkg (Mycelium),1.78,2.022,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,73.86,8.13,9.46,4.15,1.0312895315761594,C,0.0002
 Furniture,46.13,280.71,7,False,Road,2016,Wood Crate,113.68,282.956,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,10.79,41.18,43.73,10.05,1.1300251285153184,C,1.403556
 Furniture,61.56,284.05,8,False,Road,1861,Wood Crate,115.22,264.309,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,11.56,47.09,43.36,8.92,1.3032287522318091,C,1.420262
-Electronics,2.48,0.27,8,True,Air,1850,Mushroom Pkg (Mycelium),2.59,11.47,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,40.09,33.44,21.68,4.15,1.8509224238504407,B,0.001344
+Electronics,2.48,0.27,8,True,Air,1850,Mushroom Pkg (Mycelium),2.59,11.47,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,40.09,33.44,21.68,4.15,1.8509224238504411,B,0.001344
 Home Decor,2.09,1.25,9,False,Air,1072,Mushroom Pkg (Mycelium),2.64,5.601,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,54.67,31.05,16.4,3.08,2.2719510809785928,B,0.006272
 Furniture,16.7,4.81,9,False,Road,2223,Mushroom Pkg (Mycelium),8.48,18.562,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,51.47,78.27,17.56,3.08,5.34874684802125,A,0.024056
 Clothing,1.94,3.96,3,True,Air,2299,Kraft Paper Mailer,2.18,22.76,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,23.76,10.85,40.9,39.39,0.3183374005296479,E,0.01978
@@ -1512,7 +1512,7 @@ Home Decor,1.72,1.39,10,False,Air,2005,Mushroom Pkg (Mycelium),2.69,8.621,601.0,
 Electronics,0.18,0.0,5,True,Air,2609,Honeycomb Paper,1.07,1.174,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,80.84,1.6,9.03,18.57,0.2126245611711449,E,0.0
 Home Decor,1.97,1.09,10,False,Air,1241,Mushroom Pkg (Mycelium),2.79,6.112,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,53.07,30.77,16.98,2.79,2.174558175821073,B,0.00546
 Clothing,1.47,4.02,3,True,Road,208,Kraft Paper Mailer,2.21,0.418,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,83.71,10.86,8.74,39.39,1.4910753442705555,B,0.02009
-Electronics,1.51,0.13,7,True,Road,699,Honeycomb Paper,2.0,0.528,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,85.21,13.66,6.97,13.9,2.351793062870436,B,0.000672
+Electronics,1.51,0.13,7,True,Road,699,Honeycomb Paper,2.0,0.528,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,85.21,13.66,6.97,13.9,2.3517930628704358,B,0.000672
 Furniture,14.23,6.48,10,False,Road,886,Mushroom Pkg (Mycelium),7.69,6.304,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,64.53,81.74,12.83,2.79,7.645205951269997,A,0.0324
 Beauty,0.66,0.27,5,True,Air,2784,PLA Bioplastic,1.26,4.594,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,55.11,12.08,25.55,33.25,0.5673580991249275,D,0.001344
 Electronics,16.95,7.52,9,True,Road,2209,Mushroom Pkg (Mycelium),8.58,18.721,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,51.33,78.51,17.61,3.72,5.349914517324559,A,0.037605
@@ -1520,7 +1520,7 @@ Electronics,20.41,6.16,10,True,Road,847,Mushroom Pkg (Mycelium),10.16,8.644,601.
 Electronics,0.17,0.0,5,True,Air,2905,Honeycomb Paper,1.07,1.235,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,80.3,1.47,9.28,18.57,0.1900861864131265,E,1.6e-05
 Electronics,0.16,0.0,5,True,Air,2487,Honeycomb Paper,1.06,0.995,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,82.92,1.37,8.05,18.57,0.2042235771150836,E,0.0
 Clothing,1.2,4.21,3,True,Road,588,Kraft Paper Mailer,2.28,1.238,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,81.02,11.04,10.18,39.39,1.3013751177431123,C,0.02107
-Home Decor,2.74,1.49,10,False,Air,2060,Mushroom Pkg (Mycelium),3.1,14.111,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,35.62,38.69,23.3,2.79,1.9926179402309887,B,0.00744
+Home Decor,2.74,1.49,10,False,Air,2060,Mushroom Pkg (Mycelium),3.1,14.111,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,35.62,38.69,23.3,2.79,1.9926179402309891,B,0.00744
 Electronics,0.34,0.0,9,True,Air,1738,Mushroom Pkg (Mycelium),1.94,1.477,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,78.6,6.34,7.74,3.72,0.9829456094385516,C,0.0
 Furniture,17.81,5.94,10,False,Road,1542,Mushroom Pkg (Mycelium),9.12,13.732,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,55.1,86.3,16.25,2.79,6.372922684743219,A,0.0297
 Beauty,0.72,0.24,4,True,Air,2115,PLA Bioplastic,1.09,3.807,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,57.55,12.19,24.16,39.92,0.6054635510983629,D,0.001176
@@ -1633,7 +1633,7 @@ Furniture,57.45,228.06,6,False,Road,1661,Wood Crate,92.42,189.404,405.0,Recycled
 Clothing,0.2,0.19,1,False,Air,2757,Kraft Paper Mailer,0.28,1.379,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,78.18,0.83,11.71,78.9,0.0850555008492313,E,0.00096
 Electronics,0.31,0.02,6,True,Air,2530,Honeycomb Paper,1.32,1.961,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,73.17,3.14,12.64,15.9,0.2981012422388258,E,9.8e-05
 Electronics,15.32,8.24,9,True,Road,1055,Mushroom Pkg (Mycelium),7.93,8.081,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,61.65,76.76,13.88,3.72,6.636310761072712,A,0.04118
-Home Decor,2.06,1.06,9,False,Air,1084,Mushroom Pkg (Mycelium),2.62,5.583,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,54.75,30.84,16.37,3.08,2.26072069268658,B,0.005292
+Home Decor,2.06,1.06,9,False,Air,1084,Mushroom Pkg (Mycelium),2.62,5.583,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,54.75,30.84,16.37,3.08,2.2607206926865797,B,0.005292
 Furniture,18.83,6.89,9,False,Road,2301,Mushroom Pkg (Mycelium),9.33,21.664,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,49.21,80.23,18.38,3.08,5.238084589875703,A,0.03445
 Electronics,0.17,0.0,4,True,Air,2455,Corrugated Cardboard,0.87,1.043,114.0,Woven Corrugated Cardboard,Paper,653,7.71,1.03,0.979,Yes,81.89,0.44,9.31,3.99,0.0567132055087856,E,0.0
 Furniture,19.41,5.78,10,False,Road,551,Mushroom Pkg (Mycelium),9.76,5.347,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,64.57,87.9,12.82,2.79,8.227768468972819,A,0.028875
@@ -1672,7 +1672,7 @@ Electronics,0.29,0.0,7,True,Air,1715,Honeycomb Paper,1.52,1.243,602.0,Honeycomb 
 Beauty,0.88,0.18,5,True,Air,904,PLA Bioplastic,1.35,1.989,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,64.2,15.2,20.38,33.25,0.8949950493132949,C,0.000882
 Clothing,1.37,3.3,2,True,Air,2324,Kraft Paper Mailer,1.72,19.173,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,27.95,7.44,38.65,52.56,0.230996113040204,E,0.016497
 Beauty,0.24,0.04,10,True,Air,1635,Mushroom Pkg (Mycelium),2.1,0.981,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,83.96,4.41,5.8,3.37,0.9124136357907524,C,0.0002
-Furniture,52.6,275.86,8,False,Road,2985,Cornstarch Foam,111.94,411.721,368.0,Laminated Cornstarch Foam,Eco,42,0.57,2.67,1.488,Yes,2.88,72.59,28.96,0.04,3.007872824313784,B,1.379322
+Furniture,52.6,275.86,8,False,Road,2985,Cornstarch Foam,111.94,411.721,368.0,Laminated Cornstarch Foam,Eco,42,0.57,2.67,1.488,Yes,2.88,72.59,28.96,0.04,3.0078728243137838,B,1.379322
 Clothing,1.11,1.41,4,False,Road,399,Corrugated Cardboard,1.36,0.281,114.0,Woven Corrugated Cardboard,Paper,653,7.71,1.03,0.979,Yes,87.05,5.26,6.66,3.99,0.9477476054433024,C,0.00704
 Furniture,53.82,310.17,5,False,Road,1207,Wood Crate,125.07,187.188,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,16.75,29.35,40.81,13.44,0.8630237475367865,C,1.55085
 Beauty,0.84,0.26,3,True,Road,461,PLA Bioplastic,0.94,0.194,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,84.45,12.38,8.85,49.94,1.678643878119336,B,0.00128
@@ -1724,7 +1724,7 @@ Home Decor,2.48,1.35,9,False,Air,1141,Mushroom Pkg (Mycelium),2.79,7.074,601.0,M
 Furniture,58.79,239.21,6,False,Road,1321,Wood Crate,96.88,157.998,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,19.06,35.2,39.68,11.5,1.0645161022047354,C,1.196052
 Electronics,17.64,6.1,9,True,Road,2676,Mushroom Pkg (Mycelium),8.86,23.602,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,48.2,79.13,18.74,3.72,5.067022141567654,A,0.030492
 Beauty,0.33,0.04,9,True,Air,2755,Mushroom Pkg (Mycelium),1.93,2.273,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,72.16,6.17,10.07,3.72,0.735253154393927,D,0.0002
-Home Decor,1.29,1.21,9,False,Air,1286,Mushroom Pkg (Mycelium),2.32,4.147,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,60.83,21.61,14.17,3.08,1.830063385316628,B,0.006048
+Home Decor,1.29,1.21,9,False,Air,1286,Mushroom Pkg (Mycelium),2.32,4.147,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,60.83,21.61,14.17,3.08,1.8300633853166277,B,0.006048
 Furniture,69.09,243.1,7,False,Road,1951,Wood Crate,98.64,237.144,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,13.02,41.1,42.64,10.05,1.156660385631792,C,1.215524
 Electronics,17.83,6.99,9,True,Road,1510,Mushroom Pkg (Mycelium),8.93,13.462,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,55.33,79.36,16.16,3.72,5.893068942260585,A,0.034965
 Beauty,0.95,0.24,5,True,Road,799,PLA Bioplastic,1.38,0.38,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,82.36,16.09,10.04,33.25,1.923107378176556,B,0.001176
@@ -1832,7 +1832,7 @@ Clothing,1.69,4.21,3,True,Air,2903,Kraft Paper Mailer,2.28,30.554,550.0,Laminate
 Beauty,0.29,0.04,8,True,Air,1092,Mushroom Pkg (Mycelium),1.72,0.792,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,86.16,5.33,5.01,4.15,1.2766464517671754,C,0.00018
 Electronics,0.22,0.0,8,True,Road,162,Mushroom Pkg (Mycelium),1.69,0.018,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,99.77,3.96,0.08,4.15,59.39925750928113,A,0.0
 Electronics,0.18,0.0,4,True,Road,157,Corrugated Cardboard,0.87,0.014,114.0,Woven Corrugated Cardboard,Paper,653,7.71,1.03,0.979,Yes,97.9,0.5,1.08,3.99,0.5555550411527397,D,0.0
-Electronics,1.59,0.26,9,True,Air,1200,Mushroom Pkg (Mycelium),2.44,4.77,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,58.02,25.44,15.19,3.72,2.00974311983258,B,0.00128
+Electronics,1.59,0.26,9,True,Air,1200,Mushroom Pkg (Mycelium),2.44,4.77,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,58.02,25.44,15.19,3.72,2.0097431198325797,B,0.00128
 Clothing,1.17,1.11,4,False,Air,952,Kraft Paper Mailer,1.27,2.785,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,62.63,7.11,20.05,31.48,0.4255361383772499,D,0.005544
 Furniture,61.76,253.83,7,False,Road,183,Wood Crate,102.93,23.225,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,41.62,41.13,28.62,10.05,1.7245282416307397,B,1.269135
 Electronics,21.35,7.32,10,True,Road,363,Mushroom Pkg (Mycelium),10.54,3.875,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,66.48,89.54,12.13,3.37,8.85803719224755,A,0.036576
@@ -1868,7 +1868,7 @@ Furniture,12.14,36.19,5,False,Road,1610,Wood Crate,15.48,29.133,405.0,Recycled P
 Beauty,0.33,0.04,10,True,Air,2856,Mushroom Pkg (Mycelium),2.13,2.356,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,71.58,6.22,10.28,3.37,0.7260699682811316,D,0.000225
 Beauty,0.76,0.24,3,True,Air,2470,PLA Bioplastic,0.9,4.693,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,54.13,11.66,26.11,49.94,0.5358866129495743,D,0.001176
 Clothing,0.3,0.17,1,False,Road,152,Kraft Paper Mailer,0.32,0.023,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,96.14,1.3,2.07,78.9,0.7536228243367998,D,0.000828
-Electronics,1.89,0.23,8,True,Air,1450,Mushroom Pkg (Mycelium),2.36,6.851,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,50.87,27.86,17.78,4.15,1.8803148548754287,B,0.001152
+Electronics,1.89,0.23,8,True,Air,1450,Mushroom Pkg (Mycelium),2.36,6.851,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,50.87,27.86,17.78,4.15,1.8803148548754292,B,0.001152
 Electronics,2.02,0.26,7,True,Air,1861,Honeycomb Paper,2.21,9.398,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,42.01,16.68,27.32,13.9,0.7326500463890905,D,0.00128
 Beauty,0.71,0.2,4,True,Air,960,Kraft Paper Mailer,1.08,1.704,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,71.46,4.88,15.31,31.48,0.3824950762576697,D,0.001008
 Home Decor,2.4,1.13,10,False,Air,2153,Mushroom Pkg (Mycelium),2.96,12.918,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,37.6,35.43,22.58,2.79,1.8829051424754144,B,0.00567
@@ -1905,7 +1905,7 @@ Electronics,0.24,0.02,8,True,Air,2538,Mushroom Pkg (Mycelium),1.7,1.523,601.0,Mu
 Beauty,0.28,0.04,8,True,Road,64,Mushroom Pkg (Mycelium),1.71,0.009,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,99.74,5.15,0.09,4.15,68.66590371218098,A,0.00018
 Clothing,1.11,4.18,2,True,Air,2662,Kraft Paper Mailer,2.07,27.818,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,20.18,7.86,42.82,52.56,0.220270896303809,E,0.020898
 Electronics,1.87,0.24,8,True,Air,1709,PLA Bioplastic,2.35,7.99,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,40.78,30.33,33.7,22.12,1.0799999679525232,C,0.001176
-Furniture,13.33,33.13,6,False,Road,722,Wood Crate,14.45,11.96,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,56.11,32.64,21.52,11.5,1.8200742648664368,B,0.165672
+Furniture,13.33,33.13,6,False,Road,722,Wood Crate,14.45,11.96,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,56.11,32.64,21.52,11.5,1.8200742648664372,B,0.165672
 Furniture,55.48,269.91,7,False,Road,1960,Wood Crate,109.36,264.512,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,11.65,41.16,43.31,10.05,1.1404294356862286,C,1.349568
 Clothing,0.97,1.46,3,False,Air,1339,Kraft Paper Mailer,1.18,4.887,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,54.99,7.17,24.15,39.39,0.3562732771729492,E,0.007308
 Clothing,1.44,3.67,4,True,Road,52,Kraft Paper Mailer,2.27,0.095,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,85.74,13.0,7.65,31.48,2.0392154197104024,B,0.01836
@@ -2228,7 +2228,7 @@ Electronics,0.37,0.0,9,True,Air,1673,Mushroom Pkg (Mycelium),1.95,1.548,601.0,Mu
 Electronics,2.28,0.24,7,True,Road,131,Honeycomb Paper,2.31,0.149,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,84.07,18.07,7.5,13.9,2.8911996145067174,B,0.001178
 Furniture,18.27,4.37,9,False,Road,616,Mushroom Pkg (Mycelium),9.11,5.627,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,64.45,79.71,12.86,3.08,7.437946544483161,A,0.02184
 Home Decor,1.19,1.43,9,False,Air,1229,Mushroom Pkg (Mycelium),2.37,4.394,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,59.84,23.51,14.53,3.08,1.9416378567351784,B,0.007168
-Furniture,12.09,36.29,5,False,Road,225,Wood Crate,15.52,4.083,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,66.72,27.63,16.32,13.44,2.031617522572456,B,0.18144
+Furniture,12.09,36.29,5,False,Road,225,Wood Crate,15.52,4.083,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,66.72,27.63,16.32,13.44,2.0316175225724558,B,0.18144
 Electronics,0.19,0.0,5,True,Air,2523,Recycled PET Box,1.08,1.198,320.0,Recycled PVC Film,Plastic,1279,39.86,1.59,1.476,No,79.17,1.26,21.94,21.17,0.0459434801301968,E,2e-05
 Clothing,1.77,3.95,2,True,Air,1103,Kraft Paper Mailer,1.98,10.892,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,38.69,7.76,32.89,52.56,0.2831255614738351,E,0.01974
 Electronics,0.35,0.02,6,True,Air,1439,Honeycomb Paper,1.34,1.259,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,78.76,3.57,10.01,15.9,0.4279719852175839,D,8.4e-05
@@ -2263,7 +2263,7 @@ Beauty,0.93,0.26,5,True,Air,2504,PLA Bioplastic,1.37,5.822,575.0,Woven PLA Biopl
 Electronics,0.24,0.0,6,True,Air,2267,Honeycomb Paper,1.3,1.36,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,78.59,2.32,10.09,15.9,0.2759167219111276,E,0.0
 Electronics,0.18,0.0,4,True,Road,227,Corrugated Cardboard,0.87,0.02,114.0,Woven Corrugated Cardboard,Paper,653,7.71,1.03,0.979,Yes,97.82,0.5,1.12,3.99,0.5357138073983863,D,1.6e-05
 Beauty,0.69,0.21,4,True,Air,2794,PLA Bioplastic,1.08,4.82,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,54.15,11.77,26.09,39.92,0.5413568209522107,D,0.001064
-Home Decor,1.4,1.05,9,False,Air,1363,Mushroom Pkg (Mycelium),2.36,4.771,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,58.15,23.1,15.14,3.08,1.83091137180242,B,0.005265
+Home Decor,1.4,1.05,9,False,Air,1363,Mushroom Pkg (Mycelium),2.36,4.771,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,58.15,23.1,15.14,3.08,1.8309113718024197,B,0.005265
 Electronics,18.28,7.7,10,True,Road,2288,Mushroom Pkg (Mycelium),9.31,20.912,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,49.73,86.78,18.19,3.37,5.724903478564953,A,0.03848
 Electronics,17.06,5.67,10,True,Road,1492,Mushroom Pkg (Mycelium),8.82,12.727,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,56.13,85.47,15.87,3.37,6.462759517154409,A,0.02834
 Electronics,0.21,0.0,7,True,Air,1651,Honeycomb Paper,1.48,0.867,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,83.96,2.01,7.56,13.9,0.3190475768455585,E,0.0
@@ -2277,7 +2277,7 @@ Clothing,0.2,0.09,2,False,Road,391,Kraft Paper Mailer,0.48,0.039,550.0,Laminated
 Beauty,0.42,0.03,9,True,Air,2637,Mushroom Pkg (Mycelium),1.97,2.769,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,68.78,7.86,11.3,3.72,0.834690191620337,D,0.00016
 Beauty,0.46,0.04,9,True,Air,1053,Mushroom Pkg (Mycelium),1.98,1.211,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,81.0,8.63,6.87,3.72,1.507423361364867,B,0.00018
 Furniture,15.99,5.49,9,False,Road,2944,Mushroom Pkg (Mycelium),8.2,23.537,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,48.4,77.49,18.67,3.08,4.980610338478288,B,0.027468
-Electronics,2.12,0.12,9,True,Air,1942,Mushroom Pkg (Mycelium),2.65,10.293,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,42.49,31.39,20.81,3.72,1.810091215276732,B,0.000589
+Electronics,2.12,0.12,9,True,Air,1942,Mushroom Pkg (Mycelium),2.65,10.293,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,42.49,31.39,20.81,3.72,1.8100912152767317,B,0.000589
 Electronics,2.18,0.11,7,True,Air,1707,Honeycomb Paper,2.27,9.303,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,41.96,17.56,27.34,13.9,0.7707388159934595,D,0.000567
 Clothing,0.19,0.09,2,False,Air,1861,Kraft Paper Mailer,0.48,0.884,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,83.33,0.99,8.94,52.56,0.1328858911760748,E,0.000468
 Beauty,0.62,0.2,5,True,Air,1926,PLA Bioplastic,1.25,2.985,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,61.79,11.4,21.75,33.25,0.6289654883234258,D,0.001008
@@ -2405,14 +2405,14 @@ Beauty,0.46,0.04,10,True,Road,135,Mushroom Pkg (Mycelium),2.18,0.031,601.0,Mushr
 Electronics,19.45,8.25,10,True,Road,67,Mushroom Pkg (Mycelium),9.78,0.652,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,74.78,87.9,9.13,3.37,11.553120311815956,A,0.04125
 Furniture,66.02,295.22,8,False,Road,2499,Wood Crate,119.69,368.877,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,6.55,47.11,45.81,8.92,1.2340536731269662,C,1.47609
 Electronics,23.13,7.97,10,True,Road,2138,Mushroom Pkg (Mycelium),11.25,24.726,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,47.04,90.9,19.16,3.37,5.693110350046433,A,0.039865
-Electronics,0.38,0.02,7,True,Road,51,Honeycomb Paper,1.55,0.01,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,96.57,3.98,1.62,13.9,2.948146328304736,B,8.4e-05
+Electronics,0.38,0.02,7,True,Road,51,Honeycomb Paper,1.55,0.01,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,96.57,3.98,1.62,13.9,2.9481463283047358,B,8.4e-05
 Clothing,0.93,1.39,3,False,Air,2732,Kraft Paper Mailer,1.16,9.494,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,42.95,6.92,30.61,39.39,0.2712838852896476,E,0.00696
 Clothing,0.3,0.19,1,False,Road,391,Kraft Paper Mailer,0.32,0.059,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,95.72,1.3,2.3,78.9,0.6782605746693153,D,0.000936
 Electronics,18.23,6.38,10,True,Road,1883,Recycled PET Box,9.29,17.164,320.0,Recycled PVC Film,Plastic,1279,39.86,1.59,1.476,No,40.56,42.75,62.61,11.49,0.5462386113042866,D,0.03192
 Home Decor,1.33,0.95,9,False,Air,1625,Mushroom Pkg (Mycelium),2.33,5.403,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,55.83,22.2,15.98,3.08,1.6670837504953848,B,0.004732
 Electronics,0.28,0.02,8,True,Air,1490,Mushroom Pkg (Mycelium),1.71,1.043,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,83.16,5.15,6.09,4.15,1.0147781584929132,C,0.000112
 Furniture,12.02,36.33,4,False,Road,78,Wood Crate,15.33,1.417,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,72.63,22.28,13.42,16.15,1.9922502241244244,B,0.181656
-Beauty,0.94,0.2,4,True,Road,679,PLA Bioplastic,1.18,0.319,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,82.76,14.84,9.81,39.92,1.815290334832789,B,0.001008
+Beauty,0.94,0.2,4,True,Road,679,PLA Bioplastic,1.18,0.319,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,82.76,14.84,9.81,39.92,1.8152903348327891,B,0.001008
 Electronics,2.19,0.1,8,True,Road,343,Mushroom Pkg (Mycelium),2.48,0.376,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,91.64,30.78,3.02,4.15,12.230459526337905,A,0.000513
 Home Decor,1.45,1.25,10,False,Air,984,Mushroom Pkg (Mycelium),2.58,3.567,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,63.38,24.35,13.25,2.79,2.205282852431483,B,0.006272
 Clothing,1.16,1.34,3,False,Air,1599,Kraft Paper Mailer,1.14,5.357,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,52.81,6.78,25.32,39.39,0.3213270015273696,E,0.006699
@@ -2529,7 +2529,7 @@ Furniture,11.82,29.95,6,False,Road,680,Wood Crate,13.18,10.183,405.0,Recycled Pi
 Home Decor,2.07,1.34,9,False,Road,613,Mushroom Pkg (Mycelium),2.63,0.634,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,89.66,30.87,3.74,3.08,9.90481018587963,A,0.00672
 Clothing,1.18,1.28,5,False,Air,872,Kraft Paper Mailer,1.51,2.79,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,62.55,8.28,20.09,26.22,0.4945743905139675,D,0.0064
 Furniture,79.17,299.57,5,False,Road,1286,Wood Crate,120.83,192.624,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,15.79,29.34,41.28,13.44,0.8529069560826804,C,1.49787
-Home Decor,1.82,1.49,9,False,Air,1456,Mushroom Pkg (Mycelium),2.53,6.625,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,51.57,28.16,17.52,3.08,1.9287670131982293,B,0.00744
+Home Decor,1.82,1.49,9,False,Air,1456,Mushroom Pkg (Mycelium),2.53,6.625,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,51.57,28.16,17.52,3.08,1.9287670131982295,B,0.00744
 Clothing,0.28,0.2,2,False,Air,2152,Kraft Paper Mailer,0.51,1.506,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,76.34,1.64,12.69,52.56,0.1550827300959235,E,0.001
 Electronics,0.11,0.0,6,True,Air,2581,Honeycomb Paper,1.24,0.71,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,86.84,0.76,6.2,15.9,0.147096750468266,E,0.0
 Electronics,1.71,0.12,9,True,Road,266,Mushroom Pkg (Mycelium),2.48,0.227,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,93.89,26.96,2.21,3.72,14.638907403209318,A,0.0006
@@ -2889,7 +2889,7 @@ Electronics,1.65,0.22,8,True,Air,2693,Mushroom Pkg (Mycelium),2.26,11.109,601.0,
 Clothing,1.06,1.49,4,False,Air,856,Kraft Paper Mailer,1.4,3.189,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,61.28,8.32,20.77,31.48,0.4806932845116377,D,0.00744
 Clothing,0.21,0.18,1,False,Air,2341,Kraft Paper Mailer,0.28,1.229,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,79.49,0.9,11.0,78.9,0.0981818092561991,E,0.000912
 Electronics,2.42,0.12,9,True,Road,359,Mushroom Pkg (Mycelium),2.77,0.434,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,90.78,34.34,3.34,3.72,12.337720856969804,A,0.000588
-Beauty,0.55,0.18,4,True,Road,368,PLA Bioplastic,1.02,0.101,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,88.59,9.83,6.49,39.92,1.817565205305824,B,0.000882
+Beauty,0.55,0.18,4,True,Road,368,PLA Bioplastic,1.02,0.101,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,88.59,9.83,6.49,39.92,1.8175652053058236,B,0.000882
 Beauty,0.97,0.2,4,True,Air,2291,PLA Bioplastic,1.19,5.556,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,50.27,15.2,28.3,39.92,0.6445229454232173,D,0.00098
 Beauty,0.87,0.27,3,True,Air,1795,PLA Bioplastic,0.95,3.904,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,56.13,12.7,24.97,49.94,0.6103323744360282,D,0.001344
 Furniture,17.07,4.19,9,False,Road,2705,Mushroom Pkg (Mycelium),8.63,23.087,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,48.55,78.61,18.62,3.08,5.0661651414519255,A,0.020952
@@ -3049,7 +3049,7 @@ Electronics,2.13,0.13,7,True,Air,1767,Honeycomb Paper,2.25,9.409,602.0,Honeycomb
 Furniture,71.2,304.81,8,False,Road,1550,Wood Crate,123.52,236.228,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,13.04,47.13,42.63,8.92,1.3266713270778483,C,1.524068
 Electronics,2.09,0.24,8,True,Air,1903,Mushroom Pkg (Mycelium),2.44,9.943,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,43.22,29.84,20.55,4.15,1.7424816670325225,B,0.001176
 Electronics,0.21,0.02,6,True,Air,2480,Honeycomb Paper,1.28,1.302,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,79.35,1.99,9.73,15.9,0.2454264907064243,E,0.000105
-Electronics,0.34,0.02,8,True,Road,194,Mushroom Pkg (Mycelium),1.74,0.033,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,99.23,6.28,0.28,4.15,26.91418959218004,A,9e-05
+Electronics,0.34,0.02,8,True,Road,194,Mushroom Pkg (Mycelium),1.74,0.033,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,99.23,6.28,0.28,4.15,26.914189592180037,A,9e-05
 Electronics,0.32,0.0,8,True,Air,2455,Mushroom Pkg (Mycelium),1.73,1.964,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,74.48,5.91,9.23,4.15,0.7683639470894965,D,0.0
 Clothing,0.17,0.19,1,False,Air,2524,Kraft Paper Mailer,0.28,1.199,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,80.19,0.75,10.63,78.9,0.0846660315459989,E,0.00095
 Furniture,62.71,269.24,6,False,Road,1660,Honeycomb Paper,108.9,223.469,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,12.22,39.58,41.35,15.9,1.1486335876993086,C,1.346175
@@ -3297,7 +3297,7 @@ Furniture,11.49,31.4,4,False,Road,512,Wood Crate,13.36,8.038,405.0,Recycled Pine
 Furniture,57.71,273.66,7,False,Road,2025,Wood Crate,110.86,277.081,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,10.92,41.17,43.67,10.05,1.131302928067256,C,1.368312
 Furniture,14.92,4.86,10,False,Road,1811,Mushroom Pkg (Mycelium),7.97,13.51,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,55.76,82.7,16.01,2.79,6.198625471666116,A,0.024304
 Electronics,0.17,0.0,4,True,Air,3000,Corrugated Cardboard,0.87,1.275,114.0,Woven Corrugated Cardboard,Paper,653,7.71,1.03,0.979,Yes,79.52,0.44,10.53,3.99,0.0501424453805844,E,0.0
-Home Decor,2.02,1.3,9,False,Air,1487,Mushroom Pkg (Mycelium),2.61,7.509,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,48.98,30.34,18.46,3.08,1.972264248523064,B,0.00651
+Home Decor,2.02,1.3,9,False,Air,1487,Mushroom Pkg (Mycelium),2.61,7.509,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,48.98,30.34,18.46,3.08,1.9722642485230637,B,0.00651
 Clothing,0.21,0.1,1,False,Road,273,Kraft Paper Mailer,0.28,0.029,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,97.2,0.9,1.5,78.9,0.7199995200003201,D,0.000486
 Clothing,0.25,0.21,2,False,Air,2717,Kraft Paper Mailer,0.5,1.698,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,75.01,1.43,13.41,52.56,0.1279641962741091,E,0.001026
 Furniture,13.8,37.82,6,False,Road,276,Wood Crate,16.33,5.219,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,63.97,32.97,17.66,11.5,2.240316973934486,B,0.1891
@@ -3769,7 +3769,7 @@ Furniture,18.49,4.47,10,False,Road,447,Mushroom Pkg (Mycelium),9.4,4.133,601.0,M
 Electronics,0.27,0.0,9,True,Air,857,Mushroom Pkg (Mycelium),1.91,0.578,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,89.13,4.98,3.93,3.72,1.5206103000991604,B,0.0
 Electronics,0.1,0.0,4,True,Road,316,Corrugated Cardboard,0.84,0.016,114.0,Woven Corrugated Cardboard,Paper,653,7.71,1.03,0.979,Yes,98.95,0.0,0.54,3.99,0.0,E,1.6e-05
 Electronics,2.49,0.12,7,True,Road,770,Honeycomb Paper,2.4,0.959,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,79.47,19.03,9.67,13.9,2.361530262509797,B,0.00062
-Home Decor,2.36,1.59,10,False,Air,2392,Mushroom Pkg (Mycelium),2.94,14.113,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,35.72,35.07,23.26,2.79,1.8092862506755687,B,0.007936
+Home Decor,2.36,1.59,10,False,Air,2392,Mushroom Pkg (Mycelium),2.94,14.113,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,35.72,35.07,23.26,2.79,1.8092862506755691,B,0.007936
 Electronics,0.35,0.0,7,True,Road,772,Honeycomb Paper,1.54,0.135,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,95.37,3.64,2.18,13.9,2.003668805656511,B,0.0
 Electronics,16.95,6.9,9,True,Road,2562,Mushroom Pkg (Mycelium),8.58,21.713,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,49.38,78.51,18.32,3.72,5.142576138505669,A,0.0345
 Electronics,0.11,0.0,5,True,Road,337,Honeycomb Paper,1.04,0.019,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,99.12,0.75,0.41,18.57,2.1951165972765923,B,0.0
@@ -4151,7 +4151,7 @@ Home Decor,1.74,1.26,9,False,Air,2560,Mushroom Pkg (Mycelium),2.5,11.136,601.0,M
 Electronics,0.12,0.0,4,True,Road,173,Corrugated Cardboard,0.85,0.01,114.0,Woven Corrugated Cardboard,Paper,653,7.71,1.03,0.979,Yes,98.76,0.13,0.64,3.99,0.24374961914122,E,1.6e-05
 Electronics,1.81,0.12,7,True,Air,801,Honeycomb Paper,2.12,3.625,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,58.31,15.54,19.64,13.9,0.9494907866858052,C,0.000609
 Electronics,15.79,6.38,10,True,Road,2934,Mushroom Pkg (Mycelium),8.32,23.164,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,48.64,83.85,18.58,3.37,5.415500246743798,A,0.03192
-Electronics,0.3,0.0,8,True,Road,284,Mushroom Pkg (Mycelium),1.72,0.043,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,99.19,5.53,0.29,4.15,22.88267971489753,A,0.0
+Electronics,0.3,0.0,8,True,Road,284,Mushroom Pkg (Mycelium),1.72,0.043,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,99.19,5.53,0.29,4.15,22.882679714897534,A,0.0
 Electronics,21.43,6.37,9,True,Road,1576,Mushroom Pkg (Mycelium),10.37,16.887,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,52.06,82.16,17.35,3.72,5.682535695531083,A,0.031828
 Clothing,0.91,1.17,4,False,Air,2316,Kraft Paper Mailer,1.27,6.774,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,49.43,7.11,27.13,31.48,0.3144857974756433,E,0.005852
 Electronics,0.16,0.0,4,True,Air,1840,Corrugated Cardboard,0.86,0.736,114.0,Woven Corrugated Cardboard,Paper,653,7.71,1.03,0.979,Yes,85.55,0.38,7.43,3.99,0.0613728046604569,E,0.0
@@ -4201,7 +4201,7 @@ Furniture,72.75,297.01,8,False,Road,1579,Wood Crate,120.4,234.489,405.0,Recycled
 Electronics,0.34,0.0,7,True,Air,2809,Honeycomb Paper,1.54,2.388,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,70.05,3.51,14.11,13.9,0.2985116726781238,E,0.0
 Electronics,0.26,0.0,8,True,Air,1760,Corrugated Cardboard,1.7,1.144,114.0,Woven Corrugated Cardboard,Paper,653,7.71,1.03,0.979,Yes,79.94,1.07,10.31,2.16,0.1245392701707788,E,0.0
 Clothing,1.14,1.08,4,False,Air,2449,Kraft Paper Mailer,1.26,6.98,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,48.25,6.97,27.76,31.48,0.3012968191175497,E,0.0054
-Beauty,0.97,0.22,4,True,Road,291,PLA Bioplastic,1.19,0.141,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,83.38,15.2,9.46,39.92,1.9281181894166808,B,0.00112
+Beauty,0.97,0.22,4,True,Road,291,PLA Bioplastic,1.19,0.141,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,83.38,15.2,9.46,39.92,1.9281181894166812,B,0.00112
 Beauty,0.25,0.04,10,True,Air,1536,PLA Bioplastic,2.1,0.96,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,79.58,5.12,11.62,18.08,0.5287435001081325,D,0.000225
 Electronics,2.15,0.13,7,True,Road,702,Honeycomb Paper,2.26,0.755,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,81.49,17.39,8.72,13.9,2.3931189916147946,B,0.000651
 Beauty,0.37,0.04,9,True,Air,2077,Mushroom Pkg (Mycelium),1.95,1.921,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,74.74,6.92,9.14,3.72,0.908533817447066,C,0.00018
@@ -4562,7 +4562,7 @@ Electronics,15.01,7.66,10,True,Road,1599,Mushroom Pkg (Mycelium),8.0,12.0,601.0,
 Beauty,0.78,0.21,3,True,Air,1040,PLA Bioplastic,0.91,2.028,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,64.99,11.85,19.93,49.94,0.7134972045410333,D,0.001064
 Electronics,2.4,0.11,8,True,Air,1279,Mushroom Pkg (Mycelium),2.56,7.674,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,48.37,32.72,18.68,4.15,2.10192708233795,B,0.00054
 Electronics,0.14,0.0,6,True,Air,813,Honeycomb Paper,1.26,0.285,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,92.86,1.13,3.36,15.9,0.40357130846092,D,0.0
-Electronics,2.22,0.11,8,True,Air,1504,Mushroom Pkg (Mycelium),2.49,8.347,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,46.76,31.09,19.26,4.15,1.937071550515496,B,0.00054
+Electronics,2.22,0.11,8,True,Air,1504,Mushroom Pkg (Mycelium),2.49,8.347,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,46.76,31.09,19.26,4.15,1.9370715505154956,B,0.00054
 Clothing,1.94,3.37,4,True,Air,937,Kraft Paper Mailer,2.15,7.894,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,44.14,12.58,29.97,31.48,0.5037036868967739,D,0.016848
 Furniture,14.34,4.56,10,False,Road,1549,Mushroom Pkg (Mycelium),7.74,11.106,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,58.25,81.84,15.11,2.79,6.499536300493959,A,0.0228
 Electronics,22.23,7.17,9,True,Road,2877,Mushroom Pkg (Mycelium),10.69,31.978,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,43.68,82.68,20.38,3.72,4.86830201823837,B,0.03584
@@ -4574,7 +4574,7 @@ Furniture,62.89,296.26,7,False,Road,1387,Wood Crate,119.9,205.456,405.0,Recycled
 Electronics,0.1,0.0,5,True,Air,1750,Honeycomb Paper,1.04,0.438,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,90.85,0.62,4.31,18.57,0.1726217696933249,E,2e-05
 Furniture,54.62,286.0,5,False,Road,2657,Wood Crate,115.4,379.951,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,6.24,29.33,45.97,13.44,0.7656297418831902,D,1.430016
 Electronics,19.1,5.84,9,True,Road,2363,Mushroom Pkg (Mycelium),9.44,22.567,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,48.64,80.43,18.58,3.72,5.194617589094855,A,0.029184
-Beauty,0.62,0.2,4,True,Road,271,PLA Bioplastic,1.05,0.084,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,87.76,10.82,6.97,39.92,1.862840478789028,B,0.00098
+Beauty,0.62,0.2,4,True,Road,271,PLA Bioplastic,1.05,0.084,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,87.76,10.82,6.97,39.92,1.8628404787890276,B,0.00098
 Clothing,0.21,0.1,1,False,Road,620,Kraft Paper Mailer,0.28,0.065,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,96.75,0.9,1.74,78.9,0.6206892984544262,D,0.000486
 Clothing,1.07,1.07,5,False,Air,1780,Kraft Paper Mailer,1.43,4.761,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,55.07,7.23,24.1,26.22,0.3599999850622412,E,0.005346
 Electronics,0.32,0.0,7,True,Air,886,Honeycomb Paper,1.53,0.709,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,84.85,3.29,7.14,13.9,0.5529410990278573,D,0.0
@@ -4618,7 +4618,7 @@ Furniture,75.41,359.86,5,False,Road,330,Wood Crate,144.94,59.377,405.0,Recycled 
 Home Decor,1.02,1.21,9,False,Air,2501,Mushroom Pkg (Mycelium),2.28,7.566,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,49.31,20.59,18.34,3.08,1.3472191195627523,C,0.006045
 Home Decor,1.46,1.3,10,False,Air,2451,Mushroom Pkg (Mycelium),2.58,8.946,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,45.66,24.52,19.66,2.79,1.4966428536804244,B,0.006525
 Beauty,0.3,0.04,10,True,Air,2357,Mushroom Pkg (Mycelium),2.12,1.768,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,76.09,5.62,8.65,3.37,0.7796530890574463,D,0.0002
-Home Decor,2.6,1.44,10,False,Air,2061,Mushroom Pkg (Mycelium),3.04,13.397,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,36.77,37.41,22.88,2.79,1.9620628513084413,B,0.0072
+Home Decor,2.6,1.44,10,False,Air,2061,Mushroom Pkg (Mycelium),3.04,13.397,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,36.77,37.41,22.88,2.79,1.9620628513084415,B,0.0072
 Electronics,2.47,0.22,9,True,Air,1909,Mushroom Pkg (Mycelium),2.79,11.788,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,39.52,34.81,21.88,3.72,1.9091406805694384,B,0.00112
 Clothing,0.91,1.19,4,False,Air,1411,Kraft Paper Mailer,1.28,4.198,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,57.73,7.19,22.68,31.48,0.3804232636497679,D,0.00594
 Clothing,1.99,4.35,2,True,Air,899,Kraft Paper Mailer,2.14,9.777,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,40.27,7.92,32.04,52.56,0.296629204225056,E,0.02173
@@ -5115,7 +5115,7 @@ Electronics,0.19,0.0,6,True,Road,72,Honeycomb Paper,1.28,0.007,602.0,Honeycomb P
 Electronics,0.11,0.0,6,True,Air,881,Honeycomb Paper,1.24,0.242,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,94.0,0.76,2.83,15.9,0.3222613702256642,E,0.0
 Electronics,23.7,7.69,9,True,Road,67,Mushroom Pkg (Mycelium),11.28,0.794,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,72.22,83.55,10.05,3.72,9.976118410336476,A,0.03843
 Furniture,18.75,6.83,9,False,Road,206,Mushroom Pkg (Mycelium),9.3,1.931,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,71.59,80.14,10.28,3.08,9.354862903223454,A,0.034125
-Clothing,0.91,1.07,3,False,Road,362,PLA Bioplastic,1.03,0.194,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,83.71,14.5,9.27,49.94,1.87702245123814,B,0.005346
+Clothing,0.91,1.07,3,False,Road,362,PLA Bioplastic,1.03,0.194,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,83.71,14.5,9.27,49.94,1.8770224512381397,B,0.005346
 Electronics,0.18,0.01,6,True,Air,1631,Honeycomb Paper,1.27,0.734,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,85.85,1.63,6.67,15.9,0.2932533293473269,E,2.5e-05
 Clothing,1.4,4.01,4,True,Air,1251,Kraft Paper Mailer,2.4,12.541,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,36.59,13.46,34.02,31.48,0.4747795274903137,D,0.020034
 Beauty,0.52,0.18,3,True,Air,2657,PLA Bioplastic,0.81,3.454,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,60.54,8.7,22.46,49.94,0.464826337273983,D,0.000882
@@ -5127,7 +5127,7 @@ Clothing,0.3,0.2,1,False,Air,1513,Kraft Paper Mailer,0.32,1.135,550.0,Laminated 
 Furniture,13.68,5.94,9,False,Road,1939,Corrugated Cardboard,7.27,13.263,114.0,Woven Corrugated Cardboard,Paper,653,7.71,1.03,0.979,Yes,48.27,23.6,26.59,1.93,1.0650620133485516,C,0.0297
 Furniture,17.7,5.78,10,False,Road,1762,Mushroom Pkg (Mycelium),9.08,15.594,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,53.55,86.15,16.81,2.79,6.149910401552029,A,0.02889
 Beauty,0.81,0.24,5,True,Air,1104,PLA Bioplastic,1.32,2.236,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,63.63,14.27,20.7,33.25,0.827246336848003,D,0.001176
-Electronics,2.27,0.26,8,True,Air,1052,Mushroom Pkg (Mycelium),2.51,5.97,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,53.35,31.54,16.88,4.15,2.242179961956164,B,0.00128
+Electronics,2.27,0.26,8,True,Air,1052,Mushroom Pkg (Mycelium),2.51,5.97,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,53.35,31.54,16.88,4.15,2.2421799619561638,B,0.00128
 Electronics,0.19,0.0,5,True,Air,1801,Honeycomb Paper,1.08,0.855,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,84.27,1.7,7.41,18.57,0.275303606571713,E,1.6e-05
 Electronics,0.13,0.0,4,True,Air,2005,Corrugated Cardboard,0.85,0.652,114.0,Woven Corrugated Cardboard,Paper,653,7.71,1.03,0.979,Yes,87.01,0.19,6.68,3.99,0.0341317314174054,E,0.0
 Clothing,0.2,0.09,2,False,Air,1090,Kraft Paper Mailer,0.48,0.545,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,87.4,1.08,6.76,52.56,0.1917159479710136,E,0.00046
@@ -5334,7 +5334,7 @@ Electronics,0.17,0.0,5,True,Air,2222,Honeycomb Paper,1.07,0.944,602.0,Honeycomb 
 Electronics,15.56,8.38,9,True,Road,1322,Mushroom Pkg (Mycelium),8.02,10.285,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,58.91,77.1,14.87,3.72,6.221922917153805,A,0.041875
 Electronics,21.4,8.02,10,True,Road,2438,Mushroom Pkg (Mycelium),10.56,26.087,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,46.5,89.58,19.36,3.37,5.552479052041371,A,0.04012
 Home Decor,2.34,1.13,10,False,Road,72,Mushroom Pkg (Mycelium),2.94,0.084,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,94.2,34.77,2.1,2.79,19.868561967351443,A,0.005655
-Home Decor,1.58,1.29,10,False,Air,1508,Mushroom Pkg (Mycelium),2.63,5.957,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,53.79,26.08,16.72,2.79,1.8717702229802493,B,0.006448
+Home Decor,1.58,1.29,10,False,Air,1508,Mushroom Pkg (Mycelium),2.63,5.957,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,53.79,26.08,16.72,2.79,1.8717702229802495,B,0.006448
 Clothing,1.07,1.07,3,False,Road,526,Kraft Paper Mailer,1.03,0.281,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,86.98,5.91,6.98,39.39,1.0160456997069196,C,0.005346
 Electronics,1.84,0.12,9,True,Air,919,Mushroom Pkg (Mycelium),2.54,4.227,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,60.05,28.36,14.46,3.72,2.3535268081931666,B,0.000589
 Beauty,0.64,0.22,3,True,Road,512,PLA Bioplastic,0.86,0.164,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,86.95,10.19,7.43,49.94,1.6457602091843593,B,0.00112
@@ -5577,7 +5577,7 @@ Electronics,0.14,0.0,4,True,Road,200,Corrugated Cardboard,0.86,0.014,114.0,Woven
 Beauty,0.39,0.04,9,True,Air,1602,Mushroom Pkg (Mycelium),1.96,1.562,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,77.74,7.29,8.05,3.72,1.0867079395393864,C,0.0002
 Clothing,0.2,0.19,2,False,Air,1711,Kraft Paper Mailer,0.48,0.856,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,83.53,1.08,8.84,52.56,0.1466063182572038,E,0.000936
 Electronics,0.29,0.02,7,True,Air,2357,Honeycomb Paper,1.52,1.709,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,75.23,2.94,11.67,13.9,0.3023135987734706,E,9e-05
-Electronics,2.42,0.23,8,True,Air,1878,Mushroom Pkg (Mycelium),2.57,11.362,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,40.31,32.87,21.6,4.15,1.826111026568933,B,0.001152
+Electronics,2.42,0.23,8,True,Air,1878,Mushroom Pkg (Mycelium),2.57,11.362,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,40.31,32.87,21.6,4.15,1.8261110265689335,B,0.001152
 Beauty,0.61,0.19,5,True,Road,235,PLA Bioplastic,1.24,0.072,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,87.97,11.3,6.85,33.25,1.979561754808503,B,0.000931
 Clothing,0.23,0.09,1,False,Air,1234,Kraft Paper Mailer,0.29,0.71,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,84.89,1.0,8.11,78.9,0.1479654564777489,E,0.000456
 Electronics,0.31,0.02,6,True,Road,604,Honeycomb Paper,1.32,0.094,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,96.19,3.14,1.79,15.9,2.105026756968292,B,9e-05
@@ -5871,7 +5871,7 @@ Beauty,0.35,0.04,9,True,Road,427,Mushroom Pkg (Mycelium),1.94,0.075,601.0,Mushro
 Beauty,0.25,0.04,10,True,Air,1663,Mushroom Pkg (Mycelium),2.1,1.039,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,83.27,4.62,6.05,3.37,0.9163634848985976,C,0.000225
 Electronics,0.25,0.02,7,True,Road,705,Honeycomb Paper,1.5,0.088,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,96.81,2.48,1.5,13.9,1.9839986773342155,B,9.6e-05
 Home Decor,1.59,1.43,9,False,Air,1675,Mushroom Pkg (Mycelium),2.44,6.658,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,51.6,25.44,17.51,3.08,1.7434607799279964,B,0.007168
-Home Decor,2.26,1.02,10,False,Air,2267,Mushroom Pkg (Mycelium),2.9,12.809,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,37.82,34.03,22.5,2.79,1.814933252669633,B,0.005096
+Home Decor,2.26,1.02,10,False,Air,2267,Mushroom Pkg (Mycelium),2.9,12.809,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,37.82,34.03,22.5,2.79,1.8149332526696331,B,0.005096
 Clothing,0.27,0.21,2,False,Air,1121,Kraft Paper Mailer,0.51,0.757,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,83.84,1.56,8.67,52.56,0.2159169301133875,E,0.001026
 Electronics,20.71,9.43,9,True,Road,2581,Mushroom Pkg (Mycelium),10.08,26.726,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,46.24,81.68,19.45,3.72,5.039382774324793,B,0.04716
 Clothing,1.46,3.74,2,True,Road,303,Kraft Paper Mailer,1.9,0.567,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,82.98,7.65,9.13,52.56,1.00547634113074,C,0.01872
@@ -6037,7 +6037,7 @@ Clothing,0.8,1.25,4,False,Air,1733,Kraft Paper Mailer,1.3,5.416,550.0,Laminated 
 Electronics,1.73,0.24,9,True,Air,2528,Mushroom Pkg (Mycelium),2.49,10.934,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,41.36,27.17,21.22,3.72,1.5364749511557516,B,0.001178
 Furniture,14.36,37.43,6,False,Road,164,Wood Crate,16.17,3.069,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,67.38,32.96,15.99,11.5,2.473545811535596,B,0.187148
 Clothing,0.18,0.18,1,False,Air,1832,Recycled PET Box,0.27,0.824,320.0,Recycled PVC Film,Plastic,1279,39.86,1.59,1.476,No,83.21,0.79,17.69,53.11,0.0357263970759526,E,0.0009
-Electronics,0.34,0.0,6,True,Road,606,Honeycomb Paper,1.34,0.103,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,95.82,3.45,1.97,15.9,2.101521775877272,B,0.0
+Electronics,0.34,0.0,6,True,Road,606,Honeycomb Paper,1.34,0.103,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,95.82,3.45,1.97,15.9,2.1015217758772717,B,0.0
 Electronics,1.69,0.12,9,True,Air,1242,Mushroom Pkg (Mycelium),2.48,5.247,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,56.16,26.64,15.86,3.72,2.0156366951048748,B,0.0006
 Furniture,62.58,297.49,5,False,Road,608,Wood Crate,120.0,90.437,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,26.54,29.34,36.01,13.44,0.9777283816237607,C,1.487456
 Electronics,2.28,0.23,7,True,Air,2714,Honeycomb Paper,2.31,15.47,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,32.0,18.07,32.04,13.9,0.6767790050942882,D,0.001134
@@ -6578,7 +6578,7 @@ Clothing,0.18,0.1,2,False,Road,59,Kraft Paper Mailer,0.47,0.005,550.0,Laminated 
 Furniture,11.55,42.85,6,False,Road,1625,Wood Crate,18.34,34.816,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,42.78,33.27,28.05,11.5,1.4233154572793063,C,0.214272
 Clothing,1.09,1.18,4,False,Road,761,Kraft Paper Mailer,1.27,0.449,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,85.77,7.18,7.63,31.48,1.1292265885679438,C,0.00588
 Electronics,15.58,7.08,9,True,Road,2902,Mushroom Pkg (Mycelium),8.03,22.607,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,48.99,77.1,18.46,3.72,5.011917388303499,B,0.0354
-Furniture,12.5,36.16,6,False,Road,615,Wood Crate,15.66,11.119,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,57.16,32.87,21.0,11.5,1.878285624843541,B,0.180804
+Furniture,12.5,36.16,6,False,Road,615,Wood Crate,15.66,11.119,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,57.16,32.87,21.0,11.5,1.8782856248435411,B,0.180804
 Beauty,0.71,0.24,4,True,Air,846,PLA Bioplastic,1.08,1.502,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,68.72,12.13,17.8,39.92,0.8177527630475975,D,0.001176
 Beauty,0.93,0.19,3,True,Road,724,PLA Bioplastic,0.97,0.337,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,82.76,13.33,9.81,49.94,1.6305808735391565,B,0.000931
 Furniture,11.2,34.8,5,False,Road,1677,Wood Crate,14.92,29.18,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,45.27,27.56,26.83,13.44,1.232649972692882,C,0.174
@@ -6670,7 +6670,7 @@ Clothing,1.02,3.92,3,True,Air,1178,Kraft Paper Mailer,2.17,11.544,550.0,Laminate
 Furniture,45.69,288.77,6,False,Road,1174,Wood Crate,116.71,169.508,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,18.38,35.27,40.01,11.5,1.0578355146754437,C,1.44384
 Beauty,0.43,0.04,8,True,Road,675,Mushroom Pkg (Mycelium),1.77,0.145,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,97.48,7.97,0.91,4.15,10.509878560573007,A,0.0002
 Furniture,13.29,35.36,5,False,Road,450,Wood Crate,15.14,7.956,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,60.41,27.6,19.41,13.44,1.706336851811599,B,0.176778
-Electronics,0.19,0.0,5,True,Road,701,Honeycomb Paper,1.08,0.067,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,97.65,1.7,1.11,18.57,1.8378361821295648,B,2e-05
+Electronics,0.19,0.0,5,True,Road,701,Honeycomb Paper,1.08,0.067,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,97.65,1.7,1.11,18.57,1.8378361821295652,B,2e-05
 Furniture,12.96,5.67,10,False,Road,2634,Mushroom Pkg (Mycelium),7.18,17.068,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,53.07,79.72,16.98,2.79,5.633921929686576,A,0.028325
 Electronics,0.21,0.02,6,True,Air,2722,Honeycomb Paper,1.28,1.429,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,78.16,1.99,10.29,15.9,0.232069948292522,E,0.000112
 Beauty,0.98,0.21,4,True,Air,1192,PLA Bioplastic,1.19,2.92,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,59.1,15.37,23.28,39.92,0.7922680072049824,D,0.001064
@@ -6711,7 +6711,7 @@ Clothing,1.85,4.12,2,True,Road,469,Kraft Paper Mailer,2.05,0.966,550.0,Laminated
 Electronics,0.19,0.0,4,True,Air,2284,Wood Crate,0.88,1.085,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,82.64,1.41,8.51,16.15,0.1988248885047134,E,0.0
 Beauty,0.69,0.26,4,True,Road,292,PLA Bioplastic,1.08,0.101,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,86.74,11.77,7.55,39.92,1.8707282290426184,B,0.00128
 Clothing,1.39,4.54,2,True,Air,2581,Kraft Paper Mailer,2.22,29.294,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,18.83,7.97,43.55,52.56,0.2196096390445548,E,0.02268
-Home Decor,1.33,1.3,9,False,Air,1213,Mushroom Pkg (Mycelium),2.33,4.033,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,61.3,22.2,14.0,3.08,1.902857006938785,B,0.00651
+Home Decor,1.33,1.3,9,False,Air,1213,Mushroom Pkg (Mycelium),2.33,4.033,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,61.3,22.2,14.0,3.08,1.9028570069387851,B,0.00651
 Electronics,0.15,0.0,6,True,Air,2723,Honeycomb Paper,1.26,1.021,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,82.71,1.26,8.15,15.9,0.18552144962927,E,0.0
 Electronics,0.37,0.0,7,True,Air,1471,Honeycomb Paper,1.55,1.361,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,77.69,3.85,10.51,13.9,0.4395813092691428,D,0.0
 Electronics,0.37,0.0,9,True,Air,1555,Mushroom Pkg (Mycelium),1.95,1.438,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,78.92,6.92,7.63,3.72,1.0883353750543414,C,0.0
@@ -6720,7 +6720,7 @@ Furniture,19.36,6.37,9,False,Road,2186,Mushroom Pkg (Mycelium),9.54,21.16,601.0,
 Home Decor,2.09,1.09,9,False,Air,2788,Mushroom Pkg (Mycelium),2.64,14.567,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,35.11,31.05,23.48,3.08,1.5868823855671896,B,0.00546
 Furniture,18.97,4.97,9,False,Road,2186,Mushroom Pkg (Mycelium),9.39,20.734,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,49.77,80.31,18.18,3.08,5.300989807426303,A,0.024832
 Furniture,56.43,279.12,6,False,Road,2473,Corrugated Cardboard,112.85,345.132,114.0,Woven Corrugated Cardboard,Paper,653,7.71,1.03,0.979,Yes,6.06,20.59,48.28,2.82,0.5117646952824214,D,1.395576
-Electronics,0.3,0.02,8,True,Road,286,Mushroom Pkg (Mycelium),1.72,0.043,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,99.19,5.53,0.29,4.15,22.88267971489753,A,9.6e-05
+Electronics,0.3,0.02,8,True,Road,286,Mushroom Pkg (Mycelium),1.72,0.043,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,99.19,5.53,0.29,4.15,22.882679714897534,A,9.6e-05
 Furniture,52.46,279.79,7,False,Road,1994,Wood Crate,113.32,278.951,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,10.91,41.18,43.68,10.05,1.131318655418529,C,1.39893
 Clothing,0.94,1.46,3,False,Air,2524,Kraft Paper Mailer,1.18,9.213,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,43.52,7.17,30.3,39.39,0.283960386667974,E,0.00728
 Beauty,0.61,0.21,3,True,Air,1856,PLA Bioplastic,0.84,2.83,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,62.6,9.93,21.29,49.94,0.5596993630953798,D,0.001029
@@ -6944,7 +6944,7 @@ Beauty,0.43,0.03,8,True,Air,2441,Mushroom Pkg (Mycelium),1.77,2.624,601.0,Mushro
 Electronics,0.16,0.0,4,True,Air,1349,Corrugated Cardboard,0.86,0.54,114.0,Woven Corrugated Cardboard,Paper,653,7.71,1.03,0.979,Yes,88.14,0.38,6.1,3.99,0.0747540861058875,E,2e-05
 Beauty,0.94,0.27,3,True,Road,406,PLA Bioplastic,0.98,0.191,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,83.42,13.34,9.44,49.94,1.6957625322285454,B,0.001344
 Beauty,0.96,0.2,5,True,Road,253,PLA Bioplastic,1.38,0.121,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,83.59,16.26,9.34,33.25,2.089079005451927,B,0.001008
-Furniture,55.87,319.2,7,False,Road,89,Wood Crate,129.08,14.204,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,46.26,41.24,26.35,10.05,1.878102395517936,B,1.596
+Furniture,55.87,319.2,7,False,Road,89,Wood Crate,129.08,14.204,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,46.26,41.24,26.35,10.05,1.8781023955179357,B,1.596
 Electronics,0.25,0.0,7,True,Road,606,Honeycomb Paper,1.5,0.076,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,96.96,2.48,1.43,13.9,2.08111742579201,B,0.0
 Electronics,19.61,7.78,10,True,Road,1855,Bubble Wrap (LDPE),9.84,18.188,34.0,Standard Bubble Wrap (LDPE),Plastic,890,9.68,2.13,2.807,No,32.69,58.4,67.31,2.69,0.6941019061937022,D,0.03888
 Electronics,0.14,0.0,6,True,Air,2560,Honeycomb Paper,1.26,0.896,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,84.23,1.13,7.43,15.9,0.1825033401745167,E,1.6e-05
@@ -7146,7 +7146,7 @@ Beauty,0.25,0.05,9,True,Air,1560,Mushroom Pkg (Mycelium),1.9,0.975,601.0,Mushroo
 Furniture,73.43,308.88,6,False,Road,1824,Wood Crate,124.75,281.699,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,10.44,35.3,43.91,11.5,0.9647005018287292,C,1.544388
 Beauty,0.44,0.05,8,True,Air,959,Mushroom Pkg (Mycelium),1.78,1.055,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,82.71,8.13,6.26,4.15,1.5584662047178588,B,0.00025
 Beauty,0.96,0.2,3,True,Air,2421,PLA Bioplastic,0.98,5.81,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,49.62,13.63,28.67,49.94,0.5704917833801262,D,0.001008
-Home Decor,2.98,1.06,10,False,Air,2852,Mushroom Pkg (Mycelium),3.19,21.247,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,26.66,40.93,26.54,2.79,1.8506404728470047,B,0.005292
+Home Decor,2.98,1.06,10,False,Air,2852,Mushroom Pkg (Mycelium),3.19,21.247,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,26.66,40.93,26.54,2.79,1.8506404728470052,B,0.005292
 Electronics,0.18,0.0,5,True,Air,867,Honeycomb Paper,1.07,0.39,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,90.66,1.6,4.4,18.57,0.4363635371901052,D,2e-05
 Home Decor,2.15,1.13,10,False,Air,1634,Mushroom Pkg (Mycelium),2.86,8.783,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,45.75,32.8,19.63,2.79,2.0050941413604613,B,0.005642
 Furniture,11.02,33.7,6,False,Road,476,Wood Crate,14.68,8.021,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,61.16,32.68,19.04,11.5,2.059663757370601,B,0.16848
@@ -7177,9 +7177,9 @@ Beauty,0.99,0.22,5,True,Air,2103,PLA Bioplastic,1.4,5.205,575.0,Woven PLA Biopla
 Electronics,24.8,8.42,9,True,Road,1467,Mushroom Pkg (Mycelium),11.72,18.191,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,50.73,84.15,17.83,3.72,5.663488184885688,A,0.04212
 Electronics,24.26,6.45,9,True,Road,1881,Mushroom Pkg (Mycelium),11.5,22.817,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,47.97,83.89,18.83,3.72,5.346149477103054,A,0.03224
 Clothing,1.07,1.39,4,False,Air,1488,Kraft Paper Mailer,1.36,5.171,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,53.7,7.97,24.84,31.48,0.3850241390892053,D,0.00693
-Home Decor,2.62,1.02,10,False,Air,2650,Mushroom Pkg (Mycelium),3.05,17.358,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,31.17,37.58,24.91,2.79,1.810357213554508,B,0.005096
+Home Decor,2.62,1.02,10,False,Air,2650,Mushroom Pkg (Mycelium),3.05,17.358,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,31.17,37.58,24.91,2.79,1.8103572135545076,B,0.005096
 Clothing,0.98,1.34,4,False,Road,586,Kraft Paper Mailer,1.34,0.393,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,86.85,7.78,7.05,31.48,1.3242551313113289,C,0.00672
-Beauty,0.35,0.04,10,True,Road,341,Mushroom Pkg (Mycelium),2.14,0.06,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,98.82,6.6,0.43,3.37,18.41856181729809,A,0.0002
+Beauty,0.35,0.04,10,True,Road,341,Mushroom Pkg (Mycelium),2.14,0.06,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,98.82,6.6,0.43,3.37,18.418561817298094,A,0.0002
 Clothing,0.21,0.09,2,False,Road,497,Kraft Paper Mailer,0.48,0.052,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,96.91,1.17,1.66,52.56,0.8457826230225162,D,0.00046
 Clothing,0.22,0.1,2,False,Air,1469,Kraft Paper Mailer,0.49,0.808,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,83.85,1.22,8.66,52.56,0.1690530982617669,E,0.00052
 Clothing,1.08,1.41,5,False,Air,2336,Kraft Paper Mailer,1.56,8.234,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,45.35,8.88,29.32,26.22,0.3634379139345868,E,0.007068
@@ -7247,7 +7247,7 @@ Clothing,1.04,1.28,5,False,Road,453,Kraft Paper Mailer,1.51,0.29,550.0,Laminated
 Electronics,0.23,0.02,6,True,Air,1581,Honeycomb Paper,1.29,0.909,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,83.3,2.22,7.87,15.9,0.3385005923125042,E,8.4e-05
 Electronics,21.4,6.69,10,True,Road,2976,Mushroom Pkg (Mycelium),10.56,31.843,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,43.8,89.58,20.34,3.37,5.284955492381736,A,0.03344
 Electronics,15.04,8.39,10,True,Road,451,Mushroom Pkg (Mycelium),8.02,3.392,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,69.72,82.85,10.96,3.37,9.07116705555045,A,0.041975
-Furniture,50.69,289.44,8,False,Road,225,Wood Crate,117.38,32.562,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,39.48,47.1,29.67,8.92,1.9049544352897048,B,1.4472
+Furniture,50.69,289.44,8,False,Road,225,Wood Crate,117.38,32.562,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,39.48,47.1,29.67,8.92,1.9049544352897052,B,1.4472
 Electronics,2.33,0.22,8,True,Air,1993,Mushroom Pkg (Mycelium),2.53,11.609,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,39.89,32.13,21.75,4.15,1.772689573669445,B,0.00112
 Furniture,14.78,38.1,5,False,Road,1060,Wood Crate,16.24,20.193,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,49.56,27.73,24.73,13.44,1.3455721251285029,C,0.190512
 Beauty,0.33,0.05,10,True,Air,1147,Mushroom Pkg (Mycelium),2.13,0.946,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,84.18,6.22,5.72,3.37,1.30489487676663,C,0.00025
@@ -7400,7 +7400,7 @@ Clothing,1.17,1.41,4,False,Air,1746,Kraft Paper Mailer,1.36,6.155,550.0,Laminate
 Beauty,0.3,0.04,10,True,Air,2442,Mushroom Pkg (Mycelium),2.12,1.832,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,75.56,5.62,8.84,3.37,0.7628958413013754,D,0.00018
 Electronics,2.5,0.27,8,True,Air,914,Mushroom Pkg (Mycelium),2.6,5.713,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,54.05,33.58,16.63,4.15,2.4230906540534782,B,0.001344
 Furniture,77.32,290.22,6,False,Road,2374,Wood Crate,117.29,344.491,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,7.43,35.28,45.38,11.5,0.9329219715089914,C,1.45112
-Home Decor,1.78,1.21,10,False,Air,1520,Mushroom Pkg (Mycelium),2.71,6.764,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,51.18,28.57,17.66,2.79,1.941336243412444,B,0.006045
+Home Decor,1.78,1.21,10,False,Air,1520,Mushroom Pkg (Mycelium),2.71,6.764,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,51.18,28.57,17.66,2.79,1.9413362434124437,B,0.006045
 Furniture,48.53,292.57,5,False,Road,159,Honeycomb Paper,118.03,23.259,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,35.87,32.96,30.21,18.57,1.3092353091944615,C,1.46286
 Clothing,0.27,0.2,2,False,Air,2615,Kraft Paper Mailer,0.51,1.765,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,74.32,1.56,13.78,52.56,0.1358490467453522,E,0.001008
 Clothing,0.88,1.54,3,False,Air,2807,Kraft Paper Mailer,1.22,10.807,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,40.48,7.33,31.93,39.39,0.2754775986383464,E,0.00768
@@ -7530,7 +7530,7 @@ Electronics,24.79,6.89,10,True,Road,201,Honeycomb Paper,11.92,2.491,602.0,Honeyc
 Furniture,11.59,34.31,4,False,Road,1042,Wood Crate,14.52,17.876,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,51.71,22.21,23.67,16.15,1.1259822084502658,C,0.171564
 Beauty,0.26,0.04,10,True,Air,1163,Mushroom Pkg (Mycelium),2.1,0.756,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,86.7,4.83,4.81,3.37,1.2049893544720678,C,0.00018
 Home Decor,1.89,1.14,10,False,Air,932,Mushroom Pkg (Mycelium),2.76,4.404,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,59.27,29.82,14.74,2.79,2.427679618203554,B,0.005684
-Electronics,0.21,0.0,7,True,Road,282,Honeycomb Paper,1.48,0.03,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,97.94,2.01,0.97,13.9,2.486595374643944,B,0.0
+Electronics,0.21,0.0,7,True,Road,282,Honeycomb Paper,1.48,0.03,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,97.94,2.01,0.97,13.9,2.4865953746439438,B,0.0
 Electronics,1.58,0.12,8,True,Air,2957,Mushroom Pkg (Mycelium),2.23,11.68,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,40.01,24.57,21.71,4.15,1.3580837697796513,C,0.00062
 Furniture,12.07,4.94,9,False,Road,2098,Mushroom Pkg (Mycelium),6.63,12.661,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,57.07,72.3,15.53,3.08,5.586606208203078,A,0.024696
 Clothing,1.47,4.08,3,True,Air,2202,Kraft Paper Mailer,2.23,22.46,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,24.49,10.93,40.51,39.39,0.3237719001784275,E,0.0204
@@ -7846,7 +7846,7 @@ Clothing,1.19,1.04,3,False,Air,1034,Kraft Paper Mailer,1.08,3.076,550.0,Laminate
 Electronics,21.34,7.84,9,True,Road,2675,Mushroom Pkg (Mycelium),10.34,28.542,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,45.3,82.05,19.79,3.72,4.975239768810522,B,0.0392
 Electronics,2.39,0.11,9,True,Air,1463,Mushroom Pkg (Mycelium),2.76,8.741,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,45.75,34.03,19.63,3.72,2.0802851716614787,B,0.00056
 Electronics,0.21,0.0,9,True,Air,1432,Mushroom Pkg (Mycelium),1.88,0.752,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,86.87,3.8,4.75,3.72,0.9599997978947792,C,0.0
-Electronics,2.34,0.12,8,True,Air,1802,Mushroom Pkg (Mycelium),2.54,10.542,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,41.91,32.15,21.02,4.15,1.835394774719564,B,0.00062
+Electronics,2.34,0.12,8,True,Air,1802,Mushroom Pkg (Mycelium),2.54,10.542,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,41.91,32.15,21.02,4.15,1.8353947747195636,B,0.00062
 Electronics,20.44,9.29,10,True,Road,2581,Mushroom Pkg (Mycelium),10.18,26.378,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,46.44,88.75,19.38,3.37,5.495355753593614,A,0.04644
 Beauty,0.21,0.05,10,True,Road,439,Mushroom Pkg (Mycelium),2.08,0.046,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,99.38,3.81,0.22,3.37,20.78172371943764,A,0.00025
 Furniture,14.61,27.22,5,False,Road,1312,Wood Crate,11.89,17.856,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,51.11,27.04,23.97,13.44,1.3536920586695012,C,0.13608
@@ -8264,7 +8264,7 @@ Furniture,20.0,4.73,10,False,Road,1259,Mushroom Pkg (Mycelium),10.0,12.59,601.0,
 Clothing,0.18,0.19,1,False,Air,1097,Kraft Paper Mailer,0.28,0.521,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,88.01,0.75,6.43,78.9,0.1399688740328345,E,0.000966
 Home Decor,1.27,1.13,10,False,Air,2053,Mushroom Pkg (Mycelium),2.51,6.518,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,52.19,21.86,17.3,2.79,1.5163004903872548,B,0.005655
 Electronics,1.66,0.12,7,True,Air,1919,Honeycomb Paper,2.06,7.964,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,45.66,14.63,25.6,13.9,0.6857812232116709,D,0.000576
-Electronics,0.24,0.0,6,True,Road,685,Honeycomb Paper,1.3,0.082,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,96.98,2.32,1.42,15.9,1.9605619996042247,B,0.0
+Electronics,0.24,0.0,6,True,Road,685,Honeycomb Paper,1.3,0.082,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,96.98,2.32,1.42,15.9,1.9605619996042252,B,0.0
 Electronics,0.18,0.0,6,True,Air,2521,Honeycomb Paper,1.27,1.134,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,81.26,1.63,8.83,15.9,0.2215175287069616,E,0.0
 Electronics,1.72,0.13,7,True,Air,1501,Honeycomb Paper,2.09,6.454,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,49.33,14.95,23.87,13.9,0.7515709781495191,D,0.000651
 Electronics,0.18,0.01,4,True,Road,337,Corrugated Cardboard,0.87,0.03,114.0,Woven Corrugated Cardboard,Paper,653,7.71,1.03,0.979,Yes,97.69,0.5,1.19,3.99,0.5042012569737337,D,2.5e-05
@@ -8536,7 +8536,7 @@ Electronics,1.86,0.13,8,True,Air,2066,Mushroom Pkg (Mycelium),2.34,9.607,601.0,M
 Furniture,12.63,28.95,4,False,Road,2139,Wood Crate,12.38,30.962,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,44.27,21.97,27.32,16.15,0.9650072853218415,C,0.14476
 Electronics,0.39,0.02,8,True,Air,1797,Mushroom Pkg (Mycelium),1.76,1.752,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,76.09,7.21,8.65,4.15,1.000231098239179,C,9.1e-05
 Furniture,17.57,7.08,10,False,Road,412,Mushroom Pkg (Mycelium),9.03,3.619,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,68.27,85.99,11.48,2.79,8.98850095918981,A,0.035425
-Home Decor,1.17,1.22,9,False,Road,147,Mushroom Pkg (Mycelium),2.29,0.09,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,96.5,20.67,1.27,3.08,19.53069328291868,A,0.006075
+Home Decor,1.17,1.22,9,False,Road,147,Mushroom Pkg (Mycelium),2.29,0.09,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,96.5,20.67,1.27,3.08,19.530693282918676,A,0.006075
 Clothing,1.19,3.78,4,True,Air,1495,Kraft Paper Mailer,2.31,14.128,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,34.52,13.17,35.13,31.48,0.4498718915493341,D,0.0189
 Electronics,0.11,0.01,4,True,Air,2369,Corrugated Cardboard,0.84,0.651,114.0,Woven Corrugated Cardboard,Paper,653,7.71,1.03,0.979,Yes,87.29,0.07,6.53,3.99,0.0128637040024955,E,2.5e-05
 Furniture,48.59,294.3,8,False,Road,110,Wood Crate,119.32,16.186,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,46.32,47.11,26.32,8.92,2.1478722588194428,B,1.47149
@@ -9155,7 +9155,7 @@ Furniture,19.08,5.24,9,False,Road,1162,Mushroom Pkg (Mycelium),9.43,11.085,601.0
 Clothing,0.29,0.1,1,False,Air,1785,Kraft Paper Mailer,0.32,1.294,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,78.11,1.23,11.74,78.9,0.1257240097339003,E,0.0005
 Electronics,0.19,0.0,5,True,Air,1640,Honeycomb Paper,1.08,0.779,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,85.19,1.7,6.98,18.57,0.2922635684436148,E,0.0
 Electronics,0.33,0.02,8,True,Road,94,Mushroom Pkg (Mycelium),1.73,0.016,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,99.5,6.11,0.18,4.15,40.73310703829424,A,0.000105
-Furniture,14.53,27.32,6,False,Road,225,Wood Crate,12.13,3.074,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,67.28,32.05,16.04,11.5,2.397755461486568,B,0.13662
+Furniture,14.53,27.32,6,False,Road,225,Wood Crate,12.13,3.074,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,67.28,32.05,16.04,11.5,2.3977554614865677,B,0.13662
 Home Decor,2.05,1.17,10,False,Air,2251,Mushroom Pkg (Mycelium),2.82,11.536,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,40.11,31.7,21.67,2.79,1.755422161724865,B,0.00585
 Home Decor,1.76,1.21,10,False,Air,864,Cornstarch Foam,2.7,3.802,368.0,Laminated Cornstarch Foam,Eco,42,0.57,2.67,1.488,Yes,53.21,23.54,13.95,0.01,2.024946091401714,B,0.006048
 Home Decor,1.46,1.54,9,False,Air,2972,Mushroom Pkg (Mycelium),2.42,11.442,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,40.48,24.83,21.54,3.08,1.3832868438585493,C,0.00768
@@ -9179,7 +9179,7 @@ Clothing,1.84,3.37,2,True,Air,1271,Kraft Paper Mailer,1.75,10.708,550.0,Laminate
 Furniture,13.37,31.29,4,False,Road,2812,Wood Crate,13.32,43.994,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,39.28,22.08,29.77,16.15,0.8900234837076424,C,0.156465
 Beauty,0.72,0.23,5,True,Air,2379,PLA Bioplastic,1.29,4.282,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,55.8,12.91,25.16,33.25,0.615739244207502,D,0.001152
 Beauty,0.23,0.03,10,True,Road,564,Mushroom Pkg (Mycelium),2.09,0.065,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,99.05,4.22,0.34,3.37,14.89407384095929,A,0.000144
-Electronics,1.82,0.24,9,True,Air,1688,Mushroom Pkg (Mycelium),2.53,7.68,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,48.62,28.16,18.59,3.72,1.817751381508801,B,0.001176
+Electronics,1.82,0.24,9,True,Air,1688,Mushroom Pkg (Mycelium),2.53,7.68,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,48.62,28.16,18.59,3.72,1.8177513815088011,B,0.001176
 Furniture,15.71,5.28,10,False,Road,1008,Mushroom Pkg (Mycelium),8.28,7.918,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,61.78,83.83,13.83,2.79,7.273752185556603,A,0.02639
 Beauty,0.29,0.04,10,True,Air,1525,Mushroom Pkg (Mycelium),2.12,1.106,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,82.44,5.41,6.35,3.37,1.022362043722513,C,0.00018
 Clothing,1.03,1.15,3,False,Road,274,Kraft Paper Mailer,1.06,0.158,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,88.1,6.2,6.38,39.39,1.1661440178457652,C,0.005742
@@ -9391,7 +9391,7 @@ Clothing,0.26,0.19,2,False,Air,1050,Kraft Paper Mailer,0.5,0.683,550.0,Laminated
 Electronics,0.12,0.0,5,True,Road,769,Honeycomb Paper,1.05,0.046,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,98.64,0.87,0.64,18.57,1.6312474511758577,B,1.6e-05
 Clothing,1.39,3.69,2,True,Air,965,Kraft Paper Mailer,1.88,8.902,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,43.2,7.62,30.47,52.56,0.3000984476501986,E,0.01845
 Furniture,10.17,35.05,5,False,Road,2895,Wood Crate,15.02,50.735,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,37.51,27.58,30.64,13.44,1.0801566227102928,C,0.17523
-Electronics,0.13,0.0,5,True,Road,301,Honeycomb Paper,1.05,0.02,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,98.9,1.0,0.52,18.57,2.30768786983102,B,0.0
+Electronics,0.13,0.0,5,True,Road,301,Honeycomb Paper,1.05,0.02,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,98.9,1.0,0.52,18.57,2.3076878698310197,B,0.0
 Electronics,0.26,0.02,9,True,Air,2423,Mushroom Pkg (Mycelium),1.9,1.575,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,77.84,4.8,8.02,3.72,0.7182043992263842,D,9.6e-05
 Beauty,0.33,0.04,10,True,Air,2436,Mushroom Pkg (Mycelium),2.13,2.01,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,74.11,6.22,9.37,3.37,0.7965847602364184,D,0.0002
 Electronics,0.11,0.0,6,True,Air,1908,Honeycomb Paper,1.24,0.525,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,89.41,0.76,4.99,15.9,0.1827654944357726,E,0.0
@@ -9427,7 +9427,7 @@ Furniture,13.04,34.52,6,False,Road,1390,Wood Crate,15.01,23.991,405.0,Recycled P
 Electronics,17.48,6.92,10,True,Road,2132,Mushroom Pkg (Mycelium),8.99,18.634,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,51.33,85.93,17.61,3.37,5.855536294404526,A,0.034584
 Electronics,0.14,0.0,4,True,Air,2392,Corrugated Cardboard,0.86,0.837,114.0,Woven Corrugated Cardboard,Paper,653,7.71,1.03,0.979,Yes,84.55,0.25,7.94,3.99,0.0377833705562505,E,0.0
 Clothing,0.2,0.18,2,False,Air,2921,Kraft Paper Mailer,0.48,1.461,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,77.44,1.08,12.1,52.56,0.1071074291646752,E,0.00088
-Home Decor,2.66,1.25,10,False,Air,2304,Mushroom Pkg (Mycelium),3.06,15.322,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,33.87,38.04,23.93,2.79,1.907563647824336,B,0.00624
+Home Decor,2.66,1.25,10,False,Air,2304,Mushroom Pkg (Mycelium),3.06,15.322,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,33.87,38.04,23.93,2.79,1.9075636478243356,B,0.00624
 Clothing,0.97,1.49,4,False,Air,2411,Kraft Paper Mailer,1.4,8.981,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,43.95,8.32,30.07,31.48,0.3320252633180823,E,0.00744
 Electronics,0.3,0.0,9,True,Air,1962,Mushroom Pkg (Mycelium),1.92,1.472,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,78.72,5.58,7.7,3.72,0.86961027667399,C,0.0
 Furniture,17.22,6.14,9,False,Road,2394,Mushroom Pkg (Mycelium),8.69,20.612,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,50.04,78.76,18.08,3.08,5.227433339190633,A,0.03068
@@ -9462,11 +9462,11 @@ Clothing,0.28,0.1,1,False,Air,1898,Kraft Paper Mailer,0.31,1.329,550.0,Laminated
 Clothing,1.11,1.19,4,False,Air,1720,Kraft Paper Mailer,1.28,5.117,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,53.74,7.19,24.82,31.48,0.3476228707645902,E,0.00594
 Electronics,0.15,0.0,4,True,Road,230,Corrugated Cardboard,0.86,0.017,114.0,Woven Corrugated Cardboard,Paper,653,7.71,1.03,0.979,Yes,98.25,0.32,0.9,3.99,0.4266661925931193,D,1.6e-05
 Electronics,2.47,0.22,8,True,Air,2423,Mushroom Pkg (Mycelium),2.59,14.962,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,34.43,33.3,23.73,4.15,1.6839443032471846,B,0.00108
-Electronics,2.11,0.1,9,True,Air,1807,Mushroom Pkg (Mycelium),2.64,9.532,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,44.09,31.36,20.23,3.72,1.860207520503829,B,0.000486
-Beauty,0.93,0.24,5,True,Road,572,PLA Bioplastic,1.37,0.266,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,83.13,15.85,9.6,33.25,1.9812497936198128,B,0.001216
+Electronics,2.11,0.1,9,True,Air,1807,Mushroom Pkg (Mycelium),2.64,9.532,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,44.09,31.36,20.23,3.72,1.8602075205038295,B,0.000486
+Beauty,0.93,0.24,5,True,Road,572,PLA Bioplastic,1.37,0.266,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,83.13,15.85,9.6,33.25,1.9812497936198132,B,0.001216
 Clothing,0.88,1.11,4,False,Road,568,Kraft Paper Mailer,1.24,0.315,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,88.08,6.89,6.39,31.48,1.2938965111273064,C,0.005544
 Furniture,13.5,6.34,10,False,Road,1973,Mushroom Pkg (Mycelium),7.4,13.318,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,56.18,80.58,15.86,2.79,6.096847030463619,A,0.03172
-Beauty,0.68,0.27,4,True,Road,276,PLA Bioplastic,1.07,0.094,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,86.91,11.7,7.45,39.92,1.8845635054277168,B,0.001344
+Beauty,0.68,0.27,4,True,Road,276,PLA Bioplastic,1.07,0.094,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,86.91,11.7,7.45,39.92,1.8845635054277172,B,0.001344
 Clothing,1.11,4.56,4,True,Air,1825,Kraft Paper Mailer,2.62,20.805,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,26.49,14.05,39.44,31.48,0.4274847761793921,D,0.02279
 Clothing,1.02,4.39,4,True,Road,265,Kraft Paper Mailer,2.56,0.582,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,85.4,13.83,7.83,31.48,2.1195399591902992,B,0.02193
 Electronics,0.28,0.02,9,True,Road,622,Mushroom Pkg (Mycelium),1.91,0.087,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,98.62,5.19,0.5,3.72,12.455975088049824,A,9.6e-05
@@ -9664,7 +9664,7 @@ Furniture,67.13,260.15,5,False,Road,936,Wood Crate,105.06,121.75,405.0,Recycled 
 Home Decor,1.23,1.3,10,False,Air,2030,Mushroom Pkg (Mycelium),2.52,6.598,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,51.97,22.3,17.38,2.79,1.539700716933215,B,0.00651
 Electronics,22.24,8.21,10,True,Road,1989,Mushroom Pkg (Mycelium),10.9,22.118,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,48.57,90.2,18.61,3.37,5.816227521965205,A,0.04104
 Clothing,1.46,3.76,3,True,Road,684,Kraft Paper Mailer,2.1,1.286,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,79.65,10.68,10.92,39.39,1.173626266151441,C,0.018819
-Furniture,58.26,266.38,8,False,Road,218,Wood Crate,108.15,29.035,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,39.92,47.04,29.45,8.92,1.9167401726064448,B,1.331883
+Furniture,58.26,266.38,8,False,Road,218,Wood Crate,108.15,29.035,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,39.92,47.04,29.45,8.92,1.9167401726064452,B,1.331883
 Clothing,0.86,1.36,5,False,Air,2636,Kraft Paper Mailer,1.54,8.962,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,44.23,8.66,29.92,26.22,0.3473261916000604,E,0.006804
 Clothing,1.57,4.13,4,True,Air,2623,Kraft Paper Mailer,2.45,27.082,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,20.39,13.58,42.71,31.48,0.3815499793596352,D,0.02064
 Beauty,0.78,0.2,3,True,Air,2271,PLA Bioplastic,0.91,4.428,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,54.89,11.85,25.67,49.94,0.5539540103640821,D,0.001008
@@ -9761,7 +9761,7 @@ Clothing,0.84,1.28,4,False,Road,89,Kraft Paper Mailer,1.31,0.057,550.0,Laminated
 Electronics,0.36,0.0,6,True,Air,1254,Honeycomb Paper,1.34,1.129,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,79.94,3.69,9.45,15.9,0.4685713789871557,D,0.0
 Electronics,0.3,0.02,6,True,Air,1702,Honeycomb Paper,1.32,1.276,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,78.95,3.02,9.92,15.9,0.3653225438182919,E,9e-05
 Electronics,2.09,0.23,9,True,Air,2263,Mushroom Pkg (Mycelium),2.64,11.824,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,39.58,31.05,21.86,3.72,1.70448299613527,B,0.00116
-Home Decor,2.38,1.44,10,False,Air,956,Mushroom Pkg (Mycelium),2.95,5.688,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,54.2,35.25,16.57,2.79,2.552806122341212,B,0.0072
+Home Decor,2.38,1.44,10,False,Air,956,Mushroom Pkg (Mycelium),2.95,5.688,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,54.2,35.25,16.57,2.79,2.5528061223412117,B,0.0072
 Furniture,11.67,35.9,6,False,Road,107,Wood Crate,15.56,1.921,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,71.59,32.85,13.93,11.5,2.8298634005841063,B,0.17952
 Furniture,57.54,306.76,5,False,Road,2069,Wood Crate,123.7,317.343,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,8.91,29.35,44.66,13.44,0.7886251502770902,D,1.53381
 Beauty,0.51,0.2,3,True,Air,835,PLA Bioplastic,0.8,1.065,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,74.37,8.63,14.59,49.94,0.709801185071886,D,0.00098
@@ -10089,7 +10089,7 @@ Beauty,0.78,0.19,3,True,Road,389,PLA Bioplastic,0.91,0.152,575.0,Woven PLA Biopl
 Furniture,73.45,312.08,8,False,Road,2065,Wood Crate,126.43,322.223,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,8.47,47.15,44.87,8.92,1.26097612522897,C,1.560384
 Clothing,1.42,3.46,4,True,Air,2086,Kraft Paper Mailer,2.18,18.044,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,29.16,12.75,38.0,31.48,0.4026315683518009,D,0.01728
 Furniture,17.87,4.59,10,False,Road,2660,Mushroom Pkg (Mycelium),9.15,23.767,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,48.08,86.31,18.79,2.79,5.512080600740788,A,0.022936
-Beauty,0.77,0.2,4,True,Road,399,PLA Bioplastic,1.11,0.154,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,85.46,12.84,8.28,39.92,1.8608693404747167,B,0.00098
+Beauty,0.77,0.2,4,True,Road,399,PLA Bioplastic,1.11,0.154,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,85.46,12.84,8.28,39.92,1.8608693404747172,B,0.00098
 Electronics,1.68,0.26,7,True,Air,1253,Honeycomb Paper,2.07,5.263,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,52.89,14.74,22.19,13.9,0.7971157820137096,D,0.001302
 Clothing,0.83,1.07,4,False,Air,1090,Kraft Paper Mailer,1.23,2.916,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,63.68,6.68,19.48,31.48,0.4114989521817785,D,0.005346
 Furniture,76.93,288.12,7,False,Road,1896,Wood Crate,116.65,273.138,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,10.84,41.19,43.71,10.05,1.1308167208689837,C,1.4406
@@ -10286,7 +10286,7 @@ Electronics,0.24,0.0,8,True,Air,967,Mushroom Pkg (Mycelium),1.7,0.58,601.0,Mushr
 Electronics,0.19,0.01,4,True,Road,728,Corrugated Cardboard,0.88,0.069,114.0,Woven Corrugated Cardboard,Paper,653,7.71,1.03,0.979,Yes,97.07,0.56,1.51,3.99,0.445032817859061,D,2.5e-05
 Clothing,0.95,1.25,4,False,Air,2100,Kraft Paper Mailer,1.3,6.562,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,49.9,7.45,26.88,31.48,0.3325892733411729,E,0.00627
 Beauty,0.8,0.22,4,True,Air,845,PLA Bioplastic,1.12,1.69,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,66.61,13.24,19.0,39.92,0.8362104823047114,D,0.00112
-Furniture,12.97,4.51,10,False,Road,778,Honeycomb Paper,7.19,5.045,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,57.13,48.28,20.2,10.07,2.868118669895116,B,0.02256
+Furniture,12.97,4.51,10,False,Road,778,Honeycomb Paper,7.19,5.045,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,57.13,48.28,20.2,10.07,2.8681186698951158,B,0.02256
 Home Decor,1.15,0.98,10,False,Road,266,Mushroom Pkg (Mycelium),2.46,0.153,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,95.8,20.14,1.52,2.79,15.899989539480568,A,0.004914
 Furniture,51.43,284.17,6,False,Road,2349,Wood Crate,114.87,333.758,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,8.23,35.27,44.99,11.5,0.9407423662871224,C,1.42086
 Home Decor,1.83,1.16,9,False,Air,2977,Honeycomb Paper,2.53,13.62,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,35.04,16.99,30.6,11.09,0.6662744880302454,D,0.005824
@@ -10491,7 +10491,7 @@ Clothing,0.24,0.19,1,False,Air,1756,Kraft Paper Mailer,0.3,1.054,550.0,Laminated
 Home Decor,2.37,1.44,10,False,Air,2858,Mushroom Pkg (Mycelium),2.95,16.934,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,31.77,35.1,24.69,2.79,1.7059537583655826,B,0.0072
 Clothing,1.53,3.63,3,True,Air,1449,Kraft Paper Mailer,2.05,13.15,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,35.44,10.56,34.64,39.39,0.3658198508712514,E,0.018126
 Electronics,0.19,0.01,6,True,Air,880,Wood Crate,1.28,0.418,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,91.48,1.47,4.18,11.5,0.4220094684187874,D,2.5e-05
-Home Decor,2.85,1.1,10,False,Air,2751,Mushroom Pkg (Mycelium),3.14,19.601,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,28.46,39.75,25.89,2.79,1.842410125824252,B,0.005488
+Home Decor,2.85,1.1,10,False,Air,2751,Mushroom Pkg (Mycelium),3.14,19.601,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,28.46,39.75,25.89,2.79,1.8424101258242516,B,0.005488
 Beauty,0.85,0.21,5,True,Air,1665,PLA Bioplastic,1.34,3.538,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,57.64,14.77,24.11,33.25,0.7351306206913887,D,0.001064
 Furniture,16.76,6.5,9,False,Road,2841,Mushroom Pkg (Mycelium),8.5,23.808,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,48.17,78.36,18.75,3.08,5.015039732531214,B,0.0325
 Clothing,0.29,0.2,1,False,Air,2468,Kraft Paper Mailer,0.32,1.789,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,73.97,1.23,13.96,78.9,0.105730651451959,E,0.001008
@@ -10527,7 +10527,7 @@ Electronics,20.88,6.63,9,True,Road,466,Mushroom Pkg (Mycelium),10.15,4.865,601.0
 Electronics,0.16,0.0,5,True,Road,787,Honeycomb Paper,1.06,0.063,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,98.0,1.37,0.94,18.57,1.7489343096443513,B,0.0
 Clothing,0.29,0.1,1,False,Air,1414,Kraft Paper Mailer,0.32,1.025,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,80.7,1.23,10.35,78.9,0.1426086818735573,E,0.000525
 Furniture,13.89,31.49,4,False,Road,784,Wood Crate,13.4,12.344,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,55.6,22.08,21.77,16.15,1.2170876795090635,C,0.157464
-Electronics,0.16,0.0,6,True,Road,139,Honeycomb Paper,1.26,0.011,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,98.71,1.39,0.61,15.9,2.734421746849596,B,1.6e-05
+Electronics,0.16,0.0,6,True,Road,139,Honeycomb Paper,1.26,0.011,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,98.71,1.39,0.61,15.9,2.7344217468495957,B,1.6e-05
 Furniture,18.89,5.82,10,False,Road,1811,Mushroom Pkg (Mycelium),9.56,17.105,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,52.23,87.33,17.28,2.79,6.064582982373669,A,0.02912
 Furniture,10.1,40.09,4,False,Road,900,Wood Crate,16.84,18.041,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,51.9,22.38,23.58,16.15,1.138931249409192,C,0.200446
 Furniture,11.0,38.69,4,False,Road,591,Wood Crate,16.28,11.433,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,57.28,22.34,20.94,16.15,1.280229165223058,C,0.19344
@@ -10631,7 +10631,7 @@ Electronics,0.22,0.0,6,True,Air,2541,Honeycomb Paper,1.29,1.398,602.0,Honeycomb 
 Furniture,14.67,5.98,9,False,Road,84,Mushroom Pkg (Mycelium),7.67,0.616,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,77.79,75.99,8.04,3.08,11.341789634105767,A,0.0299
 Furniture,15.66,5.82,10,False,Road,2961,Mushroom Pkg (Mycelium),8.26,23.185,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,48.64,83.77,18.58,2.79,5.410333400950839,A,0.02912
 Electronics,22.16,7.32,10,True,Road,865,Mushroom Pkg (Mycelium),10.86,9.584,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,58.37,90.21,15.06,3.37,7.18804733147096,A,0.0366
-Electronics,0.13,0.0,5,True,Road,307,Honeycomb Paper,1.05,0.02,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,98.9,1.0,0.52,18.57,2.30768786983102,B,2e-05
+Electronics,0.13,0.0,5,True,Road,307,Honeycomb Paper,1.05,0.02,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,98.9,1.0,0.52,18.57,2.3076878698310197,B,2e-05
 Clothing,1.18,1.44,4,False,Air,2892,Kraft Paper Mailer,1.38,10.411,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,40.64,8.15,31.85,31.48,0.3070643545662683,E,0.0072
 Clothing,0.15,0.17,2,False,Road,585,Kraft Paper Mailer,0.47,0.05,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,97.72,0.85,1.22,52.56,0.8360648884714029,D,0.000874
 Electronics,22.9,8.18,9,True,Road,2229,Mushroom Pkg (Mycelium),10.96,25.522,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,46.65,83.08,19.3,3.72,5.165595587274839,A,0.04088
@@ -10644,7 +10644,7 @@ Clothing,0.17,0.09,2,False,Air,2994,Kraft Paper Mailer,0.47,1.272,550.0,Laminate
 Furniture,13.08,34.38,5,False,Road,2189,Wood Crate,14.75,37.629,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,41.51,27.54,28.67,13.44,1.1527031338436295,C,0.171912
 Furniture,77.43,280.79,7,False,Road,2707,Honeycomb Paper,113.72,380.049,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,4.64,46.23,44.93,13.9,1.234720649127072,C,1.403948
 Electronics,20.02,6.65,9,True,Road,866,Mushroom Pkg (Mycelium),9.81,8.669,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,59.85,81.13,14.53,3.72,6.700343654484264,A,0.033232
-Clothing,1.0,1.34,3,False,Road,727,PLA Bioplastic,1.14,0.487,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,81.39,16.5,10.59,49.94,1.869688208716884,B,0.00672
+Clothing,1.0,1.34,3,False,Road,727,PLA Bioplastic,1.14,0.487,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,81.39,16.5,10.59,49.94,1.8696882087168836,B,0.00672
 Furniture,13.5,5.16,9,False,Road,2538,Mushroom Pkg (Mycelium),7.2,17.131,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,52.94,74.48,17.03,3.08,5.248150014788607,A,0.025792
 Clothing,1.48,3.37,4,True,Air,2789,Kraft Paper Mailer,2.15,23.497,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,23.52,12.58,41.03,31.48,0.3679258989050475,D,0.016848
 Home Decor,1.13,1.22,10,False,Air,1886,Mushroom Pkg (Mycelium),2.49,5.752,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,54.74,21.14,16.38,2.79,1.5487178541686293,B,0.006075
@@ -11042,7 +11042,7 @@ Electronics,2.36,0.11,8,True,Air,1430,Mushroom Pkg (Mycelium),2.54,8.437,601.0,M
 Electronics,0.14,0.0,5,True,Air,2164,Honeycomb Paper,1.06,0.757,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,85.94,1.11,6.62,18.57,0.201208428820479,E,0.0
 Home Decor,1.72,1.18,9,False,Road,725,Mushroom Pkg (Mycelium),2.49,0.624,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,90.24,27.01,3.53,3.08,9.181867087289778,A,0.00588
 Clothing,1.01,1.06,3,False,Road,287,Kraft Paper Mailer,1.02,0.152,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,88.29,5.91,6.28,39.39,1.1292991832326138,C,0.00532
-Beauty,0.96,0.2,4,True,Road,730,PLA Bioplastic,1.18,0.35,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,82.41,15.17,10.01,39.92,1.818581236904972,B,0.001008
+Beauty,0.96,0.2,4,True,Road,730,PLA Bioplastic,1.18,0.35,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,82.41,15.17,10.01,39.92,1.8185812369049716,B,0.001008
 Clothing,0.16,0.19,1,False,Road,618,Kraft Paper Mailer,0.28,0.059,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,97.47,0.75,1.36,78.9,0.6617642192910153,D,0.000972
 Electronics,0.24,0.02,6,True,Air,2419,Cornstarch Foam,1.3,1.451,368.0,Laminated Cornstarch Foam,Eco,42,0.57,2.67,1.488,Yes,76.21,3.43,7.09,0.09,0.5805358842685636,D,8.4e-05
 Beauty,0.35,0.04,10,True,Air,1859,Mushroom Pkg (Mycelium),2.14,1.627,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,77.23,6.6,8.24,3.37,0.9611649318974596,C,0.0002
@@ -11061,7 +11061,7 @@ Furniture,13.92,4.77,10,False,Road,1350,Mushroom Pkg (Mycelium),7.57,9.396,601.0
 Beauty,0.22,0.04,9,True,Air,2586,Mushroom Pkg (Mycelium),1.89,1.422,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,79.33,3.98,7.48,3.72,0.6385025884354828,D,0.000225
 Home Decor,2.86,1.21,10,False,Air,2765,Mushroom Pkg (Mycelium),3.14,19.77,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,28.27,39.89,25.95,2.79,1.844624206372863,B,0.006045
 Furniture,65.98,238.56,7,False,Road,1600,Wood Crate,96.82,190.848,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,16.2,41.09,41.08,10.05,1.2002920837319355,C,1.19282
-Home Decor,2.81,1.25,9,False,Air,1870,Mushroom Pkg (Mycelium),2.92,13.137,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,37.12,37.9,22.75,3.08,1.9991207912474367,B,0.006272
+Home Decor,2.81,1.25,9,False,Air,1870,Mushroom Pkg (Mycelium),2.92,13.137,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,37.12,37.9,22.75,3.08,1.9991207912474371,B,0.006272
 Beauty,0.26,0.03,8,True,Air,2331,Mushroom Pkg (Mycelium),1.7,1.515,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,78.38,4.77,7.82,4.15,0.7319692158607138,D,0.00016
 Clothing,1.13,1.69,3,False,Air,2255,Kraft Paper Mailer,1.28,9.527,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,42.46,7.7,30.87,39.39,0.2993197181950204,E,0.008463
 Furniture,14.51,4.7,10,False,Road,1302,Mushroom Pkg (Mycelium),7.8,9.446,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,60.11,82.18,14.43,2.79,6.834095160492367,A,0.02352
@@ -11162,7 +11162,7 @@ Beauty,0.26,0.03,8,True,Road,567,Kraft Paper Mailer,1.7,0.074,550.0,Laminated Kr
 Clothing,0.17,0.09,2,False,Road,133,Kraft Paper Mailer,0.47,0.011,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,97.97,0.85,1.09,52.56,0.935778958000956,C,0.000437
 Furniture,18.31,4.85,10,False,Road,2688,Mushroom Pkg (Mycelium),9.32,24.609,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,47.57,86.83,18.97,2.79,5.492672351466928,A,0.02424
 Beauty,0.91,0.21,3,True,Air,2863,PLA Bioplastic,0.96,6.513,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,48.01,13.17,29.59,49.94,0.5340993398411847,D,0.001029
-Electronics,2.17,0.13,8,True,Air,1261,Mushroom Pkg (Mycelium),2.47,6.841,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,50.76,30.62,17.82,4.15,2.061952746242832,B,0.000651
+Electronics,2.17,0.13,8,True,Air,1261,Mushroom Pkg (Mycelium),2.47,6.841,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,50.76,30.62,17.82,4.15,2.0619527462428318,B,0.000651
 Furniture,65.67,293.99,8,False,Road,101,Wood Crate,119.2,14.846,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,44.6,47.11,27.16,8.92,2.0814432223327235,B,1.469952
 Furniture,13.76,35.75,6,False,Road,2802,Wood Crate,15.5,50.086,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,37.4,32.84,30.69,11.5,1.2840664293233488,C,0.17875
 Beauty,0.73,0.24,3,True,Air,1517,PLA Bioplastic,0.89,2.769,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,61.82,11.31,21.73,49.94,0.624574292472421,D,0.001176
@@ -11467,7 +11467,7 @@ Electronics,1.71,0.22,9,True,Air,2980,Mushroom Pkg (Mycelium),2.48,12.74,601.0,M
 Electronics,21.38,8.44,10,True,Road,2471,Mushroom Pkg (Mycelium),10.55,26.415,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,46.33,89.59,19.42,3.37,5.535942042433468,A,0.04221
 Clothing,0.97,1.19,5,False,Air,2165,Kraft Paper Mailer,1.48,6.441,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,50.18,7.82,26.73,26.22,0.3510662045990945,E,0.00594
 Clothing,0.19,0.18,1,False,Air,2601,Kraft Paper Mailer,0.28,1.235,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,79.63,0.75,10.93,78.9,0.0823421699595452,E,0.0009
-Furniture,72.21,258.0,8,False,Road,203,Wood Crate,104.8,26.187,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,39.52,47.02,29.65,8.92,1.9030016221584607,B,1.29
+Furniture,72.21,258.0,8,False,Road,203,Wood Crate,104.8,26.187,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,39.52,47.02,29.65,8.92,1.9030016221584611,B,1.29
 Clothing,1.37,3.79,4,True,Air,2952,Kraft Paper Mailer,2.32,27.97,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,19.85,13.14,43.0,31.48,0.366697665890752,E,0.018963
 Clothing,0.96,1.46,3,False,Air,1212,Kraft Paper Mailer,1.18,4.424,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,56.68,7.17,23.24,39.39,0.3702237362210096,D,0.007308
 Electronics,1.73,0.12,7,True,Air,2567,Styrofoam (EPS),2.09,11.102,105.0,Woven Styrofoam (EPS),Plastic,27,0.52,1.93,3.6,No,31.81,14.88,33.45,0.08,0.355874428822887,E,0.00062
@@ -11496,7 +11496,7 @@ Clothing,1.99,3.3,4,True,Air,2409,Kraft Paper Mailer,2.12,19.874,550.0,Laminated
 Electronics,21.1,8.55,9,True,Road,2211,Mushroom Pkg (Mycelium),10.24,23.326,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,48.0,81.92,18.82,3.72,5.223379106090377,A,0.04275
 Electronics,22.46,6.99,10,True,Road,2074,Mushroom Pkg (Mycelium),10.98,23.291,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,47.88,90.43,18.86,3.37,5.753764276046432,A,0.034932
 Furniture,14.55,32.6,4,False,Road,99,Wood Crate,13.84,1.614,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,70.32,22.14,14.55,16.15,1.825979255946443,B,0.16302
-Home Decor,2.83,1.25,9,False,Air,1314,Mushroom Pkg (Mycelium),2.93,9.297,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,44.32,38.04,20.15,3.08,2.265409316853136,B,0.006272
+Home Decor,2.83,1.25,9,False,Air,1314,Mushroom Pkg (Mycelium),2.93,9.297,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,44.32,38.04,20.15,3.08,2.2654093168531357,B,0.006272
 Beauty,0.48,0.03,8,True,Air,2078,Mushroom Pkg (Mycelium),1.79,2.494,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,70.46,8.87,10.69,4.15,0.9956968198599794,C,0.00016
 Clothing,0.25,0.19,2,False,Road,198,Kraft Paper Mailer,0.5,0.025,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,96.74,1.43,1.75,52.56,0.980570868245218,C,0.000972
 Home Decor,1.87,1.34,10,False,Road,87,Mushroom Pkg (Mycelium),2.75,0.081,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,95.14,29.61,1.76,2.79,20.18862489282677,A,0.00672
@@ -12054,7 +12054,7 @@ Furniture,12.63,33.87,6,False,Road,1888,Wood Crate,14.75,31.973,405.0,Recycled P
 Clothing,1.28,3.5,3,True,Air,1187,Kraft Paper Mailer,2.0,10.386,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,40.49,10.43,31.93,39.39,0.3919824493585201,D,0.01748
 Electronics,2.34,0.24,9,True,Air,2175,Mushroom Pkg (Mycelium),2.74,12.724,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,37.94,33.55,22.46,3.72,1.7925199558094405,B,0.001218
 Electronics,0.3,0.0,9,True,Air,913,Mushroom Pkg (Mycelium),1.92,0.685,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,87.55,5.58,4.5,3.72,1.487999669333407,B,0.0
-Electronics,2.33,0.23,9,True,Air,1679,Mushroom Pkg (Mycelium),2.73,9.78,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,43.47,33.53,20.45,3.72,1.9675304661354287,B,0.00114
+Electronics,2.33,0.23,9,True,Air,1679,Mushroom Pkg (Mycelium),2.73,9.78,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,43.47,33.53,20.45,3.72,1.9675304661354291,B,0.00114
 Furniture,56.33,323.78,7,False,Road,2729,Wood Crate,130.91,441.798,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,3.93,41.25,47.1,10.05,1.0509553916994607,C,1.61891
 Electronics,24.35,6.48,9,True,Road,1416,Mushroom Pkg (Mycelium),11.54,17.24,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,51.44,83.91,17.57,3.72,5.73090462544652,A,0.032376
 Furniture,78.46,271.3,7,False,Road,1198,Wood Crate,109.92,162.509,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,18.17,41.16,40.12,10.05,1.2311066492745104,C,1.356498
@@ -12293,7 +12293,7 @@ Electronics,1.53,0.11,7,True,Air,2682,Honeycomb Paper,2.01,10.259,602.0,Honeycom
 Furniture,12.6,34.94,6,False,Road,290,Wood Crate,15.18,5.066,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,64.76,32.77,17.28,11.5,2.275694312749172,B,0.174699
 Electronics,0.23,0.02,7,True,Road,362,Honeycomb Paper,1.49,0.042,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,97.58,2.25,1.14,13.9,2.3684189750710747,B,9.8e-05
 Electronics,0.14,0.0,5,True,Air,2165,Honeycomb Paper,1.06,0.758,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,85.92,1.11,6.63,18.57,0.2009049470731603,E,1.6e-05
-Electronics,0.14,0.0,6,True,Road,572,Honeycomb Paper,1.26,0.04,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,98.51,1.13,0.7,15.9,1.937140089799872,B,0.0
+Electronics,0.14,0.0,6,True,Road,572,Honeycomb Paper,1.26,0.04,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,98.51,1.13,0.7,15.9,1.9371400897998716,B,0.0
 Beauty,0.79,0.24,5,True,Air,871,PLA Bioplastic,1.32,1.72,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,66.55,13.9,19.04,33.25,0.8760503741570181,C,0.001176
 Furniture,10.13,38.58,4,False,Road,798,Wood Crate,16.23,15.393,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,53.92,22.35,22.59,16.15,1.1872509434594536,C,0.192882
 Clothing,0.18,0.18,1,False,Air,2791,Kraft Paper Mailer,0.27,1.256,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,79.53,0.73,10.98,78.9,0.0797814134989605,E,0.000924
@@ -12366,7 +12366,7 @@ Furniture,79.6,303.62,6,False,Road,2008,Wood Crate,122.65,304.834,405.0,Recycled
 Clothing,1.73,4.1,3,True,Air,2876,Kraft Paper Mailer,2.24,29.479,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,18.43,10.94,43.76,39.39,0.2999999931444243,E,0.0205
 Furniture,13.58,30.42,5,False,Road,1517,Wood Crate,13.17,23.074,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,48.06,27.29,25.46,13.44,1.2862528952767909,C,0.152076
 Furniture,12.91,41.24,6,False,Road,2702,Wood Crate,17.7,55.715,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,35.92,33.18,31.42,11.5,1.267218291940856,C,0.20618
-Electronics,0.25,0.0,6,True,Road,684,Honeycomb Paper,1.3,0.086,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,96.83,2.45,1.49,15.9,1.973153038152324,B,0.0
+Electronics,0.25,0.0,6,True,Road,684,Honeycomb Paper,1.3,0.086,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,96.83,2.45,1.49,15.9,1.9731530381523237,B,0.0
 Beauty,0.38,0.04,10,True,Air,2418,Mushroom Pkg (Mycelium),2.15,2.297,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,71.93,7.19,10.16,3.37,0.8492125148412879,D,0.0002
 Electronics,2.22,0.19,7,True,Air,871,Honeycomb Paper,2.29,4.834,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,52.96,17.74,22.16,13.9,0.960649776143963,C,0.000972
 Furniture,17.58,4.71,10,False,Road,1040,Mushroom Pkg (Mycelium),9.03,9.142,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,59.81,86.04,14.54,2.79,7.1009623726986,A,0.023552
@@ -12504,7 +12504,7 @@ Clothing,0.15,0.17,1,False,Road,345,Kraft Paper Mailer,0.27,0.029,550.0,Laminate
 Beauty,0.23,0.03,9,True,Air,1430,Mushroom Pkg (Mycelium),1.89,0.822,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,85.92,4.2,5.09,3.72,0.990176622755084,C,0.00016
 Clothing,0.29,0.23,2,False,Air,2153,Kraft Paper Mailer,0.52,1.561,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,75.79,1.68,12.99,52.56,0.1551962929025178,E,0.001134
 Beauty,0.56,0.21,3,True,Air,2959,PLA Bioplastic,0.82,4.143,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,57.43,9.3,24.23,49.94,0.4605860313418889,D,0.001064
-Electronics,0.35,0.0,7,True,Road,369,Honeycomb Paper,1.54,0.065,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,96.18,3.64,1.8,13.9,2.426665318519268,B,0.0
+Electronics,0.35,0.0,7,True,Road,369,Honeycomb Paper,1.54,0.065,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,96.18,3.64,1.8,13.9,2.4266653185192677,B,0.0
 Electronics,0.19,0.0,4,True,Road,118,Corrugated Cardboard,0.88,0.011,114.0,Woven Corrugated Cardboard,Paper,653,7.71,1.03,0.979,Yes,97.81,0.56,1.13,3.99,0.5946897392126204,D,2e-05
 Electronics,0.1,0.0,4,True,Air,1076,Corrugated Cardboard,0.84,0.269,114.0,Woven Corrugated Cardboard,Paper,653,7.71,1.03,0.979,Yes,93.25,0.0,3.47,3.99,0.0,E,0.0
 Home Decor,1.45,1.44,9,False,Air,2906,Mushroom Pkg (Mycelium),2.38,10.534,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,42.24,23.74,20.9,3.08,1.3630621357386536,C,0.0072
@@ -13182,7 +13182,7 @@ Clothing,1.18,1.27,3,False,Air,1494,Kraft Paper Mailer,1.11,4.743,550.0,Laminate
 Beauty,0.38,0.04,9,True,Air,1723,Mushroom Pkg (Mycelium),1.95,1.637,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,77.09,7.13,8.29,3.72,1.0320867271306724,C,0.00018
 Furniture,12.17,5.12,9,False,Road,501,Mushroom Pkg (Mycelium),6.67,3.049,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,71.76,72.46,10.22,3.08,8.50802265087841,A,0.025575
 Furniture,15.6,5.41,9,False,Road,2970,Mushroom Pkg (Mycelium),8.04,23.166,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,48.66,77.1,18.58,3.08,4.97954763296299,B,0.027032
-Electronics,1.59,0.13,9,True,Air,1525,Mushroom Pkg (Mycelium),2.44,6.062,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,53.44,25.44,16.85,3.72,1.8117506343174687,B,0.00064
+Electronics,1.59,0.13,9,True,Air,1525,Mushroom Pkg (Mycelium),2.44,6.062,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,53.44,25.44,16.85,3.72,1.8117506343174692,B,0.00064
 Electronics,21.77,7.39,10,True,Road,2244,Mushroom Pkg (Mycelium),10.71,24.426,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,47.33,89.86,19.06,3.37,5.657502326468923,A,0.03696
 Clothing,0.94,1.07,4,False,Road,284,Kraft Paper Mailer,1.23,0.152,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,88.82,6.68,6.0,31.48,1.3359997773333705,C,0.005346
 Clothing,0.25,0.09,1,False,Air,875,Kraft Paper Mailer,0.3,0.547,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,86.69,1.08,7.14,78.9,0.1815125796200869,E,0.000437
@@ -13318,7 +13318,7 @@ Beauty,0.35,0.05,8,True,Road,210,Mushroom Pkg (Mycelium),1.74,0.037,601.0,Mushro
 Furniture,14.67,41.42,6,False,Road,1851,Wood Crate,17.77,38.334,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,41.09,33.19,28.88,11.5,1.3790858248238982,C,0.20709
 Electronics,2.41,0.11,7,True,Road,551,Honeycomb Paper,2.36,0.664,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,81.01,18.72,8.95,13.9,2.5099438536375587,B,0.00057
 Beauty,0.7,0.22,4,True,Air,1713,Bubble Wrap (LDPE),1.08,2.998,34.0,Standard Bubble Wrap (LDPE),Plastic,890,9.68,2.13,2.807,No,58.39,7.0,41.61,6.08,0.1345830296903862,E,0.00112
-Electronics,2.17,0.21,9,True,Air,1638,Mushroom Pkg (Mycelium),2.67,8.886,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,45.5,31.9,19.72,3.72,1.9411763721513,B,0.001064
+Electronics,2.17,0.21,9,True,Air,1638,Mushroom Pkg (Mycelium),2.67,8.886,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,45.5,31.9,19.72,3.72,1.9411763721512996,B,0.001064
 Beauty,0.36,0.04,9,True,Air,1310,Mushroom Pkg (Mycelium),1.94,1.179,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,81.52,6.76,6.69,3.72,1.2125558725626495,C,0.000225
 Home Decor,2.96,1.14,9,False,Air,1868,Mushroom Pkg (Mycelium),2.98,13.823,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,36.0,39.14,23.16,3.08,2.0279791870475306,B,0.005684
 Furniture,13.72,5.77,9,False,Road,121,Mushroom Pkg (Mycelium),7.29,0.83,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,77.64,74.77,8.09,3.08,11.090727924508291,A,0.02883
@@ -13648,7 +13648,7 @@ Clothing,0.23,0.1,1,False,Air,1390,Kraft Paper Mailer,0.29,0.799,550.0,Laminated
 Furniture,68.92,286.34,6,False,Road,956,Wood Crate,115.74,136.871,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,20.78,35.27,38.84,11.5,1.0897013107697913,C,1.43172
 Clothing,1.54,4.1,2,True,Air,1900,Corrugated Cardboard,2.04,19.475,114.0,Woven Corrugated Cardboard,Paper,653,7.71,1.03,0.979,Yes,27.51,5.08,37.26,6.74,0.1636070809552581,E,0.02052
 Electronics,0.33,0.0,6,True,Air,863,Honeycomb Paper,1.33,0.712,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,84.73,3.36,7.19,15.9,0.5607787815328535,D,0.0
-Electronics,0.26,0.02,6,True,Road,704,Honeycomb Paper,1.3,0.092,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,96.67,2.57,1.57,15.9,1.964329959025504,B,0.000105
+Electronics,0.26,0.02,6,True,Road,704,Honeycomb Paper,1.3,0.092,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,96.67,2.57,1.57,15.9,1.9643299590255037,B,0.000105
 Beauty,0.91,0.22,4,True,Air,916,PLA Bioplastic,1.16,2.084,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,63.45,14.6,20.8,39.92,0.842307651812132,D,0.00112
 Electronics,2.26,0.1,8,True,Air,1526,Mushroom Pkg (Mycelium),2.5,8.622,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,46.08,31.53,19.51,4.15,1.9393130733309545,B,0.000504
 Beauty,0.34,0.03,8,True,Air,1448,Mushroom Pkg (Mycelium),1.74,1.231,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,81.02,6.28,6.87,4.15,1.0969430717695674,C,0.00016
@@ -13728,7 +13728,7 @@ Clothing,1.55,3.84,2,True,Air,1301,Kraft Paper Mailer,1.94,12.49,550.0,Laminated
 Furniture,13.43,30.59,4,False,Road,1120,Wood Crate,13.04,17.13,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,51.86,22.04,23.6,16.15,1.1206779186153422,C,0.152928
 Electronics,18.66,5.68,9,True,Road,2104,Mushroom Pkg (Mycelium),9.26,19.63,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,50.51,80.1,17.91,3.72,5.366833871198554,A,0.028416
 Electronics,1.94,0.26,9,True,Road,419,Mushroom Pkg (Mycelium),2.58,0.406,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,91.77,29.46,2.98,3.72,11.863083267421722,A,0.001302
-Home Decor,1.84,1.3,9,False,Air,1075,Mushroom Pkg (Mycelium),2.54,4.945,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,57.18,28.36,15.49,3.08,2.19703020032084,B,0.00651
+Home Decor,1.84,1.3,9,False,Air,1075,Mushroom Pkg (Mycelium),2.54,4.945,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,57.18,28.36,15.49,3.08,2.1970302003208397,B,0.00651
 Clothing,1.91,4.26,3,True,Road,668,Kraft Paper Mailer,2.3,1.423,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,77.33,11.07,12.16,39.39,1.0924341206879835,C,0.02132
 Furniture,10.5,32.45,5,False,Road,2740,Wood Crate,13.98,44.457,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,39.4,27.43,29.71,13.44,1.1079097573911223,C,0.16225
 Furniture,58.95,299.14,8,False,Road,1236,Wood Crate,121.26,184.869,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,16.82,47.12,40.78,8.92,1.386562006214762,C,1.49568
@@ -13797,7 +13797,7 @@ Beauty,0.33,0.04,9,True,Air,1606,Bubble Wrap (LDPE),1.93,1.325,34.0,Standard Bub
 Clothing,0.24,0.1,1,False,Road,512,Kraft Paper Mailer,0.3,0.061,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,96.42,1.01,1.92,78.9,0.6312496712241297,D,0.00048
 Electronics,0.19,0.0,4,True,Air,1111,Corrugated Cardboard,0.88,0.528,114.0,Woven Corrugated Cardboard,Paper,653,7.71,1.03,0.979,Yes,87.9,0.56,6.22,3.99,0.1080385678394585,E,0.0
 Electronics,0.36,0.0,9,True,Road,95,Mushroom Pkg (Mycelium),1.94,0.017,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,99.41,6.76,0.21,3.72,38.628387483869126,A,0.0
-Electronics,0.15,0.0,6,True,Road,692,Honeycomb Paper,1.26,0.052,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,98.25,1.26,0.82,15.9,1.8439001903656207,B,1.6e-05
+Electronics,0.15,0.0,6,True,Road,692,Honeycomb Paper,1.26,0.052,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,98.25,1.26,0.82,15.9,1.8439001903656211,B,1.6e-05
 Home Decor,2.74,1.21,10,False,Air,2087,Mushroom Pkg (Mycelium),3.1,14.296,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,35.34,38.69,23.4,2.79,1.98410247931186,B,0.006045
 Home Decor,2.89,1.05,9,False,Air,1796,Mushroom Pkg (Mycelium),2.96,12.976,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,37.36,38.46,22.67,3.08,2.0358181722179896,B,0.005265
 Furniture,12.54,5.58,9,False,Road,1386,Mushroom Pkg (Mycelium),6.82,8.69,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,61.51,73.03,13.93,3.08,6.2911696847688665,A,0.027904
@@ -14051,7 +14051,7 @@ Furniture,10.29,33.18,5,False,Road,95,Wood Crate,14.27,1.576,405.0,Recycled Pine
 Beauty,0.5,0.05,8,True,Road,502,Mushroom Pkg (Mycelium),1.8,0.126,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,97.56,9.22,0.88,4.15,12.572712985553425,A,0.00025
 Electronics,1.79,0.23,7,True,Air,2027,Honeycomb Paper,2.12,9.071,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,43.02,15.36,26.84,13.9,0.6867361890187708,D,0.001134
 Beauty,0.94,0.24,4,True,Road,770,PLA Bioplastic,1.18,0.362,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,82.54,14.84,9.94,39.92,1.7915491155383183,B,0.001176
-Home Decor,1.61,1.25,10,False,Air,1589,Mushroom Pkg (Mycelium),2.64,6.396,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,52.38,26.48,17.23,2.79,1.8442250815887933,B,0.00624
+Home Decor,1.61,1.25,10,False,Air,1589,Mushroom Pkg (Mycelium),2.64,6.396,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,52.38,26.48,17.23,2.79,1.8442250815887935,B,0.00624
 Electronics,19.3,7.7,10,True,Road,973,Mushroom Pkg (Mycelium),9.72,9.389,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,59.16,87.76,14.78,3.37,7.125303983402978,A,0.0385
 Furniture,12.55,33.65,6,False,Road,2159,Wood Crate,14.66,36.325,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,42.07,32.67,28.4,11.5,1.380422486604842,C,0.168268
 Electronics,21.31,6.79,9,True,Road,93,Mushroom Pkg (Mycelium),10.32,0.991,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,72.84,82.1,9.83,3.72,10.022379448384592,A,0.033948
@@ -14114,7 +14114,7 @@ Beauty,0.37,0.03,8,True,Road,124,Mushroom Pkg (Mycelium),1.75,0.023,601.0,Mushro
 Clothing,0.26,0.19,1,False,Air,2479,Kraft Paper Mailer,0.3,1.611,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,75.63,1.15,13.07,78.9,0.1055853017914841,E,0.00095
 Electronics,15.94,6.87,9,True,Road,1725,Mushroom Pkg (Mycelium),8.18,13.748,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,55.38,77.44,16.15,3.72,5.754055371265921,A,0.034336
 Furniture,41.2,315.36,6,False,Road,1065,Wood Crate,127.34,167.929,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,18.63,35.31,39.89,11.5,1.0622210814183737,C,1.5768
-Electronics,2.09,0.11,7,True,Road,187,Honeycomb Paper,2.24,0.195,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,84.62,17.05,7.25,13.9,2.822068576266404,B,0.000558
+Electronics,2.09,0.11,7,True,Road,187,Honeycomb Paper,2.24,0.195,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,84.62,17.05,7.25,13.9,2.8220685762664037,B,0.000558
 Beauty,0.84,0.27,5,True,Air,1386,PLA Bioplastic,1.34,2.911,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,60.26,14.59,22.62,33.25,0.7740052708220481,D,0.001344
 Electronics,2.18,0.1,9,True,Air,1905,Mushroom Pkg (Mycelium),2.67,10.382,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,42.28,32.05,20.89,3.72,1.841072195257434,B,0.000513
 Electronics,24.73,8.25,9,True,Road,1246,Mushroom Pkg (Mycelium),11.69,15.407,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,52.72,84.12,17.11,3.72,5.899707428421542,A,0.041245
@@ -14350,7 +14350,7 @@ Electronics,0.16,0.0,5,True,Air,1028,Honeycomb Paper,1.06,0.411,602.0,Honeycomb 
 Furniture,63.0,335.55,8,False,Road,294,Wood Crate,135.82,49.326,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,33.93,47.19,32.39,8.92,1.7483173279309252,B,1.67776
 Clothing,0.18,0.08,1,False,Air,2461,Kraft Paper Mailer,0.27,1.107,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,81.02,0.73,10.18,78.9,0.0860510720971442,E,0.000414
 Home Decor,2.01,1.05,9,False,Air,2820,Mushroom Pkg (Mycelium),2.6,14.17,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,35.73,30.31,23.26,3.08,1.563714464156729,B,0.005265
-Electronics,1.72,0.11,8,True,Air,1231,Mushroom Pkg (Mycelium),2.29,5.293,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,55.98,26.08,15.93,4.15,1.964594980251413,B,0.00054
+Electronics,1.72,0.11,8,True,Air,1231,Mushroom Pkg (Mycelium),2.29,5.293,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,55.98,26.08,15.93,4.15,1.9645949802514135,B,0.00054
 Beauty,0.29,0.04,9,True,Road,378,Mushroom Pkg (Mycelium),1.92,0.055,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,99.04,5.37,0.35,3.72,18.41137596749724,A,0.00018
 Electronics,0.12,0.0,4,True,Air,1446,Corrugated Cardboard,0.85,0.434,114.0,Woven Corrugated Cardboard,Paper,653,7.71,1.03,0.979,Yes,90.25,0.13,5.01,3.99,0.0311377183357847,E,2e-05
 Clothing,0.2,0.17,1,False,Air,1325,Kraft Paper Mailer,0.28,0.663,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,85.86,0.83,7.59,78.9,0.1312252791534546,E,0.000874
@@ -14551,7 +14551,7 @@ Clothing,1.18,4.01,4,True,Air,2584,Kraft Paper Mailer,2.4,25.905,550.0,Laminated
 Beauty,0.69,0.2,3,True,Air,1217,PLA Bioplastic,0.88,2.099,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,65.52,10.78,19.62,49.94,0.6593271835205308,D,0.00098
 Electronics,2.36,0.25,9,True,Road,631,Mushroom Pkg (Mycelium),2.74,0.745,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,88.43,33.85,4.19,3.72,9.69450842613164,A,0.00126
 Clothing,0.98,1.34,4,False,Road,689,Kraft Paper Mailer,1.34,0.462,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,86.4,7.78,7.3,31.48,1.2789039343967212,C,0.006699
-Beauty,0.23,0.04,9,True,Road,326,Mushroom Pkg (Mycelium),1.89,0.037,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,99.46,4.2,0.2,3.72,25.19987400063,A,0.0002
+Beauty,0.23,0.04,9,True,Road,326,Mushroom Pkg (Mycelium),1.89,0.037,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,99.46,4.2,0.2,3.72,25.199874000629997,A,0.0002
 Home Decor,1.19,1.06,10,False,Road,610,Mushroom Pkg (Mycelium),2.48,0.363,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,93.46,20.69,2.37,2.79,10.475944946858672,A,0.005278
 Clothing,1.57,3.24,4,True,Air,1288,Kraft Paper Mailer,2.1,10.433,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,39.86,12.37,32.26,31.48,0.4601363775531191,D,0.0162
 Home Decor,2.39,1.39,9,False,Road,266,Mushroom Pkg (Mycelium),2.76,0.318,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,91.84,34.03,2.95,3.08,13.842707171963667,A,0.006944
@@ -14636,7 +14636,7 @@ Clothing,0.23,0.17,2,False,Air,1789,Kraft Paper Mailer,0.49,1.029,550.0,Laminate
 Furniture,69.39,257.13,6,False,Road,865,Wood Crate,104.05,111.209,405.0,Recycled Pine Wood Crate,Wood,484,30.47,1.74,0.29,Yes,23.56,35.23,37.47,11.5,1.1282625799769794,C,1.285632
 Clothing,0.19,0.21,2,False,Air,1254,Kraft Paper Mailer,0.48,0.658,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,86.05,1.17,7.48,52.56,0.1877005096657072,E,0.00105
 Clothing,1.87,4.43,4,True,Air,2876,Kraft Paper Mailer,2.57,31.852,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,16.66,13.91,44.71,31.48,0.3733392893460235,D,0.02214
-Furniture,53.57,283.83,7,False,Road,2119,PLA Bioplastic,114.93,300.718,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,5.97,83.54,53.52,24.91,1.8730941354055648,B,1.419134
+Furniture,53.57,283.83,7,False,Road,2119,PLA Bioplastic,114.93,300.718,575.0,Woven PLA Bioplastic,Eco,1311,74.97,3.5,1.903,Yes,5.97,83.54,53.52,24.91,1.8730941354055652,B,1.419134
 Clothing,1.01,4.1,3,True,Air,2490,Kraft Paper Mailer,2.24,25.523,550.0,Laminated Kraft Paper,Paper,868,59.17,1.52,1.026,Yes,22.16,10.94,41.76,39.39,0.3143678085639892,E,0.0205
 Electronics,2.01,0.21,8,True,Road,224,Mushroom Pkg (Mycelium),2.4,0.225,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,93.36,29.16,2.4,4.15,14.57999392500253,A,0.001044
 Furniture,12.29,5.43,9,False,Road,1857,Mushroom Pkg (Mycelium),6.72,11.411,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,58.32,72.63,15.08,3.08,5.77957521355602,A,0.027136
@@ -14736,7 +14736,7 @@ Electronics,0.18,0.01,5,True,Air,2465,Honeycomb Paper,1.07,1.109,602.0,Honeycomb
 Beauty,0.47,0.04,10,True,Road,606,Mushroom Pkg (Mycelium),2.19,0.142,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,97.43,8.88,0.93,3.37,11.458052195642798,A,0.000225
 Electronics,16.05,8.38,9,True,Road,392,Mushroom Pkg (Mycelium),8.22,3.146,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,69.87,77.59,10.9,3.72,8.542017564952516,A,0.041875
 Electronics,1.53,0.23,8,True,Road,585,Mushroom Pkg (Mycelium),2.21,0.448,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,92.06,23.99,2.87,4.15,10.03065852590295,A,0.001134
-Home Decor,2.47,1.13,10,False,Air,2247,Mushroom Pkg (Mycelium),2.99,13.875,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,36.05,36.11,23.14,2.79,1.8726014748227533,B,0.00567
+Home Decor,2.47,1.13,10,False,Air,2247,Mushroom Pkg (Mycelium),2.99,13.875,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,36.05,36.11,23.14,2.79,1.8726014748227535,B,0.00567
 Electronics,0.2,0.0,6,True,Road,616,Honeycomb Paper,1.28,0.062,602.0,Honeycomb Paper,Paper,380,42.0,1.95,0.75,Yes,97.62,1.86,1.12,15.9,1.992855363521997,B,2e-05
 Home Decor,2.96,1.34,9,False,Air,957,Mushroom Pkg (Mycelium),2.98,7.082,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,49.68,39.14,18.21,3.08,2.5792420329905528,B,0.00672
 Electronics,1.71,0.1,8,True,Air,1931,Mushroom Pkg (Mycelium),2.28,8.255,601.0,Mushroom Pkg (Mycelium),Bio-based,95,12.0,3.2,0.18,Yes,47.21,26.04,19.1,4.15,1.6360208567528345,B,0.000486

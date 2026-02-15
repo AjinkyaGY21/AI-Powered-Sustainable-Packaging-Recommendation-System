@@ -68,9 +68,9 @@ CORS(app,
      origins=[
          "http://localhost:3000",
          "http://127.0.0.1:5500",
-	 "https://ai-powered-sustainable-packaging-recommendation-system.onrender.com",
-         "https://ecopackai-web.vercel.app/",  # ← YOUR VERCEL URL
-         "https://*.vercel.app"  # Allow all Vercel preview URLs
+         "https://ai-powered-sustainable-packaging-jrsk.onrender.com",
+         "https://ecopackai-web.vercel.app/",
+         "https://*.vercel.app"
      ])
 
 # 🔥 UPDATED RATE LIMIT
@@ -89,6 +89,10 @@ logger = logging.getLogger("EcoPackAI")
 # ==========================================================
 MAX_RECOMMENDATIONS_PER_HOUR = 5
 SESSION_DURATION_HOURS = 2
+
+@app.route("/")
+def index():
+    return {"status": "Backend is live", "timestamp": datetime.utcnow().isoformat()}
 
 # ==========================================================
 # 🔥 FIXED SESSION INIT - NOW ENSURES ALL KEYS EXIST

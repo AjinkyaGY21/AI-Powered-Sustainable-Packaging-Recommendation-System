@@ -9,7 +9,7 @@
 const CONFIG = {
     API_URL: (() => {
         const isLocal = ['localhost', '127.0.0.1'].includes(window.location.hostname);
-        return isLocal ? 'http://localhost:5000' : 'https://ai-powered-sustainable-packaging-recommendation-system.onrender.com';
+        return isLocal ? 'http://localhost:5000' : 'https://ai-powered-sustainable-packaging-jrsk.onrender.com';
     })(),
     
     ROUTES: {

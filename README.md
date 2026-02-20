@@ -14,30 +14,31 @@ Check out the deployed frontend here: [EcoPackAI Live App](https://ecopackai-web
 EcoPackAI is an **AI-based decision system** that recommends the **best packaging material** for shipments based on:
 
 - 💰 **Cost**
-- 🌍 **CO₂ Emissions**  
+- 🌍 **CO₂ Emissions**
 - 🌱 **Sustainability Score**
 
 The system automatically predicts and ranks packaging materials — you don't choose manually.
 
 ### Key Features
 
-✅ **MySQL Database** - Full data persistence and authentication  
-✅ **Secure Authentication** - Email/password with bcrypt hashing  
-✅ **Account Protection** - 3-attempt lockout system  
-✅ **Recommendation History** - All queries saved to database  
-✅ **PowerBI Dashboard** - Visual analytics and insights  
-✅ **PDF Reports** - Downloadable recommendation reports  
-✅ **ML Integration** - Auto-loads your models or uses intelligent mock data
+✅ **Session-based** — no login required, session persists until logout  
+✅ **Rate Limiting** — 3 recommendation calls per 20-minute window (per IP)  
+✅ **Materials Database** — lazy-loading flashcards from `clean_materials.csv`  
+✅ **BI Dashboard** — HTML report embedded via iframe (served from `bi/` folder)  
+✅ **PDF Reports** — downloadable with EcoPackAI header, shipment details, watermark  
+✅ **Excel Export** — structured single-sheet report with colour formatting  
+✅ **ML Integration** — auto-loads your models or runs without them  
+✅ **Auto environment detection** — no config changes between local and production
 
 ---
 
 ## 🧠 How It Works
 
-1. **Input** - Enter shipment details (weight, size, distance, fragility, etc.)
-2. **Processing** - System tests your shipment against 15+ packaging materials
-3. **Prediction** - ML models predict cost and CO₂ for each material
-4. **Ranking** - Materials ranked by your chosen priority (Sustainability/CO₂/Cost)
-5. **Output** - View top recommendations with detailed metrics
+1. **Input** — Enter shipment details (weight, size, distance, fragility, etc.)
+2. **Processing** — System tests your shipment against packaging materials
+3. **Prediction** — ML models predict cost and CO₂ for each material
+4. **Ranking** — Materials ranked by your chosen priority (Sustainability / CO₂ / Cost)
+5. **Output** — View top recommendations with detailed metrics
 
 No ML knowledge required to use the system.
 
@@ -90,692 +91,318 @@ ecopackai/
 │                      🌱 EcoPackAI System                        │
 └─────────────────────────────────────────────────────────────────┘
 
-┌──────────────────┐          ┌──────────────────┐          ┌──────────────────┐
-│   HTML/CSS/JS    │◄────────►│   Flask Backend  │◄────────►│  MySQL Database  │
-│   Frontend       │   HTTP   │   (Port 5000)    │   TCP    │  (Port 3306)     │
-│  localhost:3000  │          │                  │          │                  │
-└──────────────────┘          └─────────┬────────┘          └─────────┬────────┘
-                                        │                             │
-                    ┌───────────────────┼─────────────────┐           │
-                    │                   │                 │           │
-              ┌─────▼─────┐      ┌─────▼─────┐    ┌─────▼─────┐     │
-              │  Session  │      │    ML     │    │  History  │     │
-              │   Store   │      │  Models   │    │   Saver   │     │
-              │ (Flask)   │      │   .pkl    │    │           │     │
-              └───────────┘      └───────────┘    └───────────┘     │
-                                                                     │
-                                        ┌────────────────────────────┘
-                                        │
-                                 ┌──────▼──────┐
-                                 │   PowerBI   │
-                                 │  Dashboard  │
-                                 │ (localhost) │
-                                 └─────────────┘
+┌──────────────────┐          ┌──────────────────┐
+│   HTML/CSS/JS    │◄────────►│   Flask Backend  │
+│   Frontend       │   HTTP   │   (Port 5000)    │
+│  localhost:5500  │          │                  │
+└──────────────────┘          └────────┬─────────┘
+         │                             │
+         │                  ┌──────────┼──────────────────────┐
+         │                  │          │                      │
+         │           ┌──────▼──┐  ┌───▼──────┐   ┌──────────▼────────┐
+         │           │ Session │  │   ML     │   │  Rate Limits      │
+         │           │ Store   │  │  Models  │   │  (per IP, 3/20min)│
+         │           │(Flask)  │  │  .pkl    │   │  In-memory dict   │
+         │           └─────────┘  └──────────┘   └───────────────────┘
+         │
+         ├── Home Tab      → Shipment form + Recommendations
+         ├── Materials Tab → Lazy-loaded flashcards from clean_materials.csv
+         └── Dashboard Tab → Iframe → /bi/dashboard → bi/EcoPackAI_BI_Dashboard.html
 ```
 
 ---
 
-## 🚀 Complete Setup Guide
-
-### Prerequisites
-
-- **Python 3.8+** installed
-- **MySQL 8.0+** installed and running
-- **PowerBI Desktop** (for dashboard)
-- **Web browser** (Chrome, Firefox, Safari, Edge)
-- **Terminal/Command Prompt**
-
----
-
-### Step 1: MySQL Database Setup
-
-**1.1 Install MySQL** (if not installed)
-
-**1.2 Create Database and Tables**
+## 🚀 Quick Start
 
 ```bash
-# Login to MySQL
-mysql -u root -p
-
-# Create database
-CREATE DATABASE IF NOT EXISTS ecopackdb;
-USE ecopackdb;
-
-# Run schema
-source sql/schema.sql;
-
-# Verify tables
-SHOW TABLES;
-# Should show: users, recommendation_history
-
-# Check test user
-SELECT * FROM users;
-# Should show: test@ecopackai.com
-```
-
-**Manual Schema Creation** (if needed):
-
-```sql
-CREATE DATABASE IF NOT EXISTS ecopackdb;
-USE ecopackdb;
-
--- Users table with authentication
-CREATE TABLE users (
-    email VARCHAR(255) PRIMARY KEY,
-    password_hash VARCHAR(255),
-    failed_attempts INT DEFAULT 0,
-    is_locked BOOLEAN DEFAULT FALSE,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    last_login TIMESTAMP NULL
-);
-
--- Recommendation history
-CREATE TABLE recommendation_history (
-    id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    email VARCHAR(255),
-    session_id VARCHAR(100),
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    
-    -- Shipment details
-    product_category VARCHAR(100),
-    weight_kg FLOAT,
-    fragility INT,
-    shipping_mode VARCHAR(50),
-    distance_km FLOAT,
-    moisture_sensitive BOOLEAN,
-    length_cm FLOAT,
-    width_cm FLOAT,
-    height_cm FLOAT,
-    
-    -- Request parameters
-    k_value INT,
-    sort_by VARCHAR(50),
-    
-    -- Results (JSON format)
-    recommendations JSON,
-    
-    FOREIGN KEY (email) REFERENCES users(email)
-);
-
--- Insert test user
-INSERT INTO users (email, password_hash, failed_attempts, is_locked)
-VALUES ('test@ecopackai.com', NULL, 0, FALSE);
-```
-
----
-
-### Step 2: Backend Setup
-
-**2.1 Create Virtual Environment**
-
-```bash
+# 1. Backend
 cd backend
-
-# Create venv
-python -m venv venv
-
-# Activate
-source venv/bin/activate       # Mac/Linux
-venv\Scripts\activate          # Windows
-```
-
-**2.2 Install Dependencies**
-
-```bash
-pip install --upgrade pip
+python -m venv ecopackvenv
+source ecopackvenv/bin/activate   # Windows: ecopackvenv\Scripts\activate
 pip install -r requirements.txt
-```
-
-This installs:
-- Flask (web framework)
-- Flask-CORS (cross-origin requests)
-- Flask-Limiter (rate limiting)
-- PyMySQL (MySQL connector)
-- bcrypt (password hashing)
-- Pandas, NumPy (data processing)
-- Scikit-learn, XGBoost (ML models)
-- ReportLab (PDF generation)
-- python-dotenv (environment variables)
-
-**2.3 Generate Secret Key**
-
-```bash
-python -c "import secrets; print(secrets.token_urlsafe(32))"
-```
-
-**Example output:**
-```
-k3vX9pLmQ7rT2nB8jH4yF6wD1sA5zE0cU
-```
-
-Copy this key!
-
-**2.4 Create .env File**
-
-Create `.env` in the `backend/` directory:
-
-```env
-# Flask Secret Key (REQUIRED)
-APP_SECRET_KEY=paste-your-generated-key-here
-
-# MySQL Connection (REQUIRED)
-DB_HOST=localhost
-DB_PORT=3306
-DB_USER=root
-DB_PASSWORD=your-mysql-password
-DB_NAME=ecopackdb
-
-# Optional - Only if you have ML models
-DATASET_PATH=../data/processed/final_ecopack_dataset_fe.csv
-ML_MODELS_PATH=../ml/models
-
-# Environment
-FLASK_ENV=development
-```
-
-**2.5 Test Database Connection**
-
-```bash
-python db.py
-```
-
-**Expected output:**
-```
-✅ Database connection successful!
-```
-
-**2.6 Start Backend**
-
-```bash
+# Create .env with APP_SECRET_KEY
 python app.py
-```
 
-**Expected output:**
-```
-🌱 EcoPackAI Backend Starting...
-✅ MySQL connected
-✅ ML Models loaded: True
-✅ Materials available: 15
-📚 API Health: http://localhost:5000/api/health
- * Running on http://0.0.0.0:5000
-```
-
-**Leave this terminal running!**
-
----
-
-### Step 3: Frontend Setup
-
-**3.1 Start Frontend Server**
-
-Open a **new terminal**:
-
-```bash
+# 2. Frontend (new terminal)
 cd frontend
+python -m http.server 5500
 
-# Mac/Linux
-python3 -m http.server 3000
-
-# Windows
-python -m http.server 3000
+# 3. Open browser
+# http://localhost:5500
 ```
 
-**Alternative - VS Code Live Server:**
-- Install "Live Server" extension
-- Right-click `login.html` → "Open with Live Server"
+No database setup. No login required. Just run and go.
 
 ---
 
-### Step 4: PowerBI Dashboard Setup
+## 🔒 Rate Limiting
 
-**4.1 Install PowerBI Desktop**
+### 3 Calls per 20 Minutes (Per IP)
 
-Download from: https://powerbi.microsoft.com/desktop/
+| Setting | Value |
+|---------|-------|
+| Max calls | 3 |
+| Window | 20 minutes (rolling) |
+| Keyed by | Client IP address |
+| Resets on | Timeout only (not on logout / refresh) |
+| Session expiry | Logout only — no timer |
 
-**4.2 Connect PowerBI to MySQL**
+**How the UI handles it:**
+- Counter updates immediately after each successful call
+- Pre-flight check: if remaining = 0, toast fires without a network call
+- If API returns 429 and the body is not valid JSON (e.g. from flask-limiter), the frontend catches the parse error and shows a friendly message regardless
+- Quota toast: *"You've used your quota of 3 calls per 20 minutes. Wait and try again in X minutes."*
 
-1. Open PowerBI Desktop
-2. Click **Get Data** → **Database** → **MySQL database**
-3. Enter connection details:
-   - **Server:** localhost
-   - **Database:** ecopackdb
-4. Click **OK**
-5. Select **Database** authentication
-   - **User name:** root (or your MySQL user)
-   - **Password:** your-mysql-password
-6. Click **Connect**
-
-**4.3 Import Tables**
-
-Select these tables:
-- ✅ `users`
-- ✅ `recommendation_history`
-
-Click **Load**
-
-**4.4 Create Dashboard Visualizations**
-
-**A. Recommendations Over Time (Line Chart)**
-- **X-axis:** `created_at` (Date hierarchy)
-- **Y-axis:** Count of `id`
-- **Legend:** `sort_by` (Sustainability/CO₂/Cost)
-
-**B. Top Product Categories (Bar Chart)**
-- **Axis:** `product_category`
-- **Values:** Count of `id`
-
-**C. Average Metrics by Shipping Mode (Clustered Column)**
-- **Axis:** `shipping_mode`
-- **Values:** 
-  - Average of `weight_kg`
-  - Average of `distance_km`
-
-**D. User Activity (Table)**
-- **Columns:**
-  - `email`
-  - Count of recommendations
-  - Latest `created_at`
-  - Most used `sort_by`
-
-**E. Fragility Distribution (Pie Chart)**
-- **Legend:** `fragility` (1-5)
-- **Values:** Count of `id`
-
-**F. Key Metrics (Cards)**
-- Total Recommendations: `COUNT(id)`
-- Active Users: `DISTINCTCOUNT(email)`
-- Avg Weight: `AVERAGE(weight_kg)`
-- Avg Distance: `AVERAGE(distance_km)`
-
-**4.5 Add Filters (Slicers)**
-
-Add slicers for:
-- Date Range (`created_at`)
-- Product Category
-- Shipping Mode
-- Sort By (optimization goal)
-
-**4.6 Save Dashboard**
-
-File → Save As → `powerbi/EcoPackAI_Dashboard.pbix`
-
-**4.7 Auto-Refresh Setup**
-
-1. Go to **Transform Data** → **Data source settings**
-2. Select MySQL connection → **Edit Permissions**
-3. Set **Privacy Level** to "Organizational"
-4. In the report, click **Refresh** to update data
-
----
-
-## 🔐 Authentication Flow
-
-### First-Time Login
-
-1. Navigate to: `http://localhost:3000/login.html`
-2. Enter email: `test@ecopackai.com`
-3. Enter any password (e.g., `mypassword123`)
-4. System **hashes and stores** the password in MySQL
-5. Redirected to main app ✅
-
-### Subsequent Logins
-
-1. Enter email: `test@ecopackai.com`
-2. Enter password: `mypassword123`
-3. System verifies bcrypt hash
-4. Logged in successfully ✅
-
-### Account Lockout
-
-After **3 failed login attempts**:
-- 🔒 Account locked in database
-- Login form disappears
-- "ACCESS DENIED" message shown
-
-**To unlock:**
-```sql
-UPDATE users 
-SET is_locked = FALSE, failed_attempts = 0 
-WHERE email = 'test@ecopackai.com';
-```
-
----
-
-## 🎯 Using the Application
-
-### 1. Login
-
-Open: `http://localhost:3000/login.html`
-
-### 2. Generate Recommendations
-
-1. Fill in shipment details:
-   - Product Category
-   - Weight (kg)
-   - Dimensions (L×W×H cm)
-   - Distance (km)
-   - Fragility (1-5)
-   - Shipping Mode (Road/Air/Sea/Rail)
-   - Moisture Sensitive (Yes/No)
-
-2. Choose optimization goal:
-   - 🌱 **Sustainability** (recommended)
-   - 🌍 **CO₂ Emissions**
-   - 💰 **Cost**
-
-3. Click **"Generate AI Recommendations"**
-
-4. View results:
-   - **Best Recommendation** (highlighted card)
-   - **Top 5 Alternatives**
-   - Detailed metrics for each option
-
-### 3. Download PDF Report
-
-Click **"Download PDF Report"** button to get a professional summary.
-
-### 4. View History
-
-Check MySQL database:
-```sql
-SELECT 
-    email,
-    product_category,
-    weight_kg,
-    sort_by,
-    created_at
-FROM recommendation_history
-ORDER BY created_at DESC
-LIMIT 10;
-```
-
-Or open PowerBI dashboard for visual analytics.
-
----
-
-## 🧠 ML Models Integration
-
-### Option 1: Without Your Models (Works Immediately!)
-
-- Uses intelligent mock data
-- 15 realistic packaging materials
-- Accurate cost/CO₂ calculations
-- Perfect for testing and demos
-
-### Option 2: With Your Trained Models
-
-**1. Place your models:**
-```
-ml/models/
-├── cost_model.pkl       # Trained cost predictor
-└── co2_model.pkl        # Trained CO₂ predictor
-```
-
-**2. Place your dataset:**
-```
-data/processed/
-└── final_ecopack_dataset_fe.csv
-```
-
-**3. Update `.env`:**
-```env
-DATASET_PATH=../data/processed/final_ecopack_dataset_fe.csv
-ML_MODELS_PATH=../ml/models
-```
-
-**4. Ensure your `recommendation_engine.py` exports:**
+**To customise (in `backend/app.py`):**
 ```python
-# ml/notebooks/recommendation_engine.py
-def generate_recommendations(shipment_data, k=5, sort_by='sustainability'):
-    # Your implementation
-    pass
-
-# Required exports
-materials_df = pd.DataFrame(...)  # Your materials data
-co2_model = ...                    # Your CO₂ model
-cost_model = ...                   # Your cost model
-FEATURES_COST = [...]              # Feature list for cost
-FEATURES_CO2 = [...]               # Feature list for CO₂
-```
-
-**5. Restart backend:**
-```bash
-python app.py
+MAX_RECOMMENDATIONS_PER_WINDOW = 3   # number of calls
+RATE_LIMIT_WINDOW_MINUTES = 20       # window in minutes
 ```
 
 ---
 
-## 📊 PowerBI Dashboard Features
+## 🗂️ Materials Database (Flashcards)
 
-### Live Data Connection
-- Real-time sync with MySQL
-- Auto-refresh capabilities
-- No data export needed
+### Lazy Loading from CSV
 
-### Key Visualizations
+The Materials tab fetches flashcard data from `data/processed/clean_materials.csv` in paginated batches — nothing loads until the tab is first visited.
 
-1. **Recommendation Trends**
-   - Time-series analysis
-   - Peak usage periods
-   - Growth patterns
+**Endpoint:**
+```
+GET /api/materials?page=1&page_size=12
+```
 
-2. **Product Analysis**
-   - Most packaged categories
-   - Average weights by category
-   - Fragility patterns
+**Response:**
+```json
+{
+  "materials": [ ... ],
+  "total": 600,
+  "page": 1,
+  "page_size": 12,
+  "has_more": true
+}
+```
 
-3. **Shipping Insights**
-   - Mode preferences (Road/Air/Sea/Rail)
-   - Distance distributions
-   - Cost vs. CO₂ trade-offs
+**Each flashcard shows:**
+- Material Name + Category
+- Biodegradable badge (green ✓ / red ✗)
+- Density, Tensile Strength
+- Cost per kg, CO₂ per kg
 
-4. **User Behavior**
-   - Active users tracking
-   - Optimization goal preferences
-   - Usage frequency
+**Pagination:** Click "Load More" to fetch the next batch. The button disables automatically when all materials are loaded.
 
-5. **Environmental Impact**
-   - Total CO₂ saved
-   - Sustainability score trends
-   - Material preferences
+**Test:**
+```bash
+curl "http://localhost:5000/api/materials?page=1&page_size=5"
+```
 
-### Interactive Filters
+---
 
-- **Date Range** - Focus on specific periods
-- **Product Category** - Filter by product type
-- **Shipping Mode** - Analyze by transport method
-- **Sort By** - View by optimization goal
+## 📊 BI Dashboard
+
+### HTML File Embedded via Iframe
+
+The Dashboard tab loads `bi/EcoPackAI_BI_Dashboard.html` served directly by the Flask backend — no external Power BI service required.
+
+**Path (relative to project root):**
+```
+bi/EcoPackAI_BI_Dashboard.html
+```
+
+**Endpoints:**
+```
+GET /bi/dashboard                  → serves the HTML file (text/html)
+GET /api/bi-dashboard-available    → {"available": true/false}
+```
+
+**To update the dashboard:**
+1. Export your Power BI report: **File → Export → Publish to web** or save as HTML
+2. Replace `bi/EcoPackAI_BI_Dashboard.html` with the new file
+3. Reload the Dashboard tab — no restart needed
+
+**Test:**
+```bash
+curl -I http://localhost:5000/bi/dashboard
+# HTTP/1.1 200 OK  Content-Type: text/html
+
+curl http://localhost:5000/api/bi-dashboard-available
+# {"available": true}
+```
+
+---
+
+## 📄 PDF Reports
+
+### Format
+
+Generated PDFs contain three sections:
+
+1. **EcoPackAI** — green title at top
+2. **Shipment Details** — table with Category, Weight, Distance, Shipping Mode, Fragility, Moisture Sensitivity, Dimensions
+3. **Recommendations** — table with green header, alternating row colours, columns: #, Material, Cost ($), CO₂ (kg), Sustainability
+
+A faint diagonal `EcoPackAI` watermark covers the page at alpha=0.05 — visible only when looking closely.
+
+**Endpoint:**
+```
+POST /api/generate-pdf
+```
+
+No request body needed — uses the last recommendation stored in the session.
+
+---
+
+## 📊 Excel Export
+
+### Format
+
+Single sheet `EcoPackAI Report` containing:
+
+1. **EcoPackAI** — merged header in green
+2. **Shipment Details** — bold labels, centre-aligned values
+3. **Recommendations** — green header row, centre-aligned data, auto-width columns
+
+**Endpoint:**
+```
+POST /api/export-excel
+```
+
+**Requires:** `openpyxl` — included in `requirements.txt`.
+
+---
+
+## 🔐 Session Management
+
+EcoPackAI uses Flask sessions (cookie-based) — **no login required**.
+
+| Behaviour | Detail |
+|-----------|--------|
+| Session creation | Automatic on first request |
+| Session expiry | Logout only (`session.clear()` + fresh session) |
+| Cookie (localhost) | `SameSite=Lax, Secure=False` — auto-detected |
+| Cookie (production) | `SameSite=None, Secure=True` — auto-detected |
+| Stored in session | Last recommendation, last shipment inputs |
+| Rate limit storage | Server-side dict keyed by IP (not in cookie) |
+
+**Cookie auto-detection** — `@app.before_request` reads `request.host` on every request. No env vars or deployment flags needed.
 
 ---
 
 ## 🌐 Deployment
 
-### Backend → Render.com (or similar)
+### Backend → Render.com
 
-1. Push code to GitHub
-2. Create new Web Service on Render
-3. Set build command: `pip install -r requirements.txt`
-4. Set start command: `gunicorn backend.app:app`
-5. Add environment variables:
-   - `APP_SECRET_KEY`
-   - `DB_HOST` (cloud MySQL host)
-   - `DB_PORT`
-   - `DB_USER`
-   - `DB_PASSWORD`
-   - `DB_NAME`
+1. Push code to GitHub (include `data/processed/clean_materials.csv` and `bi/EcoPackAI_BI_Dashboard.html`)
+2. Create Web Service on Render:
+   ```
+   Root Directory: backend
+   Build Command:  pip install -r requirements.txt
+   Start Command:  gunicorn app:app
+   ```
+3. Add environment variable: `APP_SECRET_KEY`
+4. No cookie config changes needed — auto-detected at runtime
 
-### Frontend → Netlify/Vercel
+### Frontend → Vercel
 
-1. Update `frontend/js/app.js` line 6:
-```javascript
-const API_URL = 'https://your-backend.onrender.com';
+```bash
+cd frontend
+vercel --prod
 ```
 
-2. Update `backend/app.py` CORS settings:
-```python
-CORS(app, origins=[
-    'http://localhost:3000',
-    'https://your-frontend.netlify.app'
-])
+The API URL is auto-detected. For cross-origin (Vercel frontend + Render backend), set the override once:
+```bash
+# In browser console on deployed site:
+localStorage.setItem('ECO_API_URL', 'https://your-backend.onrender.com');
 ```
 
-3. Deploy frontend folder
-
-### MySQL → Cloud Database
-
-Use **PlanetScale**, **AWS RDS**, or **DigitalOcean**:
-- Export schema: `mysqldump -u root -p ecopackdb > backup.sql`
-- Import to cloud database
-- Update `.env` with cloud credentials
-
-### PowerBI → PowerBI Service
-
-1. Publish from Desktop: **File** → **Publish** → **Publish to PowerBI**
-2. Set up **Gateway** for cloud MySQL connection
-3. Configure **scheduled refresh**
-4. Share dashboard with team
+Or inject `window.__API_BASE_URL__` via a config script before `app.js` loads.
 
 ---
 
-## 🐛 Troubleshooting
+## 🧠 ML Models Integration
 
-### Backend Issues
+### Without Models (Works Immediately)
 
-**Error: "MySQL connection failed"**
-```bash
-# Check MySQL is running
-mysql -u root -p
+- Backend runs with `ML_AVAILABLE = False`
+- Recommendation endpoint returns empty list
+- All other features (materials, dashboard, PDF, Excel) still work
 
-# Test connection
-python db.py
+### With Your Trained Models
 
-# Verify credentials in .env
+```
+ml/models/
+├── cost_model.pkl
+└── co2_model.pkl
 ```
 
-**Error: "Module not found"**
-```bash
-pip install -r requirements.txt
-```
-
-### Frontend Issues
-
-**CORS Error**
-
-Update `backend/app.py`:
+Ensure `ml/notebooks/recommendation_engine.py` exports:
 ```python
-CORS(app, origins=[
-    "http://localhost:3000",
-    "http://127.0.0.1:5500",  # VS Code Live Server
-    "http://localhost:5500"    # Alternative port
-])
+def generate_recommendations(materials_df, co2_model, cost_model,
+                              shipment, FEATURES_COST, FEATURES_CO2,
+                              top_k, sort_by): ...
+
+materials_df   # DataFrame of materials
+co2_model      # Trained CO₂ predictor
+cost_model     # Trained cost predictor
+FEATURES_COST  # List of feature names for cost model
+FEATURES_CO2   # List of feature names for CO₂ model
 ```
 
-**Can't Connect to Backend**
-```bash
-# Verify backend is running
-curl http://localhost:5000/api/health
-
-# Should return: {"status": "healthy"}
-```
-
-### Database Issues
-
-**Tables Don't Exist**
-```sql
-USE ecopackdb;
-SHOW TABLES;
-
--- If empty, run:
-source sql/schema.sql;
-```
-
-**User Can't Login**
-```sql
--- Check user exists
-SELECT * FROM users WHERE email = 'test@ecopackai.com';
-
--- Unlock if locked
-UPDATE users SET is_locked = FALSE, failed_attempts = 0 
-WHERE email = 'test@ecopackai.com';
-```
-
-### PowerBI Issues
-
-**Can't Connect to MySQL**
-- Install MySQL ODBC driver
-- Check MySQL is listening on 0.0.0.0:3306
-- Verify firewall allows connection
-
-**Data Not Refreshing**
-- Click **Refresh** button in PowerBI
-- Check Data Source Settings → Credentials
-- Verify MySQL service is running
+Restart the backend — it auto-imports on startup.
 
 ---
 
 ## 📝 API Endpoints
 
-| Endpoint | Method | Auth Required | Description |
-|----------|--------|---------------|-------------|
-| `/api/auth/login` | POST | No | Login (sets password on first use) |
-| `/api/auth/logout` | POST | Yes | Logout and clear session |
-| `/api/auth/status` | GET | Yes | Check authentication status |
-| `/api/recommend` | POST | Yes | Generate recommendations |
-| `/api/history` | GET | Yes | Get user recommendation history |
-| `/api/generate-pdf` | POST | Yes | Download PDF report |
-| `/api/health` | GET | No | Health check |
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/api/auth/status` | GET | Session info + remaining quota |
+| `/api/auth/logout` | POST | Clear session, create fresh one |
+| `/api/recommend` | POST | Generate recommendations (rate limited) |
+| `/api/generate-pdf` | POST | Download PDF of last recommendation |
+| `/api/export-excel` | POST | Download Excel of last recommendation |
+| `/api/materials` | GET | Paginated materials flashcard data |
+| `/api/bi-dashboard-available` | GET | Check if BI HTML file exists |
+| `/bi/dashboard` | GET | Serve BI dashboard HTML |
+| `/api/health` | GET | Health check + config summary |
 
 ---
 
-## 🔧 Configuration
+## 🐛 Troubleshooting
 
-### Session Timeout
-
-Edit `backend/app.py` line 24:
-```python
-app.config["PERMANENT_SESSION_LIFETIME"] = timedelta(minutes=60)  # Change as needed
-```
-
-### Lockout Attempts
-
-Edit `backend/auth.py` line 15:
-```python
-MAX_ATTEMPTS = 3  # Change to 5, 10, etc.
-```
-
-### Number of Recommendations
-
-Edit frontend or pass as parameter:
-```javascript
-// frontend/js/app.js
-k_value: 5  // Change to 3, 10, etc.
-```
-
-### Add New Users
-
-```sql
-INSERT INTO users (email, password_hash, failed_attempts, is_locked)
-VALUES ('newuser@example.com', NULL, 0, FALSE);
-```
+| Problem | Cause | Fix |
+|---------|-------|-----|
+| Materials tab shows error | CSV not found | Check `data/processed/clean_materials.csv` exists |
+| Dashboard tab blank | HTML file missing | Check `bi/EcoPackAI_BI_Dashboard.html` exists |
+| 429 toast shows garbled text | flask-limiter returned HTML | Fixed — frontend catches parse error, shows friendly message |
+| PDF returns 400 | No recommendation in session | Generate recommendations first |
+| Session resets on refresh | Cookie blocked | Check browser privacy settings / extensions |
+| Rate limit not resetting | In-memory dict persists | Wait 20 min or restart backend |
+| CORS error | Origin not whitelisted | Add your frontend URL to CORS origins in `app.py` |
+| Localhost cookies not working | Was `SameSite=None` hardcoded | Now auto-detected — should work on `http://localhost` |
 
 ---
 
 ## ✅ Features Checklist
 
-- [x] MySQL database integration
-- [x] Email/password authentication with bcrypt
-- [x] 3-attempt account lockout
-- [x] Session management (Flask sessions)
-- [x] Recommendation history saved to database
-- [x] PowerBI dashboard with live MySQL connection
-- [x] Proper sorting by Sustainability/CO₂/Cost
-- [x] PDF report generation
-- [x] Logout functionality
-- [x] CORS configuration for deployment
-- [x] ML model integration (auto-detect)
-- [x] Mock data fallback
-- [x] Responsive UI design
-- [x] Error handling and validation
+- [x] Session-based (no login/DB required)
+- [x] Rate limit: 3 calls per 20 minutes per IP
+- [x] Session expires only on logout
+- [x] Cookie auto-detected (local vs production)
+- [x] Materials flashcards lazy-loaded from CSV
+- [x] BI Dashboard HTML served from `bi/` folder
+- [x] PDF: app name + shipment details + recommendations + watermark
+- [x] Excel: single sheet with colour-formatted sections
+- [x] Graceful 429 handling (no JSON parse crash)
+- [x] No timer displayed — clean UI
+- [x] Logout clears session + reloads page
+
+---
+
+**🌱 EcoPackAI — AI-Powered Sustainable Packaging Intelligence**
+
+**Local:** http://localhost:5500  
+**Production:** https://ecopackai-web.vercel.app
 
 ---
 
@@ -811,10 +438,10 @@ python app.py
 
 # 3. Setup Frontend (new terminal)
 cd frontend
-python -m http.server 3000
+python -m http.server 5500
 
 # 4. Open Browser
-# http://localhost:3000/login.html
+# http://localhost:5500/login.html
 
 # 5. Setup PowerBI (optional)
 # Open PowerBI Desktop → Get Data → MySQL
@@ -835,6 +462,6 @@ python -m http.server 3000
 
 **🌱 Your complete EcoPackAI system with MySQL + PowerBI is ready!**
 
-**Quick Start:** Open `http://localhost:3000/login.html` after running backend and frontend servers.
+**Quick Start:** Open `http://localhost:5500/login.html` after running backend and frontend servers.
 
 **Questions?** Check the Troubleshooting section or review inline code comments.

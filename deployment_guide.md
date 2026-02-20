@@ -4,7 +4,7 @@
 
 This guide covers:
 1. **Local Development** - Running on your machine
-2. **Session Limits** - How the 5 recommendations/hour works
+2. **Rate Limits** - How the 3 calls per 20 minutes works
 3. **CMD Operations** - All command-line instructions
 4. **Deployment** - Publishing to production (Vercel + Render)
 
@@ -64,6 +64,7 @@ pandas==2.1.3
 numpy==1.26.2
 scikit-learn==1.3.2
 xgboost==2.0.2
+openpyxl==3.1.2
 gunicorn==21.2.0
 ```
 
@@ -83,7 +84,7 @@ python -c "import secrets; print(secrets.token_urlsafe(32))"
 
 Copy output to `APP_SECRET_KEY`.
 
-**1.5 Verify CSV Data Path**
+**1.5 Verify Project Structure**
 
 Ensure your project structure is:
 ```
@@ -92,9 +93,11 @@ project/
 │   ├── app.py
 │   ├── .env
 │   └── requirements.txt
+├── bi/
+│   └── EcoPackAI_BI_Dashboard.html   ← BI dashboard HTML export
 ├── data/
 │   └── processed/
-│       └── clean_materials.csv
+│       └── clean_materials.csv        ← Materials database
 └── frontend/
     ├── index.html
     ├── css/
@@ -103,10 +106,16 @@ project/
         └── app.js
 ```
 
-**Test path resolution:**
+**Test CSV path resolution:**
 ```bash
 cd backend
-python -c "from pathlib import Path; print(Path(__file__).resolve().parent.parent / 'data' / 'processed' / 'clean_materials.csv')"
+python -c "from pathlib import Path; p = Path('.').resolve().parent / 'data' / 'processed' / 'clean_materials.csv'; print(p, p.exists())"
+```
+
+**Test BI dashboard path resolution:**
+```bash
+cd backend
+python -c "from pathlib import Path; p = Path('.').resolve().parent / 'bi' / 'EcoPackAI_BI_Dashboard.html'; print(p, p.exists())"
 ```
 
 **1.6 Start Backend Server**
@@ -117,13 +126,13 @@ python app.py
 
 **Expected Output:**
 ```
-====================================================================
+============================================================
 🌱 EcoPackAI Backend Starting
-====================================================================
-Session Duration: 2 Hours
-Recommendation Limit: 5 per Hour
-ML Models Available: True
-====================================================================
+   Rate limit : 3 per 20 min (per IP)
+   Session    : expires only on logout
+   Cookie     : auto-detected (localhost=Lax, prod=None+Secure)
+   ML models  : True
+============================================================
  * Running on http://0.0.0.0:5000
 ```
 
@@ -141,21 +150,34 @@ Navigate to frontend:
 cd frontend
 ```
 
-**2.2 Update API URL for Local Testing**
+**2.2 API URL — No Manual Changes Needed**
 
-Edit `frontend/js/app.js` (around line 13):
+`frontend/js/app.js` automatically detects the environment at runtime:
 
 ```javascript
 const CONFIG = {
     API_URL: (() => {
-        const isLocal = ['localhost', '127.0.0.1'].includes(window.location.hostname);
-        return isLocal ? 'http://localhost:5000' : 'https://your-backend.onrender.com';
+        const explicit = window.__API_BASE_URL__ || localStorage.getItem('ECO_API_URL');
+        if (explicit) return explicit;
+        const { protocol, hostname, port } = window.location;
+        const isLocal = ['localhost', '127.0.0.1'].includes(hostname);
+        if (isLocal) return `http://${hostname}:5000`;
+        if (port === '5000') return `${protocol}//${hostname}:${port}`;
+        return `${protocol}//${hostname}`;
     })(),
     // ...
 };
 ```
 
-This automatically switches between local and production URLs.
+- **localhost** → automatically connects to `http://localhost:5000`
+- **Deployed** → automatically connects to the same domain/host
+- No need to hardcode or change URLs between environments.
+
+**Override if needed (advanced):**
+```javascript
+// In browser console — one-time override
+localStorage.setItem('ECO_API_URL', 'https://your-custom-backend.onrender.com');
+```
 
 **2.3 Start Frontend Server**
 
@@ -177,118 +199,205 @@ python3 -m http.server 5500
 3. Select "Open with Live Server"
 4. Opens at: `http://127.0.0.1:5500`
 
-**Expected Output:**
-```
-Serving HTTP on :: port 5500 (http://[::]:5500/) ...
-```
-
-**Keep this terminal running!**
-
 **2.4 Open in Browser**
 
 Navigate to: **http://localhost:5500** or **http://127.0.0.1:5500**
 
 ---
 
-## 🔒 HOW SESSION LIMITS WORK
+## 🔒 HOW RATE LIMITS WORK
 
-### The 5 Recommendations Per Hour System
+### The 3 Calls per 20 Minutes System
 
-**Updated Configuration:**
-- **Limit:** 5 recommendations per hour (changed from 3)
-- **Session Duration:** 2 hours (changed from 1 hour)
-- **Reset:** Counter resets after 1 hour
+**Current Configuration (per IP address, not per session):**
+- **Limit:** 3 recommendation calls per rolling 20-minute window
+- **Keyed by:** Client IP address — survives page refresh, browser close, incognito
+- **Session expiry:** Only on explicit logout — no timer, no auto-expiry
+- **Reset:** Window resets automatically after 20 minutes
 
 **How It Works:**
 
 1. **First Visit:**
-   - System creates a session with unique ID
-   - Counter starts at 0/5
-   - You have 5 recommendations available
-   - Session valid for 2 hours
+   - No rate limit record yet for your IP
+   - UI shows: "3 recommendations remaining"
+   - Session is created and persists until you click Logout
 
 2. **Generate Recommendations:**
-   - Counter increments: 1/5, 2/5, 3/5, 4/5, 5/5
-   - Each generation uses 1 quota
-   - UI shows: "4 recommendations remaining this hour"
+   - Counter increments per IP: 1/3, 2/3, 3/3
+   - Each call uses 1 quota
+   - UI updates immediately: "2 recommendations remaining"
 
-3. **Limit Reached (After 5th generation):**
-   - Toast message: "⏳ Maximum 5 recommendations per hour limit reached. Please try again later."
-   - Counter shows: "0 recommendations remaining this hour"
-   - Must wait for hourly reset
+3. **Limit Reached (After 3rd call):**
+   - API returns HTTP 429 with JSON error
+   - Toast message: "You've used your quota of 3 calls per 20 minutes. Wait and try again in X minutes."
+   - UI pre-checks before calling: if counter is 0, toast fires without hitting the network
+   - Counter shows: "0 recommendations remaining"
 
-4. **Hourly Reset:**
-   - After 1 hour, counter resets to 0/5
-   - You can generate 5 more recommendations
-   - Session itself expires after 2 hours (full logout)
+4. **Window Reset:**
+   - After 20 minutes from your first call in the window, counter resets
+   - You can generate 3 more recommendations
+   - Session data (last shipment, last recommendations) is preserved
+
+5. **Logout:**
+   - Clears session data from server
+   - Creates a fresh session immediately
+   - Rate limit counter is **not** reset on logout (it's per IP, not per session)
+   - Page reloads automatically
 
 ### How to Check Your Quota
 
 **Method 1 - UI Display:**
 
-The frontend automatically shows below the generate button:
+The frontend shows in multiple places:
 ```
-5 recommendations remaining this hour → Initial
-4 recommendations remaining this hour → After 1st
-0 recommendations remaining this hour → After 5th
+3 recommendations remaining this hour → Initial
+2 recommendations remaining this hour → After 1st
+0 recommendations remaining this hour → After 3rd
 ```
 
 **Method 2 - API Call:**
 
 ```bash
 curl -c cookies.txt http://localhost:5000/api/auth/status
+```
 
-# Response:
+**Response:**
+```json
 {
   "authenticated": true,
   "user_email": "ecopackai-user@gmail.com",
-  "recommendations_used": 2,
-  "recommendations_remaining": 3
+  "recommendations_used": 1,
+  "recommendations_remaining": 2
 }
 ```
 
-### How to Reset Session (for Testing)
+### How to Reset Rate Limit (for Testing)
 
-**Method 1 - Clear Browser Cookies:**
-1. Open Developer Tools (F12)
-2. Go to Application → Cookies
-3. Delete `session` cookie for `localhost:5500`
-4. Refresh page
+**Method 1 - Wait 20 Minutes:**
+- The window resets automatically
+- Most accurate test of production behaviour
 
-**Method 2 - Incognito/Private Window:**
-- Opens new session automatically
-- Fresh 5/5 quota
-
-**Method 3 - Backend Restart:**
+**Method 2 - Backend Restart:**
 ```bash
 # In backend terminal
-Ctrl+C  # Stop server
-python app.py  # Restart
+Ctrl+C       # Stop server
+python app.py  # Restart — clears in-memory RATE_LIMITS dict
 ```
 
-**Method 4 - Wait 1 Hour:**
-- Hourly counter auto-resets
-- Session continues for 2 hours total
+**Method 3 - Change IP:**
+- Use a different network or VPN
+- Rate limit is per IP, so a different IP = fresh quota
 
-### Customizing Session Limits
+> **Note:** Clearing browser cookies does NOT reset the rate limit.
+> The limit is stored server-side per IP, not in the browser.
 
-**Change limit from 5 to 10:**
+### Customizing Rate Limits
 
-Edit `backend/app.py` (around line 80):
+Edit `backend/app.py`:
 
 ```python
-# SESSION CONFIG VALUES
-MAX_RECOMMENDATIONS_PER_HOUR = 10  # Changed from 5
-SESSION_DURATION_HOURS = 2
+# ── RATE LIMIT CONFIG (PER CLIENT IP) ──────────────────
+MAX_RECOMMENDATIONS_PER_WINDOW = 3   # Number of calls allowed
+RATE_LIMIT_WINDOW_MINUTES = 20       # Window duration in minutes
 ```
 
-**Change session duration from 2 hours to 4 hours:**
-
-Edit `backend/app.py` (around line 81):
-
+**Examples:**
 ```python
-MAX_RECOMMENDATIONS_PER_HOUR = 5
-SESSION_DURATION_HOURS = 4  # Changed from 2
+# 5 calls per hour
+MAX_RECOMMENDATIONS_PER_WINDOW = 5
+RATE_LIMIT_WINDOW_MINUTES = 60
+
+# 10 calls per 30 minutes
+MAX_RECOMMENDATIONS_PER_WINDOW = 10
+RATE_LIMIT_WINDOW_MINUTES = 30
+```
+
+---
+
+## 🗂️ MATERIALS DATABASE (FLASHCARDS)
+
+### How It Works
+
+The Materials Database tab loads packaging materials from `data/processed/clean_materials.csv` using lazy loading — cards are fetched in batches as the user scrolls or clicks "Load More".
+
+**API Endpoint:**
+```
+GET /api/materials?page=1&page_size=12
+```
+
+**Response:**
+```json
+{
+  "materials": [ ... ],
+  "total": 600,
+  "page": 1,
+  "page_size": 12,
+  "has_more": true
+}
+```
+
+**Frontend behaviour:**
+- First batch loads when you click the "Materials DB" tab (lazy — not on page load)
+- Each card shows: Material Name, Category, Density, Tensile Strength, Cost/kg, CO₂/kg, Biodegradable badge
+- "Load More" button fetches the next batch of 12
+
+**Test the endpoint:**
+```bash
+curl "http://localhost:5000/api/materials?page=1&page_size=5"
+```
+
+**Verify CSV is found:**
+```bash
+cd backend
+python -c "
+from pathlib import Path
+p = Path('.').resolve().parent / 'data' / 'processed' / 'clean_materials.csv'
+print('Found:', p.exists(), '| Path:', p)
+"
+```
+
+---
+
+## 📊 BI DASHBOARD
+
+### How It Works
+
+The Dashboard tab embeds the BI report as an HTML file served directly by the backend.
+
+**File location (relative to project root):**
+```
+bi/EcoPackAI_BI_Dashboard.html
+```
+
+**Backend endpoint:**
+```
+GET /bi/dashboard         → serves the HTML file
+GET /api/bi-dashboard-available → {"available": true/false}
+```
+
+**Frontend:** The `dashboardFrame` iframe src is set to `{API_URL}/bi/dashboard`.
+
+**To update the dashboard:**
+1. Export your Power BI report as HTML: **File → Export → Publish to web** or use the HTML export from Power BI Desktop
+2. Save the file at `bi/EcoPackAI_BI_Dashboard.html`
+3. Reload the Dashboard tab in the app — no backend restart needed
+
+**Test the endpoint:**
+```bash
+curl -I http://localhost:5000/bi/dashboard
+# Should return: HTTP/1.1 200 OK  Content-Type: text/html
+
+curl http://localhost:5000/api/bi-dashboard-available
+# {"available": true}
+```
+
+**If the file is missing:**
+```bash
+# Create the bi/ directory
+mkdir -p bi
+
+# Place your exported HTML file there
+cp /path/to/your/exported_dashboard.html bi/EcoPackAI_BI_Dashboard.html
 ```
 
 ---
@@ -300,7 +409,7 @@ SESSION_DURATION_HOURS = 4  # Changed from 2
 **Start Backend:**
 ```bash
 cd backend
-ecopackvenv\Scripts\activate  # Windows
+ecopackvenv\Scripts\activate   # Windows
 # source ecopackvenv/bin/activate  # Mac/Linux
 python app.py
 ```
@@ -318,8 +427,9 @@ curl http://localhost:5000/api/health
 {
   "status": "healthy",
   "ml_available": true,
-  "session_duration_hours": 2,
-  "max_recommendations_per_hour": 5
+  "environment": "local",
+  "max_recommendations_per_window": 3,
+  "rate_limit_window_minutes": 20
 }
 ```
 
@@ -329,24 +439,37 @@ curl -c cookies.txt http://localhost:5000/api/auth/status
 ```
 
 **Test Recommendation API:**
-
 ```bash
 curl -b cookies.txt -X POST http://localhost:5000/api/recommend \
   -H "Content-Type: application/json" \
   -d "{\"Category_item\":\"Electronics\",\"Weight_kg\":2.5,\"Fragility\":6,\"Moisture_Sens\":false,\"Distance_km\":1500,\"Shipping_Mode\":\"Road\",\"Length_cm\":30,\"Width_cm\":20,\"Height_cm\":15,\"top_k\":5,\"sort_by\":\"Sustainability\"}"
 ```
 
-**Test Materials Database:**
+**Test Materials Database (page 1, 12 per page):**
 ```bash
-curl http://localhost:5000/api/materials?page=1&per_page=20
+curl "http://localhost:5000/api/materials?page=1&page_size=12"
+```
+
+**Test BI Dashboard available:**
+```bash
+curl http://localhost:5000/api/bi-dashboard-available
 ```
 
 **Test PDF Generation:**
 ```bash
 curl -b cookies.txt -X POST http://localhost:5000/api/generate-pdf \
-  -H "Content-Type: application/json" \
-  -d "{\"user_inputs\":{\"Category_item\":\"Electronics\",\"Weight_kg\":2.5}}" \
   --output test_report.pdf
+```
+
+**Test Excel Export:**
+```bash
+curl -b cookies.txt -X POST http://localhost:5000/api/export-excel \
+  --output test_report.xlsx
+```
+
+**Test Logout:**
+```bash
+curl -b cookies.txt -c cookies.txt -X POST http://localhost:5000/api/auth/logout
 ```
 
 ---
@@ -364,15 +487,8 @@ python -m http.server 5500
 
 **Change Port (if 5500 is busy):**
 ```bash
-python -m http.server 8080  # Use port 8080 instead
+python -m http.server 8080
 ```
-
-**Test Frontend Access:**
-```bash
-curl http://localhost:5500
-```
-
-Should return HTML of your page.
 
 ---
 
@@ -405,25 +521,27 @@ lsof -ti:5500 | xargs kill -9
 ```
 
 **Problem: "Python not found"**
-
-Try:
 ```bash
-python3 app.py  # Use python3 instead of python
+python3 app.py  # Try python3 instead
 ```
 
 **Problem: "Module not found"**
-
 ```bash
-# Ensure venv is activated - you should see (ecopackvenv)
+# Ensure venv is activated — you should see (ecopackvenv)
 pip install -r requirements.txt
 ```
 
 **Problem: "CSV not found"**
-
 ```bash
-# Verify path
 cd backend
 python -c "from pathlib import Path; print((Path.cwd().parent / 'data' / 'processed' / 'clean_materials.csv').exists())"
+# Should print: True
+```
+
+**Problem: "BI dashboard not found"**
+```bash
+cd backend
+python -c "from pathlib import Path; print((Path.cwd().parent / 'bi' / 'EcoPackAI_BI_Dashboard.html').exists())"
 # Should print: True
 ```
 
@@ -433,53 +551,52 @@ python -c "from pathlib import Path; print((Path.cwd().parent / 'data' / 'proces
 
 ### Step 1: Prepare Backend for Deployment
 
-**1.1 Update Session Config for Production**
+**1.1 Cookie Config — No Manual Changes Needed**
 
-Edit `backend/app.py` (around line 64):
+The backend auto-detects environment at runtime via `@app.before_request`:
+- `localhost` / `127.0.0.1` → `SameSite=Lax, Secure=False` (plain HTTP)
+- Any other host → `SameSite=None, Secure=True` (HTTPS)
 
-```python
-# 🔥 SESSION CONFIG FOR PRODUCTION (CROSS-ORIGIN)
-app.config["PERMANENT_SESSION_LIFETIME"] = timedelta(hours=2)
-app.config["SESSION_COOKIE_HTTPONLY"] = True
-app.config["SESSION_COOKIE_SAMESITE"] = "None"   # ← CRITICAL for cross-origin
-app.config["SESSION_COOKIE_SECURE"] = True       # ← CRITICAL (requires HTTPS)
-```
-
-**Why?** Your frontend (Vercel) and backend (Render) are on different domains. `SameSite=None` allows cookies to work across domains.
+**No code changes needed between local and production.**
 
 **1.2 Update CORS Origins**
 
-Edit `backend/app.py` (around line 67):
+Edit `backend/app.py` to add your Vercel URL:
 
 ```python
-CORS(app, 
+CORS(app,
      supports_credentials=True,
      origins=[
-         "http://localhost:5500",           # Local testing
-         "http://127.0.0.1:5500",           # Local testing
-         "http://localhost:3000",           # Alternative local port
-         "https://ecopackai-web.vercel.app", # ← YOUR VERCEL URL
-         "https://*.vercel.app"             # All Vercel preview URLs
+         "http://localhost:3000",
+         "http://localhost:5500",
+         "http://127.0.0.1:5500",
+         "http://127.0.0.1:3000",
+         "https://ecopackai-web.vercel.app",  # ← YOUR VERCEL URL
+         "https://*.vercel.app"
      ],
      allow_headers=["Content-Type"],
      max_age=3600)
 ```
 
-**1.3 Verify Materials CSV is in Git**
+**1.3 Verify Files in Git**
 
 ```bash
-# Check if CSV is tracked
+# Check CSV is tracked
 git ls-files | grep "clean_materials.csv"
 
-# If not found, add it:
+# Check BI dashboard is tracked
+git ls-files | grep "EcoPackAI_BI_Dashboard.html"
+
+# If missing, add them:
 git add data/processed/clean_materials.csv
-git commit -m "Add materials database"
+git add bi/EcoPackAI_BI_Dashboard.html
+git commit -m "Add materials CSV and BI dashboard"
 ```
 
 **1.4 Ensure gunicorn is in requirements.txt**
 
 ```bash
-pip install gunicorn
+pip install gunicorn openpyxl
 pip freeze > requirements.txt
 ```
 
@@ -488,23 +605,18 @@ pip freeze > requirements.txt
 ### Step 2: Deploy Backend to Render.com
 
 **2.1 Push to GitHub**
-
 ```bash
 git add .
-git commit -m "Deploy: Updated session config and CORS"
+git commit -m "Deploy: production-ready backend"
 git push origin main
 ```
 
-**2.2 Create Render Account**
+**2.2 Create Web Service on Render**
 
-1. Go to https://render.com
-2. Sign up with GitHub
-
-**2.3 Create Web Service**
-
-1. Click **New +** → **Web Service**
-2. Connect your GitHub repository
-3. Configure:
+1. Go to https://render.com → Sign up with GitHub
+2. Click **New +** → **Web Service**
+3. Connect your GitHub repository
+4. Configure:
    ```
    Name: ecopackai-backend
    Environment: Python 3
@@ -512,126 +624,78 @@ git push origin main
    Start Command: gunicorn app:app
    Root Directory: backend
    ```
+5. **Environment Variables → Add:**
+   - `APP_SECRET_KEY` = (generate: `python -c "import secrets; print(secrets.token_urlsafe(32))"`)
 
-4. **Environment Variables:**
-   - Click **Advanced**
-   - Add: `APP_SECRET_KEY` = (generate random string)
+6. Click **Create Web Service**
 
-5. Click **Create Web Service**
+**2.3 Wait for Deployment (~5 minutes)**
 
-**2.4 Wait for Deployment**
-
-- First deploy takes ~5 minutes
-- Watch logs for: "🌱 EcoPackAI Backend Starting"
-
-**2.5 Copy Your Backend URL**
-
-Example: `https://ecopackai-backend.onrender.com`
-
-**2.6 Test Backend**
-
-```bash
-curl https://ecopackai-backend.onrender.com/api/health
+Watch logs for:
+```
+🌱 EcoPackAI Backend Starting
+   Rate limit : 3 per 20 min (per IP)
+   Session    : expires only on logout
+   Cookie     : auto-detected (localhost=Lax, prod=None+Secure)
 ```
 
-Should return:
-```json
-{
-  "status": "healthy",
-  "ml_available": true,
-  "session_duration_hours": 2,
-  "max_recommendations_per_hour": 5
-}
+**2.4 Test Backend**
+```bash
+curl https://your-backend.onrender.com/api/health
+# {"status":"healthy","ml_available":true,"environment":"production",...}
+
+curl https://your-backend.onrender.com/api/bi-dashboard-available
+# {"available":true}  ← only if bi/ folder was committed to git
 ```
 
 ---
 
 ### Step 3: Deploy Frontend to Vercel
 
-**3.1 Update API URL**
+**3.1 No URL Changes Needed**
 
-Edit `frontend/js/app.js` (line ~13):
+The frontend auto-detects the API URL. On Vercel, if your frontend and backend are on different domains, set the override in your Vercel environment or use `localStorage`:
 
-```javascript
-const CONFIG = {
-    API_URL: (() => {
-        const isLocal = ['localhost', '127.0.0.1'].includes(window.location.hostname);
-        return isLocal 
-            ? 'http://localhost:5000' 
-            : 'https://ecopackai-backend.onrender.com';  // ← YOUR RENDER URL
-    })(),
-    // ...
-};
+```bash
+# In browser console on the deployed site (one-time):
+localStorage.setItem('ECO_API_URL', 'https://your-backend.onrender.com');
 ```
 
-**3.2 Install Vercel CLI**
+Or set `window.__API_BASE_URL__` in a config script before `app.js` loads.
 
+**3.2 Install Vercel CLI**
 ```bash
 npm install -g vercel
 ```
 
 **3.3 Deploy**
-
 ```bash
 cd frontend
 vercel
-```
-
-**Follow prompts:**
-```
-? Set up and deploy? Yes
-? Which scope? Your account
-? Link to existing project? No
-? What's your project's name? ecopackai-web
-? In which directory is your code located? ./
-? Want to override settings? No
-```
-
-**3.4 Deploy to Production**
-
-```bash
 vercel --prod
 ```
 
-**3.5 Copy Your Frontend URL**
+**3.4 Copy Your Frontend URL**
 
 Example: `https://ecopackai-web.vercel.app`
 
 ---
 
-### Step 4: Update Backend CORS with Frontend URL
+### Step 4: Update Backend CORS
 
-**4.1 Edit backend/app.py**
-
-```python
-CORS(app, 
-     supports_credentials=True,
-     origins=[
-         "http://localhost:5500",
-         "http://127.0.0.1:5500",
-         "https://ecopackai-web.vercel.app",  # ← Add your actual URL
-         "https://*.vercel.app"
-     ],
-     allow_headers=["Content-Type"],
-     max_age=3600)
-```
-
-**4.2 Redeploy Backend**
+Edit `backend/app.py` with your actual Vercel URL, then redeploy:
 
 ```bash
 git add backend/app.py
-git commit -m "Update CORS for production"
+git commit -m "Update CORS with Vercel domain"
 git push origin main
 ```
-
-Render will auto-deploy.
 
 ---
 
 ### Step 5: Test Production
 
 **5.1 Open Your Frontend**
-
 ```
 https://ecopackai-web.vercel.app
 ```
@@ -639,25 +703,15 @@ https://ecopackai-web.vercel.app
 **5.2 Test Checklist**
 
 - [ ] Page loads without errors
-- [ ] Check browser console (F12) - no CORS errors
-- [ ] Fill form and generate recommendations
-- [ ] Counter shows: "4 recommendations remaining"
-- [ ] Click "Materials Database" → cards load
-- [ ] Scroll down → more cards load (infinite scroll)
-- [ ] Generate 5 total → toast: "limit reached"
-- [ ] Download PDF → opens with user inputs
-
-**5.3 Check Render Logs**
-
-In Render dashboard:
-- Click your service
-- Click "Logs"
-- Look for:
-  ```
-  POST /api/recommend HTTP/1.1" 200
-  GET /api/materials?page=1 HTTP/1.1" 200
-  POST /api/generate-pdf HTTP/1.1" 200
-  ```
+- [ ] Browser console (F12) — no CORS errors
+- [ ] Generate recommendations → counter updates
+- [ ] After 3rd call → quota toast appears (no invalid JSON error)
+- [ ] Click "Materials DB" tab → flashcards load (lazy)
+- [ ] Scroll / "Load More" → more cards appear
+- [ ] Click "Dashboard" tab → BI iframe loads
+- [ ] Download PDF → EcoPackAI header + Shipment Details + table
+- [ ] Download Excel → structured report
+- [ ] Logout → page reloads, fresh session
 
 ---
 
@@ -665,156 +719,71 @@ In Render dashboard:
 
 ### Local Development Issues
 
-**Issue 1: CORS Error in Browser Console**
-
+**Issue: CORS Error**
 ```
-Access to fetch at 'http://localhost:5000/api/...' has been blocked by CORS
+Access to fetch at 'http://localhost:5000/api/...' blocked by CORS
 ```
-
-**Fix:** Check `backend/app.py` CORS origins include:
-```python
-"http://localhost:5500",
-"http://127.0.0.1:5500",
-```
+Fix: Ensure `backend/app.py` CORS origins include `http://localhost:5500` and `http://127.0.0.1:5500`.
 
 ---
 
-**Issue 2: Materials Not Loading**
-
+**Issue: Materials Tab Shows Error**
 ```
-Failed to load materials database
+⚠️ Could not load materials database.
 ```
-
-**Fix:** 
+Fix:
 1. Check backend logs for "CSV not found"
-2. Verify CSV exists:
-   ```bash
-   cd backend
-   python -c "from pathlib import Path; print((Path.cwd().parent / 'data' / 'processed' / 'clean_materials.csv').exists())"
-   ```
-3. If False, check your folder structure
+2. Verify: `bi backend && python -c "from pathlib import Path; print((Path.cwd().parent / 'data' / 'processed' / 'clean_materials.csv').exists())"`
 
 ---
 
-**Issue 3: Session Not Persisting**
+**Issue: Dashboard Tab Shows Blank / Error**
 
-**Fix:**
-1. Check browser allows cookies (not in strict privacy mode)
-2. Verify backend session config:
-   ```python
-   app.config["SESSION_COOKIE_HTTPONLY"] = True
-   app.config["SESSION_COOKIE_SAMESITE"] = "Lax"  # For local
-   ```
+Fix:
+1. Check `bi/EcoPackAI_BI_Dashboard.html` exists
+2. Test: `curl -I http://localhost:5000/bi/dashboard` — should be `200 OK`
+3. Check: `curl http://localhost:5000/api/bi-dashboard-available` — should be `{"available":true}`
+
+---
+
+**Issue: 429 Toast Shows Garbled Text**
+
+This was a bug where flask-limiter returned HTML instead of JSON and the frontend crashed parsing it. Fixed — the frontend now catches parse errors and shows a friendly message regardless.
+
+---
+
+**Issue: Session Not Persisting After Refresh**
+
+Fix: Browser cookie settings. Check:
+1. DevTools → Application → Cookies → `localhost:5500` — session cookie should exist
+2. Not in strict privacy mode / cookie-blocking extension active
+3. Backend is running (cookie set by backend, not frontend)
 
 ---
 
 ### Production Issues
 
-**Issue 1: PDF Returns 400 Error**
-
+**Issue: PDF Returns 400**
 ```
-POST /api/generate-pdf HTTP/1.1" 400
+POST /api/generate-pdf → 400
 ```
-
-**Fix:** Session cookies not working cross-origin.
-
-**Solution:**
-```python
-# In app.py - MUST have these for production:
-app.config["SESSION_COOKIE_SAMESITE"] = "None"
-app.config["SESSION_COOKIE_SECURE"] = True
-```
-
-Then redeploy backend.
+Fix: Session cookie not sent cross-origin. The backend auto-sets `SameSite=None, Secure=True` for non-localhost hosts. Verify HTTPS is being used on both frontend and backend.
 
 ---
 
-**Issue 2: Recommendations Work Locally but Not in Production**
+**Issue: Rate Limit Resets Too Fast / Not Resetting**
 
-**Check:**
-1. Backend logs on Render
-2. CSV file included in deployment
-3. ML models available
-
-**Fix:**
-```bash
-# Verify CSV in git
-git ls-files | grep clean_materials.csv
-
-# If missing:
-git add data/processed/clean_materials.csv
-git commit -m "Add materials CSV"
-git push origin main
-```
+The limit is per **server process memory**. On Render free tier, the server may sleep and restart, clearing the in-memory `RATE_LIMITS` dict. This is expected — restart = fresh limits.
 
 ---
 
-**Issue 3: Render Shows "Module not found"**
+**Issue: BI Dashboard Not Loading in Production**
 
-**Fix:** Missing dependency in `requirements.txt`
+Fix: Verify `bi/EcoPackAI_BI_Dashboard.html` was committed and pushed to Git before deploying to Render.
 
 ```bash
-pip freeze > requirements.txt
-git add requirements.txt
-git commit -m "Update requirements"
-git push origin main
-```
-
----
-
-**Issue 4: "Application Error" on Render**
-
-**Check Render Logs:**
-1. Go to Render dashboard
-2. Click your service
-3. Click "Logs"
-4. Look for error messages
-
-**Common causes:**
-- Missing `APP_SECRET_KEY` environment variable
-- Wrong start command (should be `gunicorn app:app`)
-- Python version mismatch
-
----
-
-## 📊 MONITORING & LOGS
-
-### Local Backend Logs
-
-Watch terminal for:
-```
-INFO:EcoPackAI:New session created: abc123...
-INFO:EcoPackAI:Recommendations used: 1/5
-INFO:EcoPackAI:Recommendations used: 2/5
-...
-INFO:EcoPackAI:Recommendations used: 5/5
-```
-
-### Production Logs (Render)
-
-1. Go to Render dashboard
-2. Click your service
-3. Click "Logs"
-
-Look for:
-```
-🌱 EcoPackAI Backend Starting
-Session Duration: 2 Hours
-Recommendation Limit: 5 per Hour
-ML Models Available: True
-```
-
-### Browser Console (F12)
-
-**Successful Request:**
-```
-[EcoPackAI] Session info: {recommendations_used: 2, recommendations_remaining: 3}
-✅ Success! 3 recommendations remaining this hour.
-```
-
-**Rate Limit Hit:**
-```
-⏳ Maximum 5 recommendations per hour limit reached. Please try again later.
+git ls-files | grep EcoPackAI_BI_Dashboard
+# bi/EcoPackAI_BI_Dashboard.html  ← should appear
 ```
 
 ---
@@ -829,124 +798,37 @@ ML Models Available: True
 | Backend API | http://localhost:5000 | API server |
 | Health Check | http://localhost:5000/api/health | Server status |
 | Session Status | http://localhost:5000/api/auth/status | Check quota |
-| Materials API | http://localhost:5000/api/materials | Database endpoint |
-
-### Production URLs (Example)
-
-| Service | URL | Purpose |
-|---------|-----|---------|
-| Frontend | https://ecopackai-web.vercel.app | Live app |
-| Backend | https://ai-powered-sustainable-packaging-jrsk.onrender.com | Live API |
-| Health Check | https://ai-powered-sustainable-packaging-jrsk.onrender.com/api/health | Status |
+| Materials API | http://localhost:5000/api/materials | Flashcard data |
+| BI Dashboard | http://localhost:5000/bi/dashboard | Embedded HTML |
 
 ### Key Configuration Values
 
-| Setting | Local | Production |
-|---------|-------|------------|
-| Backend Port | 5000 | Auto (Render) |
-| Frontend Port | 5500 | Auto (Vercel) |
-| Session Duration | 2 hours | 2 hours |
-| Recommendations Limit | 5/hour | 5/hour |
-| SESSION_COOKIE_SAMESITE | "Lax" | "None" |
-| SESSION_COOKIE_SECURE | False | True |
+| Setting | Value | Location |
+|---------|-------|----------|
+| Rate limit | 3 calls | `MAX_RECOMMENDATIONS_PER_WINDOW` in app.py |
+| Window duration | 20 minutes | `RATE_LIMIT_WINDOW_MINUTES` in app.py |
+| Session expiry | Logout only | `PERMANENT_SESSION_LIFETIME = timedelta(days=365)` |
+| Cookie (local) | SameSite=Lax, Secure=False | Auto-detected via `@before_request` |
+| Cookie (prod) | SameSite=None, Secure=True | Auto-detected via `@before_request` |
+| Materials CSV | `data/processed/clean_materials.csv` | Relative to project root |
+| BI Dashboard | `bi/EcoPackAI_BI_Dashboard.html` | Relative to project root |
+| Materials per page | 12 | `page_size` param in `/api/materials` |
 
-### Important Files to Update for Deployment
+### Files to Check Before Deploying
 
 ```
-backend/app.py:
-  ✓ Line 64: SESSION_COOKIE_SAMESITE = "None"
-  ✓ Line 65: SESSION_COOKIE_SECURE = True
-  ✓ Line 67: CORS origins (add Vercel URL)
-
-frontend/js/app.js:
-  ✓ Line 13: API_URL (add Render URL)
-```
-
----
-
-## 📝 DEPLOYMENT CHECKLIST
-
-### Before Deploying:
-
-- [ ] CSV file committed to Git
-- [ ] `requirements.txt` includes all dependencies
-- [ ] `.env` file created (but NOT in Git)
-- [ ] Session config updated for cross-origin
-- [ ] CORS origins list complete
-- [ ] Tested locally (both servers running)
-
-### Backend Deployment (Render):
-
-- [ ] GitHub repository connected
-- [ ] Root directory set to `backend`
-- [ ] Build command: `pip install -r requirements.txt`
-- [ ] Start command: `gunicorn app:app`
-- [ ] Environment variable `APP_SECRET_KEY` added
-- [ ] Logs show "🌱 EcoPackAI Backend Starting"
-
-### Frontend Deployment (Vercel):
-
-- [ ] API_URL updated with Render backend URL
-- [ ] Deployed to production (`vercel --prod`)
-- [ ] Domain copied (e.g., ecopackai-web.vercel.app)
-
-### Post-Deployment:
-
-- [ ] Backend CORS updated with Vercel domain
-- [ ] Backend redeployed
-- [ ] Tested: Generate recommendations
-- [ ] Tested: Materials database loads
-- [ ] Tested: PDF downloads
-- [ ] Tested: Rate limit (5 recommendations)
-- [ ] Browser console shows no errors
-
----
-
-## 🆘 NEED HELP?
-
-### Check These First:
-
-1. **Browser Console (F12)** - Look for red errors
-2. **Render Logs** - Click "Logs" in dashboard
-3. **Network Tab** - Check API requests/responses
-4. **Cookies** - Verify session cookie exists
-
-### Common Solutions:
-
-- **CORS Error?** → Update origins in backend/app.py
-- **PDF 400 Error?** → Check SESSION_COOKIE_SAMESITE = "None"
-- **Materials Not Loading?** → Verify CSV in Git
-- **Rate Limit Not Working?** → Clear browser cookies
-
-### Test Production Backend Directly:
-
-```bash
-# Health check
-curl https://ai-powered-sustainable-packaging-jrsk.onrender.com/api/health
-
-# Materials
-curl https://ai-powered-sustainable-packaging-jrsk.onrender.com/api/materials?page=1&per_page=5
-
-# Session status
-curl https://ai-powered-sustainable-packaging-jrsk.onrender.com/api/auth/status
+backend/app.py          ✓ CORS origins include your Vercel URL
+data/processed/         ✓ clean_materials.csv committed to git
+bi/                     ✓ EcoPackAI_BI_Dashboard.html committed to git
+requirements.txt        ✓ includes openpyxl, gunicorn
+backend/.env            ✗ NOT in git (add to .gitignore)
 ```
 
 ---
 
-## 📞 SUPPORT
+**Your EcoPackAI is ready! 🌱**
 
-If issues persist:
-1. Check all URLs match (no typos)
-2. Verify environment variables on Render
-3. Clear browser cache and cookies
-4. Try incognito/private window
-5. Check Render service is "Live" (green dot)
-
----
-
-**Your EcoPackAI is ready for production! 🌱**
-
-**Local:** http://localhost:5500
+**Local:** http://localhost:5500  
 **Production:** https://ecopackai-web.vercel.app
 
 ---

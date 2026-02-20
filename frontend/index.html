@@ -42,10 +42,9 @@
         </div>
 
         <nav class="sidebar-nav">
-            <a class="nav-item active">🏠 Home</a>
-            <a class="nav-item">📊 Dashboard</a>
-            <a class="nav-item">👤 Profile</a>
-            <a class="nav-item">🔐 Login / Signup</a>
+            <a id="navHome" class="nav-item active">🏠 Home</a>
+            <a id="navDashboard" class="nav-item">📊 Dashboard</a>
+            <a id="navMaterials" class="nav-item">📚 Materials</a>
             <a id="sidebarLogout" class="nav-item">🚪 Logout</a>
         </nav>
 
@@ -67,7 +66,7 @@
                 </div>
 
                 <div class="header-actions">
-                    <span id="sessionTimer">⏱️ 02:00:00</span>
+                    <span id="requestsRemaining" class="rate-limit-badge">📊 <strong>3</strong> recommendations remaining (20 min window)</span>
                     <button id="logoutBtn" class="btn-logout">Logout</button>
                 </div>
 
@@ -77,6 +76,9 @@
         <!-- ================= MAIN ================= -->
         <main class="main-content">
             <div class="container">
+                
+                <!-- Home Section -->
+                <div id="homeSection" class="content-section">
 
                 <!-- Shipment Form -->
                 <section class="input-section card">
@@ -187,12 +189,47 @@
                         🤖 Generate AI Recommendations
                     </button>
                     <div class="rate-limit-info">
-                        <span id="requestsRemaining">3 recommendations remaining</span>
+                        <span id="requestsRemainingInfo">📊 <strong>3</strong> recommendations remaining (20 min window)</span>
                     </div>
                 </div>
 
                 <!-- Results -->
                 <section id="resultsSection" class="results-section hidden"></section>
+
+                </div> <!-- homeSection -->
+
+                <!-- Materials Section -->
+                <div id="materialsSection" class="content-section hidden">
+                    <section class="materials-section card">
+                        <h2 class="section-title">📚 Materials Library</h2>
+                        <div id="materialsContainer" class="materials-grid"></div>
+                        <div class="load-more-container">
+                            <button id="loadMoreBtn" class="btn-secondary">Load More Materials</button>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Dashboard Section -->
+                <div id="dashboardSection" class="content-section hidden">
+                    <section class="dashboard-section card">
+                        <h2 class="section-title">📊 Analytics Dashboard</h2>
+                        <div id="dashboardContent" class="dashboard-content">
+                            <div class="dashboard-placeholder">
+                                <h3>PowerBI Dashboard Integration</h3>
+                                <p class="dashboard-note">
+                                    <strong>To view the PowerBI dashboard:</strong><br><br>
+                                    1. Open <code>bi/bi_dashboard_report.pbix</code> in PowerBI Desktop<br>
+                                    2. Or publish it to PowerBI Service and embed the URL here<br>
+                                    3. For web integration, you'll need to publish to PowerBI Service and use the embed URL<br><br>
+                                    <em>Note: .pbix files require PowerBI Desktop or PowerBI Service to view.</em>
+                                </p>
+                                <div style="margin-top: 2rem;">
+                                    <p><strong>Alternative:</strong> View analytics through the recommendations and materials data in the app.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
 
             </div>
         </main>

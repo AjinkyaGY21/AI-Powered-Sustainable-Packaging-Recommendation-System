@@ -201,13 +201,14 @@ body {
     gap: 1.5rem;
 }
 
-#sessionTimer {
+.rate-limit-badge {
     background: var(--dark-card);
     padding: 0.6rem 1.2rem;
     border-radius: 20px;
     border: 1px solid var(--dark-border);
     font-size: 0.9rem;
     color: var(--primary-green-light);
+    font-weight: 600;
 }
 
 .btn-logout {
@@ -440,9 +441,19 @@ input[type="range"] {
     border: 1px solid rgba(16, 185, 129, 0.3);
 }
 
-#requestsRemaining {
+#requestsRemaining,
+#requestsRemainingInfo {
     color: var(--primary-green-light);
     font-weight: 600;
+}
+
+.rate-limit-badge {
+    background: var(--dark-card);
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    border: 1px solid var(--dark-border);
+    font-size: 0.9rem;
+    color: var(--primary-green-light);
 }
 
 /* ======================================================
@@ -461,6 +472,14 @@ input[type="range"] {
     background: var(--dark-card);
     border-radius: 16px;
     border: 1px solid var(--dark-border);
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.results-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .btn-secondary {
@@ -805,4 +824,253 @@ input[type="range"] {
     .recs-table {
         font-size: 0.85rem;
     }
+}
+
+/* MATERIAL CARDS */
+
+.materials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.material-card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid #334155;
+    transition: 0.3s;
+}
+
+.material-card:hover {
+    transform: translateY(-4px);
+    border-color: #10b981;
+}
+
+.material-id {
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
+
+.material-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.material-metrics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    font-size: 0.9rem;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    margin-top: 10px;
+}
+
+.badge.green {
+    background: #22c55e;
+    color: white;
+}
+
+.badge.red {
+    background: #ef4444;
+    color: white;
+}
+
+/* ======================================================
+   📄 CONTENT SECTIONS
+====================================================== */
+.content-section {
+    width: 100%;
+}
+
+.content-section.hidden {
+    display: none;
+}
+
+/* ======================================================
+   📚 MATERIALS SECTION
+====================================================== */
+.materials-section {
+    min-height: 400px;
+}
+
+.material-category {
+    font-size: 0.85rem;
+    color: var(--secondary-text);
+    margin-bottom: 10px;
+}
+
+.load-more-container {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1.5rem;
+}
+
+.no-materials {
+    text-align: center;
+    color: var(--secondary-text);
+    padding: 3rem;
+    font-size: 1.1rem;
+}
+
+/* ======================================================
+   📊 DASHBOARD SECTION
+====================================================== */
+.dashboard-section {
+    min-height: 500px;
+}
+
+.dashboard-content {
+    padding: 2rem 0;
+}
+
+.dashboard-placeholder {
+    text-align: center;
+    padding: 3rem;
+    background: rgba(30, 41, 59, 0.5);
+    border-radius: 16px;
+    border: 1px solid var(--dark-border);
+}
+
+.dashboard-placeholder h3 {
+    color: var(--primary-green-light);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.dashboard-placeholder code {
+    background: var(--dark-bg);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    color: var(--primary-green-light);
+    font-family: 'Courier New', monospace;
+}
+
+.dashboard-note {
+    color: var(--secondary-text);
+    line-height: 1.8;
+    text-align: left;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.dashboard-note strong {
+    color: var(--light-text);
+}
+
+.dashboard-note em {
+    color: var(--secondary-text);
+    font-size: 0.9rem;
+}
+
+/* BI dashboard iframe */
+.dashboard-iframe-wrapper {
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--dark-border);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.dashboard-iframe {
+    width: 100%;
+    min-height: 480px;
+    border: none;
+    background: #0f172a;
+}
+
+/* ======================================================
+   📊 RESULTS ACTIONS
+====================================================== */
+.results-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .results-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .results-actions .btn-secondary {
+        width: 100%;
+    }
+}
+
+/* ======================================================
+   📚 Materials Section
+====================================================== */
+.content-section {
+    width: 100%;
+}
+
+.materials-section {
+    min-height: 400px;
+}
+
+.load-more-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.no-materials {
+    text-align: center;
+    color: var(--secondary-text);
+    padding: 3rem;
+    font-size: 1.1rem;
+}
+
+.material-category {
+    font-size: 0.85rem;
+    color: var(--secondary-text);
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+/* ======================================================
+   📊 Dashboard Section
+====================================================== */
+.dashboard-section {
+    min-height: 600px;
+}
+
+.dashboard-content {
+    padding: 2rem 0;
+}
+
+.dashboard-placeholder {
+    text-align: center;
+    padding: 3rem;
+    color: var(--secondary-text);
+}
+
+.dashboard-placeholder p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.dashboard-note {
+    font-size: 0.9rem;
+    color: var(--secondary-text);
+    background: var(--dark-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--dark-border);
+    margin-top: 1rem;
+}
+
+.dashboard-note code {
+    background: rgba(16, 185, 129, 0.1);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    color: var(--primary-green-light);
+    font-family: 'Courier New', monospace;
 }
